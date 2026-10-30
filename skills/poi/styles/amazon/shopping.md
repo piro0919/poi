@@ -6,7 +6,7 @@ Use for the app shell, search results and item grids, item detail pages, account
 
 - **Top bar** (60px, `#131921`): on the left the app's own name, then a delivery-place style line (two lines, 12px light grey over 14px bold white) only if the app has such a setting. In the middle a wide search group 40px tall with 8px outer corners: a grey category dropdown on the left (`#e6e6e6`, 12px, caret), the white field, and a square `#febd69` button with a magnifier on the right. Inside the group only the outer corners are rounded. On the right, two-line links: a 12px greeting over a 14px bold label with a small caret (「アカウント＆リスト」), and 「返品もこちら / 注文履歴」.
 - **Second strip** (39px, `#232f3e`): a 「≡ すべて」 menu button in bold, then the app's main sections as white 14px links with padding 8px 5px. Use it for the app's top-level navigation instead of a sidebar. Amazon marks no current item in this strip; none was seen in any capture.
-- There is no left sidebar on most pages. Content sits in a centered column (about 920px for account pages) or, for search results, full width with a filter column on the left.
+- There is no left sidebar on most pages. Content sits in a centered column (1000px for account pages: x 140–1140 at a 1280px window, title starting 14px under the second strip; measured 2026-10-31) or, for search results, full width with a filter column on the left.
 - Breadcrumbs above the title: 14px `#565959` links separated by 「›」, the current page in `#c45500`.
 
 ## Search results and item grids
@@ -27,16 +27,17 @@ Use for the app shell, search results and item grids, item detail pages, account
 ## Account hub
 
 - Title 「アカウントサービス」 28px weight 700.
-- A three-column grid of cards (about 320×96px), white, 1px `#d5d9d9` border, radius 8px. Each card: a 64px round icon on the left on a pale blue-grey circle, then a 17px regular title and a 14px `#565959` description joined with 「・」.
+- A three-column grid of cards (320×96px), white, 1px `#d5d9d9` border, radius 8px, padding 14px 18px. Each card: a 64px round icon on the left on a pale blue-grey circle, then a 17px regular title and a 14px `#565959` description joined with 「・」.
 - Below, a 1px divider and more cards headed in 17px weight 700 (「お買い物設定」), each holding a list of 14px links.
 
 ## Lists of boxed records (orders)
 
-- Title 28px regular at the top left, a search field (346px, magnifier inside on the left) and a dark `#303333` pill 「注文を検索」 in white bold on the right of the same row.
+- Title 28px regular at the top left, a search field (346px, magnifier inside on the left) and a dark `#303333` pill 「注文を検索」 in white bold on the right of the same row. Leave the pill out when the app's field filters as you type and has nothing to submit.
 - Tabs under the title: 14px, active tab bold with a 2px orange underline (see `company.md`).
 - A filter row: a small select (「過去3か月」) followed by 「に確定された**142件**の注文」, and a right-aligned bold link.
 - Each record is a box, radius 8px, 1px `#d5d9d9` border: a `#f0f2f2` header strip about 65px tall with small label-over-value pairs (12px label, 14px value: 「注文日」「合計」) on the left and the record number plus links (「注文内容を表示」|「領収書等」) on the right; then a white body. When the record has a state, it opens the body as an 18px weight 700 line in primary text, not in color (「10月26日にお届け済み」). Then the item image, a `#2162a1` title link, 12px bold format line, and default pill buttons stacked on the right (220px wide).
 - Records are stacked with about 14px between boxes.
+- The shopping site has no data tables. Turn an app's table into these boxed records: the identifying fields as label-over-value pairs in the header strip, the state line and the rest in the body.
 
 ## Forms
 
