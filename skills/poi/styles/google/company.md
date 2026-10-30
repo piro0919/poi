@@ -91,12 +91,10 @@ Measured from Cloud console, Search and Gmail screens.
 
 No reference screen showed these, so there are no measured values. Keep them quiet and consistent with the rest; do not invent loud styles:
 
-- Error text and error field borders
-- Status colors (success, warning, error icons)
-- Hover and pressed fills
-- Dialogs (radius, width, button order)
+- Error text, status colors, hover fills and dialogs in Gmail and Search. The Cloud console's are in `cloud-console.md`; in an app shaped like the console, use those
+- The radius and width of a modal dialog. Only a popover was opened
 - Record detail pages (label and value lists)
 
 ## Sources
 
-Icons were read the same day from the Cloud console IAM page, the Gmail inbox and a Search results page: SVG sizes, viewBox and colors as computed styles, names by eye from screenshots. Captured 2026-10-30 in a 1280×900 window: Google Search home (light, signed out), Google Search results (dark theme, signed in; layout and copy only), Gmail inbox and settings (dark theme, Japanese UI; layout and copy only), Google Cloud console IAM, APIs & Services, Create service account and IAM settings (light). Error message styling was not captured. Narrow layouts were captured the same day at 768×1024 in a desktop browser and at 375×812 with an iPhone user agent: Search results, Gmail inbox and settings, and the Cloud console IAM page and Create service account form. Dark palettes were measured the same day at 1280×900: Search home and results and the Cloud console IAM page and Create service account form with the browser set to dark, and the Gmail inbox in the account's own dark theme. Nothing was created.
+Icons were read the same day from the Cloud console IAM page, the Gmail inbox and a Search results page: SVG sizes, viewBox and colors as computed styles, names by eye from screenshots. Captured 2026-10-30 in a 1280×900 window: Google Search home (light, signed out), Google Search results (dark theme, signed in; layout and copy only), Gmail inbox and settings (dark theme, Japanese UI; layout and copy only), Google Cloud console IAM, APIs & Services, Create service account and IAM settings (light). Error message styling was not captured. Narrow layouts were captured the same day at 768×1024 in a desktop browser and at 375×812 with an iPhone user agent: Search results, Gmail inbox and settings, and the Cloud console IAM page and Create service account form. Dark palettes were measured the same day at 1280×900: Search home and results and the Cloud console IAM page and Create service account form with the browser set to dark, and the Gmail inbox in the account's own dark theme. Nothing was created. On 2026-10-31, the Cloud console's status colors, hover fills, destructive button, modal backdrop and dialog surface were read from the console's own design tokens on the IAM page (each token holds its light and dark value). The same day, a field error was triggered on Create service account by typing an invalid ID (nothing was submitted), and the column display popover on IAM was opened and closed; both were read as computed styles.

@@ -21,6 +21,14 @@ Use for the app shell of an admin product and for its tables, forms and settings
 | Input border | `#8496c1`; focused 2px `#496cc3` |
 | Dividers | `#b7c3e0` at 1px, or the panel edge |
 | Disabled | `#1b2e5d` at 38% |
+| Hover / pressed fill | Neutral surfaces `rgba(60,64,67,.04)` / `rgba(60,64,67,.1)`; blue (link-colored) controls `rgba(12,103,223,.04)` / `rgba(12,103,223,.1)` |
+| Status: success | `#108463` text and icon; light fill `#e5f7f6` |
+| Status: warning | `#c64415`; light fill `#fff6d6` |
+| Status: error | `#c61f74` (a pink red, not Material red); light fill `#ffeff2` |
+| Status: info, in progress | `#0082ed`; light fill `#e8f5fe` |
+| Destructive filled button | `#d9257f` background, white text |
+| Modal backdrop | `rgba(0,0,0,.6)` |
+| Dialog and popover surface | `#f5f8fc` for modal dialogs; `#f0f5fe` measured on a popover, radius 12px, shadow `0 1px 2px rgba(60,64,67,.3), 0 2px 6px 2px rgba(60,64,67,.15)` |
 
 Everything is tinted navy-blue. Avoid pure black text and neutral grays.
 
@@ -44,6 +52,14 @@ Use only when the app already has a dark mode. The console's dark theme, which f
 | Input border | `#b7c2e8`; focused 2px `#839cff`, and the floating label turns `#a8baff` |
 | Dividers | `#50638b` at 1px |
 | Disabled | `#f1f4f9` at 38% |
+| Hover / pressed fill | Neutral `rgba(232,234,237,.04)` / `rgba(232,234,237,.1)`; blue controls `rgba(138,180,248,.04)` / `rgba(138,180,248,.1)` |
+| Status: success | `#6eebbf`; fill `#275f5c` |
+| Status: warning | `#ffdf82`; fill `#736b3f` |
+| Status: error | `#ffb8db`; fill `#7d4560` |
+| Status: info, in progress | `#4da3ff`; fill `#344b63` |
+| Destructive filled button | `#b6213c` background, `#f1f4f9` text |
+| Modal backdrop | `rgba(0,0,0,.75)` |
+| Dialog surface | `#3c444e` |
 
 ## Layout
 
@@ -71,6 +87,8 @@ The project pill, breadcrumb, "Learn" button and table checkbox column below app
 
 - Outlined text fields, 36px tall, radius 8px (top corners 4px when a floating label is used), border `#8496c1`. The label sits inside the field as placeholder and floats to the top border when focused, at about 11px in secondary text color.
 - Helper text under the field: 12px, starts 12px from the field's left edge.
+- Errors (measured on Create service account, 2026-10-31): the field's 1px border and its floating label turn the error color (`#c61f74`, dark `#ffb8db`). Under the field, each problem is its own line: a small filled circle with "!" in the error color, then the message in 12px / 16px regular, same color. Several errors stack, one per rule broken. Each states the rule as a full sentence; seen only in the Japanese UI: 「サービス アカウント ID は 6～30 文字で指定してください。」
+- Dialogs: right-aligned actions at the bottom, Cancel (outlined) first and the confirming button (filled) last, 8px apart, 32px tall, radius 12px (measured on the column display popover). A destructive confirmation uses the destructive filled button.
 - Field width ~480px, not full width.
 - Multi-step creation is a vertical stepper: numbered circles (filled navy for the current step, gray for later), step titles 22px regular with "(optional)" in secondary color.
 - Actions at the bottom left: primary filled ("Create and close") then outlined ("Cancel"), 32px tall, radius 12px, 14px weight 500, padding 0 12px, 8px gap.
