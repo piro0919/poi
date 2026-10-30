@@ -27,8 +27,8 @@ Use for the app shell of an admin product and for its tables, forms and settings
 | Status: error | `#c61f74` (a pink red, not Material red); light fill `#ffeff2` |
 | Status: info, in progress | `#0082ed`; light fill `#e8f5fe` |
 | Destructive filled button | `#d9257f` background, white text |
-| Modal backdrop | `rgba(0,0,0,.6)` |
-| Dialog and popover surface | `#f5f8fc` for modal dialogs; `#f0f5fe` measured on a popover, radius 12px, shadow `0 1px 2px rgba(60,64,67,.3), 0 2px 6px 2px rgba(60,64,67,.15)` |
+| Modal backdrop | `rgba(0,0,0,.32)` on the project picker; the design token says `rgba(0,0,0,.6)` |
+| Dialog and popover surface | `#f5f8fc` for modal dialogs (token, and measured on the project picker); `#f0f5fe` measured on a popover, radius 12px, shadow `0 1px 2px rgba(60,64,67,.3), 0 2px 6px 2px rgba(60,64,67,.15)` |
 
 Everything is tinted navy-blue. Avoid pure black text and neutral grays.
 
@@ -58,8 +58,8 @@ Use only when the app already has a dark mode. The console's dark theme, which f
 | Status: error | `#ffb8db`; fill `#7d4560` |
 | Status: info, in progress | `#4da3ff`; fill `#344b63` |
 | Destructive filled button | `#b6213c` background, `#f1f4f9` text |
-| Modal backdrop | `rgba(0,0,0,.75)` |
-| Dialog surface | `#3c444e` |
+| Modal backdrop | `rgba(0,0,0,.32)` on the project picker; the design token says `rgba(0,0,0,.75)` |
+| Dialog surface | `#3c444e` (token, and measured on the project picker) |
 
 ## Layout
 
@@ -89,6 +89,7 @@ The project pill, breadcrumb, "Learn" button and table checkbox column below app
 - Helper text under the field: 12px, starts 12px from the field's left edge.
 - Errors (measured on Create service account, 2026-10-31): the field's 1px border and its floating label turn the error color (`#c61f74`, dark `#ffb8db`). Under the field, each problem is its own line: a small filled circle with "!" in the error color, then the message in 12px / 16px regular, same color. Several errors stack, one per rule broken. Each states the rule as a full sentence; seen only in the Japanese UI: 「サービス アカウント ID は 6～30 文字で指定してください。」
 - Dialogs: right-aligned actions at the bottom, Cancel (outlined) first and the confirming button (filled) last, 8px apart, 32px tall, radius 12px (measured on the column display popover). A destructive confirmation uses the destructive filled button.
+- Modal dialogs (measured on 「プロジェクトを選択」, the project picker, opened and cancelled on 2026-10-31): radius 16px, no shadow, 800px wide in a 1280px window. Title 18px / 24px weight 500 in primary text, 24px from the left edge, with header actions (an outlined button) at the top right. Content runs to the dialog's edges (a search field, tabs, a table); Cancel is an outlined button 8px from the bottom right corner.
 - Field width ~480px, not full width.
 - Multi-step creation is a vertical stepper: numbered circles (filled navy for the current step, gray for later), step titles 22px regular with "(optional)" in secondary color.
 - Actions at the bottom left: primary filled ("Create and close") then outlined ("Cancel"), 32px tall, radius 12px, 14px weight 500, padding 0 12px, 8px gap.
