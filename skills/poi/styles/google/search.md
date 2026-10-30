@@ -8,6 +8,7 @@ Use for search boxes (global search in a header, a search page), results lists, 
 | --- | --- |
 | Background | `#ffffff` |
 | Primary text | `#16171a` |
+| Secondary text | `#4d5156` |
 | Result titles and links | `#1a0dab` |
 | Chips and secondary buttons | `#f3f5f6` fill, primary text |
 | Primary filled button | `#0b57d0` background, `#ffffff` text |
@@ -35,7 +36,9 @@ Chips and the primary filled button were not seen in dark.
 - Fully rounded (radius 24–26px), 48–50px tall, white, 1px `#dadce0` border, and a soft shadow `0 3px 10px rgba(31,31,31,.08)` that grows slightly on hover and focus.
 - Text 16px. A leading icon on the left; trailing icon buttons on the right (clear "×" when there is text, then other tools), separated by a thin vertical divider.
 - No visible label and no "Search..." placeholder with an ellipsis; leave it empty or use "Search".
-- Suggestions while typing (measured in dark only): the field and the list join into one panel, `#363840`, radius 26px on the outer corners, shadow `0 4px 12px rgba(23,23,23,.9)` above and `0 4px 6px #171717` below, with a 1px `#4d5156` divider between the field and the list. Rows are 32px, a 20px gray `search` icon, then 16px text where the typed part is regular and the completion is bold, `#e8eaed`. The row chosen with the arrow keys gets a `#42444d` fill with radius 4px; no fill appeared when the pointer was over a row. Under the rows sit a "Google Search" button and a 12px "Report inappropriate predictions" link.
+- Suggestions while typing: the field and the list join into one panel, radius 26px on the outer corners, with a 1px divider between the field and the list. Rows are 32px, a 20px gray `search` icon, then 16px text where the typed part is regular and the completion is bold. The row chosen with the arrow keys gets a fill with radius 4px; no fill appeared when the pointer was over a row.
+  - Light: white panel, shadow `0 2px 8px 1px rgba(64,60,67,.24)` on the field and `0 4px 6px rgba(32,33,36,.28)` on the list, divider `#dadce0`, text `#212121`, chosen row `#f3f5f6`.
+  - Dark: `#363840` panel, shadow `0 4px 12px rgba(23,23,23,.9)` on the field and `0 4px 6px #171717` on the list, divider `#4d5156`, text `#e8eaed`, chosen row `#42444d`. Under the rows sit a "Google Search" button and a 12px "Report inappropriate predictions" link.
 - Under a big search box: suggestion chips, fully rounded, 42px tall, `#f3f5f6`, 14px, padding 10px 16px, optional leading icon.
 
 ## Results page
@@ -52,12 +55,12 @@ Chips and the primary filled button were not seen in dark.
 
 ### No results
 
-Measured in dark with the Web results view, which shows no AI answer (2026-10-31). The All view with an AI answer showed only an illustration where the message would be; Poi does not copy illustrations, so use the text version.
+Measured in light and dark with the Web results view, which shows no AI answer (2026-10-31). The All view with an AI answer showed only an illustration where the message would be; Poi does not copy illustrations, so use the text version.
 
 - Plain text, no box, no icon, at the left edge of the results column:
   - "Your search - **query** - did not match any documents." in 14px primary text, the query in bold.
   - "Suggestions:", then a bulleted list: "Make sure that all words are spelled correctly." "Try different keywords." "Try more general keywords."
-- When Search loosened the query, a 16px / 25px line above it in secondary text (`#bdc1c6` in dark): "No results found for "**query**"." and "Results for **query** (without quotes):" with the loosened query in link color.
+- When Search loosened the query, a 16px / 25px line above it in secondary text (`#4d5156` light, `#bdc1c6` dark): "No results found for "**query**"." and "Results for **query** (without quotes):" with the loosened query in link color.
 
 ## Icons
 

@@ -4,20 +4,24 @@ Use for lists of records that people go through one by one: customers, tickets, 
 
 ## Palette (light)
 
-Values marked * were measured on Gmail's light surfaces (settings page); the rest follow the same scheme and were not measured in a light inbox.
+Measured in the default theme as computed styles and stylesheet rules (2026-10-31).
 
 | Role | Value |
 | --- | --- |
-| App background | `#f6f8fc` |
+| App background | `#f8fafd` |
 | List surface | `#ffffff`, radius 16px on the outer container |
-| Primary text | `#202124`* |
-| Secondary text (snippets, dates on read rows) | `#5f6368`* |
-| Links | `#1155cc`* |
-| Accent (active tab underline, focus) | `#1a73e8`* |
-| Borders | `#dadce0`* |
-| Row divider | inset shadow `0 -1px 0 0 rgba(100,121,143,.12)`* instead of a border |
-| Selected nav item | `#d3e3fd` fill |
-| Compose / main action button | `#c2e7ff` fill, `#001d35` text |
+| Primary text | `#202124` |
+| Secondary text (snippets, dates on read rows) | `#5f6368` |
+| Links | `#1155cc` |
+| Accent (active tab underline, focus) | `#1a73e8` |
+| Borders | `#dadce0` |
+| Header search field | `#e9eef6` fill, radius 24px, 48px tall, no border |
+| Row divider | inset shadow `0 -1px 0 0 rgba(100,121,143,.12)` instead of a border |
+| Read rows | `#f2f6fc` fill; unread rows stay on the white surface |
+| Row hover | shadow `inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15)`, no fill change |
+| Selected row | `#c2dbff` fill, dates `#5f6368` |
+| Selected nav item | `#d3e3fd` fill, radius 0 12px 12px 0 |
+| Compose / main action button | `#c2e7ff` fill, `#001d35` text, radius 16px |
 
 ## Palette (dark)
 
@@ -87,7 +91,7 @@ Material Symbols, **outlined** everywhere, with thin strokes. The header icons a
 
 ## Dialogs
 
-Measured on 「新しいラベル」 (create label), opened and cancelled on 2026-10-31. The dialog stayed light while the account's dark theme was on.
+Measured on 「新しいラベル」 (create label), opened and cancelled on 2026-10-31 with the dark theme on. The dialog stays light in the dark theme, so use these values in both modes.
 
 - White surface, radius 28px, no shadow, about 500px wide, centered over a `rgba(0,0,0,.32)` scrim.
 - Title 24px / 32px weight 400, `#1f1f1f`. Field labels above the fields, 14px / 20px, `#444746`, ending in a colon.
@@ -97,11 +101,12 @@ Measured on 「新しいラベル」 (create label), opened and cancelled on 202
 
 ## Toast
 
-Read from Gmail's stylesheet, not seen on screen; no dark variant of the rule was found while the dark theme was on.
+Read from Gmail's stylesheet in both themes, not seen on screen. The colors are inverted against the theme: a dark toast on the light theme, a white one on the dark theme.
 
-- Bottom left, 24px from the window edges, max 640px wide, min 52px tall, padding 8px 52px 8px 24px.
-- White, radius 4px, shadow `0 1px 3px 0 rgba(60,64,67,.3), 0 4px 8px 3px rgba(60,64,67,.15)`. Message 14px, `#5f6368`.
-- An action as a text button: `#1a73e8`, 14px weight 500, 36px tall, padding 0 8px, radius 4px; hover fill `rgba(66,133,244,.04)`, pressed `rgba(66,133,244,.15)`.
+- Bottom left, 24px from the window edges, max 640px wide, min 52px tall, padding 8px 52px 8px 24px, radius 4px, shadow `0 1px 3px 0 rgba(60,64,67,.3), 0 4px 8px 3px rgba(60,64,67,.15)`, message 14px.
+- Light theme: `#202124` surface, white message, action text `#8ab4f8`, white close icon at 70%.
+- Dark theme: white surface, message `#5f6368`, action text `#1a73e8`, gray close icon.
+- The action is a text button: 14px weight 500, 36px tall, padding 0 8px, radius 4px; in the dark theme its hover fill is `rgba(66,133,244,.04)` and pressed `rgba(66,133,244,.15)`.
 - A 20px close icon 16px from the right edge.
 
 ## Copy seen here
