@@ -44,7 +44,10 @@ Flat, monochrome and airy. Everything is white with near-black text and one blue
 | Hover on left navigation items | `rgba(15, 20, 25, 0.1)` behind the icon and label, as a pill |
 | Hover on the black main button | `#272c30` |
 | Dialog backdrop | `rgba(180, 180, 182, 0.5)`, a neutral grey with no blue in it |
-| Destructive red | `#f4212e`, as text on the account deletion link (measured 2026-10-31, light theme). Its use as an error color in forms was not seen |
+| Destructive red | `#f4212e`: text on the account deletion link, the fill of the 「削除」 button in a delete confirmation, and the error color in forms |
+| Backdrop behind a confirmation | `rgba(0, 0, 0, 0.4)`, darker than the create dialog's |
+| Secondary (outlined) pill | transparent, 1px `#cfd9de` border, primary text |
+| Toast | `#1d9bf0` fill, white 15px text, radius 4px, padding 12px, 44px tall, centered at the bottom 32px above the window's edge. The same in dark |
 
 ### Dark theme
 
@@ -60,8 +63,13 @@ Use only when the app already has a dark mode. X's darkest background, "Lights o
 | Hairlines between rows and columns, side card borders | 1px `#2f3336` |
 | Input border | 1px `#333639` |
 | Selected row in a settings menu | `#16181c` fill and a 2px `#1d9bf0` bar on the right edge |
+| Dialog surface | `#000000`, like the page |
+| Create dialog backdrop | `rgba(0, 0, 0, 0.5)` |
+| Backdrop behind a confirmation | `rgba(91, 112, 131, 0.4)`, a blue grey |
+| Secondary (outlined) pill | transparent, 1px `#536471` border, primary text |
+| Destructive red and form errors | `#f4212e`, unchanged |
 
-Hover fills, the secondary pill button and the dialog backdrop were not measured in dark.
+Hover fills were not measured in dark.
 
 ## Shape and controls
 
@@ -72,6 +80,8 @@ Hover fills, the secondary pill button and the dialog backdrop were not measured
 - Checkboxes are 20px squares with a 2px `#536471` border, filled `#1d9bf0` when checked; radio-like marks are 20px circles.
 - Tabs fill the column width equally; the active one has a 4px `#1d9bf0` indicator, rounded, only as wide as its label.
 - Dialogs: white, radius 16px, 600px wide, no visible border. Header row about 53px: a close (×) icon button on the left, the title 20px weight 700 next to it, and the main pill on the right.
+- Confirmations (delete a post, keep or discard a draft): a small centered box, 320px wide, radius 16px, padding 32px. A 20px weight 700 question as the title, one 15px secondary sentence, then the choices as full-width 44px pills stacked 12px apart, 15px weight 700. The confirming choice comes first: a delete fills it `#f4212e` with white text (「削除」), any other choice uses the main button. The second is an outlined pill (「キャンセル」). Wording: 「ポストを削除しますか？」「この操作は取り消せません。…」.
+- Form errors: the field's 1px border and its floating label turn `#f4212e`, and the message sits under the field in 13px `#f4212e`: 「このユーザー名は使われています。他のものを選んでください。」
 
 ## Icons
 
@@ -97,15 +107,13 @@ Measured from the Japanese UI. The English UI was not captured.
 ## Not captured yet
 
 - The English UI wording
-- Form error messages (the name field stops at its maximum length instead of showing an error)
-- Destructive confirmations
-- Toasts after saving
-- The red as an error color in forms, and the red in dark
+- The toast after saving settings. Only the one after copying a link was seen
+- Hover fills in dark
 - Colored status labels (X has none)
 - Data tables and summary number tiles (X has none)
 - Placeholder avatars for records without a photo
 
 ## Sources
 
-Captured 2026-10-30 in a 1280×900 window, signed in, in the light theme with a Japanese UI: home, explore, people search, an empty search, a public profile, notifications, settings (account, privacy and safety), and the create-list dialog with the name field focused and filled to its limit. The dialog was closed without saving; nothing was posted or followed. Hover colors and the dialog backdrop were read as computed styles later the same day, with the page forced to the light color scheme in that tab only. Narrow layouts were captured the same day at 768×1024 in a desktop browser and at 375×812 with an iPhone user agent: home, people search, a public profile, settings and account settings. Only interface labels were copied; no post text, names or handles. The dark values were measured the same day as computed styles, with the page forced to the dark color scheme in that tab: home and account settings.
+Captured 2026-10-30 in a 1280×900 window, signed in, in the light theme with a Japanese UI: home, explore, people search, an empty search, a public profile, notifications, settings (account, privacy and safety), and the create-list dialog with the name field focused and filled to its limit. The dialog was closed without saving; nothing was posted or followed. Hover colors and the dialog backdrop were read as computed styles later the same day, with the page forced to the light color scheme in that tab only. Narrow layouts were captured the same day at 768×1024 in a desktop browser and at 375×812 with an iPhone user agent: home, people search, a public profile, settings and account settings. Only interface labels were copied; no post text, names or handles. The dark values were measured the same day as computed styles, with the page forced to the dark color scheme in that tab: home and account settings. On 2026-10-31, in both color schemes, as computed styles: the post composer was opened, 「poi」 typed and the dialog closed, and the draft discarded at the 「ポストを保存しますか？」 prompt; the delete confirmation of one of the account's own posts was opened and closed with 「キャンセル」 (the post was not deleted); a two-letter name was typed into the username settings to show its error, and the page was left without saving; a post's link was copied to show the toast.
 Icons were read the same day at 1280×900 on home navigation and account settings: SVG sizes, viewBox and colors as computed styles, shapes from a screenshot.
