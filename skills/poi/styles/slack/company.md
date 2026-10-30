@@ -44,6 +44,29 @@ Main pane values were measured in the light theme. The sidebar is themed per use
 | Info banner | `#e3f8ff` fill, 8px radius |
 | Reaction or counter pill | `rgba(29,28,29,.06)` fill, or white with the card border |
 
+### Dark theme
+
+Use only when the app already has a dark mode. Slack's own dark mode, measured as computed styles unless marked otherwise.
+
+| Role | Value |
+| --- | --- |
+| Main pane, cards, dialogs, inputs | `#1a1d21`. Directory pages lose the light theme's gray pane: pane and card are the same color, and the card shows only by its border |
+| Raised controls (sort menu, disabled button) | `#212428` |
+| Primary text | `#d1d2d3` for body text, `#f8f8f8` for titles, active tabs and button labels |
+| Secondary text | `#b9babd` |
+| Muted text | `#9a9b9e`, `#ababad` on step counters |
+| Links and text buttons | `#2ba5ce` |
+| Primary button | `#177e56` background, white text |
+| Disabled primary button | `#212428` background, `#b9babd` text |
+| Default button | `#1a1d21` background, `#f8f8f8` text, 1px `rgba(121,124,129,.5)` border |
+| Filter buttons and search field borders | 1px `rgba(121,124,129,.3)` |
+| Card border | 1px `rgba(209,210,211,.1)` |
+| Selected filter chip | `#2ba5ce` fill, `#1a1d21` text |
+| Input focus | 1px ring plus a 5px halo in blue, read from a screenshot as about `#53a3ca` and `#2c4554` |
+| Input error | 1px `#e01e5a` ring plus a 5px `rgba(224,30,90,.3)` halo, as in light; the message is `#de678a` |
+| Hover fill | `rgba(248,248,248,.08)` |
+| Sidebar | the theme's dark variant. In the theme measured: a `rgba(16,18,20,.6)` layer over the theme background, text `rgba(178,227,228,.8)`, selected item `#7d3986` fill with `#efe1f5` text |
+
 ## Shape and controls
 
 - Buttons 36px tall, padding 0 12px, 15px weight 700, radius **8px**. Small filter buttons 28px, 13px weight 700, radius 8px, with a caret.
@@ -80,4 +103,4 @@ Measured from a Japanese UI. The English UI was not captured.
 
 ## Sources
 
-Captured 2026-10-30 in a 1280×900 window, signed in to a work workspace with a Japanese UI: a channel, the directory (members and channels tabs), the create-channel dialog with a valid name and with a name error, preferences, and search with results and with no results. The account's preference is the dark theme; the light theme was shown by removing the dark theme class from the page in that tab only. The account setting was not changed, and nothing was created or sent. Only interface labels were copied; no message text, names or channel names. A channel and the files page were also captured at 768×1024 the same day; at 375×812 with an iPhone user agent Slack only offered its app.
+Captured 2026-10-30 in a 1280×900 window, signed in to a work workspace with a Japanese UI: a channel, the directory (members and channels tabs), the create-channel dialog with a valid name and with a name error, preferences, and search with results and with no results. The account's preference is the dark theme; the light theme was shown by removing the dark theme class from the page in that tab only. The account setting was not changed, and nothing was created or sent. Only interface labels were copied; no message text, names or channel names. A channel and the files page were also captured at 768×1024 the same day; at 375×812 with an iPhone user agent Slack only offered its app. The dark values were measured the same day in the account's own dark mode: the files page, the channel directory and the create-channel dialog with a name error. The dialog was closed without creating anything.
