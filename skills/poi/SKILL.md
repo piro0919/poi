@@ -34,6 +34,8 @@ Use the company's own icons. When its document names an icon package, add that p
 
 An icon font glyph placed before text in an inline box (a status in a table cell, an icon before a link) takes over the box's baseline, and the whole box sits a couple of pixels off the line of plain text next to it. Make such a box block-level (`flex`, not `inline-flex`) or align it to the middle, and check that its text lines up with the cells beside it.
 
+Use the company's own typeface only when it is distributed for free (the company documents say so and name where, such as Google Fonts); load it the way the repository loads fonts. When the company's typeface is not distributed, do not copy or imitate it: use the stack its document gives instead. Load a Japanese web font named in a stack only when the app shows Japanese text; otherwise leave it in the stack unloaded. When a stack names no Japanese font, Japanese text falls back to the OS's sans-serif, as on the real product; do not add one.
+
 Rewrite the copy too: button labels, headings, empty states, errors, confirmations, helper text. Wording is half of the feel.
 
 ### Hard rules

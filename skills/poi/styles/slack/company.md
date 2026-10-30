@@ -16,7 +16,7 @@ Friendly, bold and roomy. Text is a size larger than most apps (15px body), head
 
 ## Type
 
-- Family: Slack's own Lato for Latin text and Noto Sans JP for Japanese. Use `Lato, "Noto Sans JP", sans-serif` (both on Google Fonts).
+- Family: Slack's own Lato for Latin text and Noto Sans JP for Japanese. Use `Lato, "Noto Sans JP", sans-serif` (both on Google Fonts). Load Noto Sans JP only when the app shows Japanese text.
 - Body 15px / 22px weight 400. Metadata 13px / 18px; timestamps 12px / 18px.
 - Names, channel titles and dialog titles are weight **900**: page title 18px / 24px, dialog title 22px / 30px.
 - Labels on buttons, tabs, filter buttons and form labels are weight 700.

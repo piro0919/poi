@@ -20,7 +20,7 @@ Quiet, roomy and flat. White or very light tinted surfaces, almost no shadows, s
 
 ## Type
 
-- Family: **Google Sans Flex** for app UI (Cloud console), **Google Sans** for consumer UI (Search, Gmail). Both are on Google Fonts. Fallback stack: `"Google Sans Flex", "Google Sans", Roboto, Arial, sans-serif`.
+- Family: **Google Sans Flex** for app UI (Cloud console), **Google Sans** for consumer UI (Search, Gmail). Both are on Google Fonts. Fallback stack: `"Google Sans Flex", "Google Sans", Roboto, Arial, sans-serif`. The stacks name no Japanese font: Japanese text in Gmail and the Cloud console falls back to the OS's sans-serif (computed styles, 2026-10-31). Do the same rather than adding one.
 - Base text: 14px / 20px, weight 400. Almost everything in an app is 14px.
 - Small text (helper text, captions, metadata): 12px / 16px or 12px / 20px.
 - Labels on buttons, tabs, nav items, column headers: 14px weight **500**.
