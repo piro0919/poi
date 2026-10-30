@@ -1,0 +1,93 @@
+# Google — company-wide rules
+
+Read this first for any Google-ish request. These rules hold across Google's products. Product files add the shapes of specific screens.
+
+## Products
+
+| Product | File | Use for |
+| --- | --- | --- |
+| Gmail | `gmail.md` | Lists of records people triage one by one: inboxes, tickets, leads, customers, notifications. Dense rows, bulk-select toolbar |
+| Google Search | `search.md` | Search boxes, search results pages, global search in a header, filter chips |
+| Google Cloud console | `cloud-console.md` | Admin screens: data tables, settings pages, create/edit forms, left navigation with sections, dashboards |
+
+When in doubt for a B2B admin app, the app shell (header, left nav, page panel) follows `cloud-console.md`, and individual lists or search boxes borrow from Gmail or Search.
+
+When products are mixed, **the shell product's palette wins everywhere**. The other products lend shapes, layout and copy only. A Gmail-style list inside a Cloud console shell uses Cloud console colors (navy text, `#b7c3e0` dividers), not Gmail's neutral grays. The header search field likewise follows the shell product, not `search.md`.
+
+## Feel in one paragraph
+
+Quiet, roomy and flat. White or very light tinted surfaces, almost no shadows, soft rounded corners, one calm blue for the primary action, and text that does the work instead of decoration. Nothing shouts: weight 500 is the loudest a label gets, headings are regular weight (400) and simply larger.
+
+## Type
+
+- Family: **Google Sans Flex** for app UI (Cloud console), **Google Sans** for consumer UI (Search, Gmail). Both are on Google Fonts. Fallback stack: `"Google Sans Flex", "Google Sans", Roboto, Arial, sans-serif`.
+- Base text: 14px / 20px, weight 400. Almost everything in an app is 14px.
+- Small text (helper text, captions, metadata): 12px / 16px or 12px / 20px.
+- Labels on buttons, tabs, nav items, column headers: 14px weight **500**.
+- Headings use weight 400, not bold: page section heading 22px / 28px; card or group heading 18–20px. The one exception is the page title in the panel header (the screen's `h1`): 18px weight 500.
+- Never use 700 for headings. 700 appears only for unread items in Gmail.
+
+## Shape
+
+- Buttons and nav items: radius **12px** (Cloud console) or fully rounded pills (Search, Gmail chips).
+- Search fields: fully rounded (9999px).
+- Icon buttons: 40×40 circles, no visible background until hover.
+- Cards and panels: large radius (16–20px) on the outer page panel, flat inside it. Prefer dividers and whitespace over boxed cards.
+- Shadows: avoid. The only measured shadows are a faint lift under a floating search box (`0 3px 10px rgba(31,31,31,.08)`) and 1px hairline dividers.
+
+## Color roles
+
+Product files give exact palettes. Shared roles:
+
+- Primary action: filled blue button, white text. One per view.
+- Secondary actions: outlined (1px light border) or text-only buttons in the same blue.
+- Links: blue, no underline until hover, except inline links inside explanatory sentences, which are underlined.
+- Disabled: the normal text color at 38% opacity. Disabled actions stay visible in toolbars ("Remove access" greyed out next to "Grant access").
+- Status uses small colored icons or text, not bright filled badges.
+
+## Wording and tone
+
+Measured from Cloud console, Search and Gmail screens.
+
+- **Sentence case** for buttons, tabs, headings, column headers and menu items: "Create service account", "Grant access", "View by principals", "Recommendations history", "Show more". Only proper names of features keep capitals.
+- **Verb + object** for actions: "Grant access", "Remove access", "Enable APIs and services", "Create and continue". Avoid bare "Submit", "OK", "Yes".
+- When a form has two ways to finish, say what happens: "Create and continue" vs "Create and close". Cancel is just "Cancel".
+- **Helper text** under a field is a short phrase without a final period: "Display name for this service account", "Describe what this service account will do".
+- **Explanations** are one plain sentence with a period, followed by "Learn more": "These permissions affect this project and all of its resources. Learn more".
+- Optional parts are marked "(optional)" in secondary text color, e.g. "Permissions (optional)". Required fields end the label with a space and an asterisk: `Service account ID *`.
+- Page headings can name the scope in quotes: 'Permissions for project "shodolog"'.
+- Shortcuts are shown in placeholders and tooltips in parentheses: "Search (/) for resources, docs, products, and more".
+- No exclamation marks, no "Successfully", no "Error:" prefixes, no "Please". State the fact or the next step.
+- Japanese UI follows the same restraint: 「作成」「もっと見る」「詳細を表示」, settings phrased as 「〜を有効にする」「〜を表示する」, labels ending in a colon 「表示件数:」.
+
+### Rewrites for common AI-default copy
+
+| Default | Google-ish |
+| --- | --- |
+| + Add Customer | Add customer |
+| Submit | Add (or the specific verb: Create, Save, Send) |
+| Save Changes | Save |
+| Saving... | Saving… |
+| Settings saved successfully! | Settings saved |
+| Error: Invalid email. | Enter a valid email address |
+| Error: All fields are required. | (mark each empty field) Enter a name |
+| No data found. | No customers match your search |
+| Are you sure? / This action cannot be undone. | Delete workspace? / This permanently deletes the workspace and all of its data. You can't undo this. |
+| Yes, Delete | Delete |
+| Danger Zone | (no scary heading; a plain section title such as "Delete workspace") |
+| Manage your customers here. | (drop it, or one useful sentence with "Learn more") |
+| ← Back | (an arrow icon button left of the page title) |
+
+## Not captured yet
+
+No reference screen showed these, so there are no measured values. Keep them quiet and consistent with the rest; do not invent loud styles:
+
+- Error text and error field borders
+- Status colors (success, warning, error icons)
+- Hover and pressed fills
+- Dialogs (radius, width, button order)
+- Record detail pages (label and value lists)
+
+## Sources
+
+Captured 2026-10-30 in a 1280×900 window: Google Search home (light, signed out), Google Search results (dark theme, signed in; layout and copy only), Gmail inbox and settings (dark theme, Japanese UI; layout and copy only), Google Cloud console IAM, APIs & Services, Create service account and IAM settings (light). Error message styling was not captured.

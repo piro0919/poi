@@ -37,6 +37,8 @@ Rewrite the copy too: button labels, headings, empty states, errors, confirmatio
 - **No logos, no company or product names.** Do not add the company's logo, wordmark, product names, icons that identify the brand, or trademarks. Transfer only color, spacing, shape and wording. The result must never pass as the real product.
 - **Never change existing behavior.** Data fetching, saving, validation, routing and navigation stay exactly as they are. Do not remove features or fields.
 - **UI-only state is allowed.** You may add state that lives entirely inside a screen and exists only for the look — open/closed, selected row, hover actions, a focused search box.
+- **Do not add controls that promise features the app lacks.** Skip parts of a product's layout that have no backing data or action in this app: a workspace switcher, breadcrumbs, a "Learn" button, stars, hover actions, bulk-select checkboxes with no bulk actions. An inert control looks broken.
+- Swapping a control for another one that holds the same state and options is allowed (a status `<select>` becoming filter chips). Do not change input types or validation attributes: `type="text"` to `type="email"` adds the browser's own validation and changes behavior.
 - Keep the meaning of every piece of copy. Change how it is said, not what it says.
 - Keep the user's own product name and domain terms.
 
