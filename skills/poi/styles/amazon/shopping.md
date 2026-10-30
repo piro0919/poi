@@ -51,6 +51,22 @@ Use for the app shell, search results and item grids, item detail pages, account
 - Cards about 320×265px with a 1px border, radius 8px. The first card is an add tile with a dashed 2px `#c7c7c7` border, a large grey 「+」 and 「新しい住所を追加」 in large bold grey text.
 - A default card has a small header strip (「既定の住所：」) with a divider, then the record in 14px, and 「変更 | 削除」 links at the bottom.
 
+## Narrow widths
+
+Measured at 768px in a desktop browser and at 375px in an iPhone browser, which gets the mobile site.
+
+- **Tablet (768px)**: the desktop site does not adapt. The page keeps a 1000px minimum width and scrolls sideways. Poi must not scroll sideways, so below 1000px use the phone layout below with the content stretched to the width. This is a rule for Poi, not something Amazon does.
+- **Phone header** (142px in all, 98px without the delivery row):
+  - A 50px top row in dark slate (read from a screenshot as about `#252f3d`): a 「≡」 menu button, the app's own name, then on the right a two-line greeting over a small value and the account and cart icons.
+  - The search group on its own row, full width with 8px side margins, 44px tall: a white field with 15px text and radius 8px, and a 50×44px `#febd69` magnifier button inside its right end. There is no category dropdown.
+  - A 44px delivery row, `#37475a`, 12px text with a pin icon, padding 12px 10px. Only when the app has such a setting.
+  - There is no second strip of section links. The app's top-level pages move into the 「≡」 menu.
+- **Page**: white, 12–14px side padding. Titles are bold here, unlike desktop: 22–24px weight 700 (「アカウントサービス」「注文履歴」), group headings 18px weight 700 (「注文」「支払い＆住所」).
+- **Account hub**: the tiles become grouped lists. Under each group heading, a white box with radius 8px and a 1px `#d5d9d9` border holds rows 51px tall, 16px text, a chevron at the right, and a 1px `#e7e7e7` line between rows.
+- **Orders**: a full-width search field (「すべての注文を検索」) with 「絞り込み ›」 at its right, then one box per record with the thumbnail on the left and the title and date on the right.
+- **Search results**: a row of filter chips under the header that scrolls sideways and stays stuck: 32px tall, radius 16px, white with a 1px `#888c8c` border. Then one result per row, with the image on the left (about 40% of the width) and the details on the right, ending with a `#ffd814` 「カートに入れる」 pill 32px tall, as wide as the details column.
+- **Forms**: a 「‹ お客様のご住所」 back row above the title. Fields run full width and are 44px tall: text inputs with radius 3px and a 1px `#949494` border, selects with radius 12px and a 1px `#888c8c` border, under bold labels.
+
 ## Empty states
 
 - Cart style: on the `#eaeded` page, a white panel with a 24px weight 700 heading 「Amazonカートは空です」 and one or two 14px sentences with inline links to where to go next.
