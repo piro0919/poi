@@ -4,19 +4,28 @@
     "description": "A skill for Claude Code. Say \"make it Google-ish\" and Poi rewrites the screens of your repository in that product's style: color, spacing and wording."
   },
   "hero": {
-    "tagline": ["Say", "\"make it Google-ish.\""],
+    "tagline": [
+      "Say",
+      "\"make it Google-ish.\""
+    ],
     "lead": [
       "Poi rewrites the screens of your repository,",
       "down to the wording on buttons and errors."
     ],
-    "start": "Get started"
+    "start": "Get started",
+    "points": [
+      "A skill for Claude Code",
+      "Color, spacing and wording",
+      "Behavior stays as is"
+    ]
   },
   "showcase": {
-    "before": "Before"
+    "before": "Before",
+    "caption": "The same sample app, rewritten by Poi for each company."
   },
   "install": {
     "title": "Get started.",
-    "body": "Run these in your terminal, then ask in Claude Code."
+    "body": "Run these two lines, then say \"Make it Google-ish\" in Claude Code."
   },
   "footer": {
     "source": "Source code"
@@ -24,5 +33,19 @@
   "language": {
     "ja": "日本語",
     "en": "English"
-  }
+  },
+  "features": [
+    {
+      "title": "Measured from the real screens",
+      "body": "Colors, sizes and the way each company words buttons and errors."
+    },
+    {
+      "title": "Behavior stays",
+      "body": "Data, saving and navigation are untouched. Logos and names are never copied."
+    },
+    {
+      "title": "Every width, dark mode too",
+      "body": "Keeps your layouts at 1280, 768 and 375px, and your dark mode if you have one."
+    }
+  ]
 }

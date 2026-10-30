@@ -68,6 +68,8 @@ export default async function Page({ params }: PageProps) {
   const t = await getTranslations();
   const tagline = t.raw("hero.tagline") as string[];
   const lead = t.raw("hero.lead") as string[];
+  const points = t.raw("hero.points") as string[];
+  const features = t.raw("features") as { title: string; body: string }[];
 
   return (
     <div className="mx-auto max-w-6xl px-6">
@@ -102,8 +104,26 @@ export default async function Page({ params }: PageProps) {
             <PrimaryButton href="#install">{t("hero.start")}</PrimaryButton>
             <SecondaryButton href={REPO}>GitHub</SecondaryButton>
           </div>
+          <ul className="flex flex-wrap gap-x-5 gap-y-2 text-muted text-sm">
+            {points.map((point) => (
+              <li className="flex items-center gap-2" key={point}>
+                <span className="h-1.5 w-1.5 rounded-full bg-ink" />
+                {point}
+              </li>
+            ))}
+          </ul>
         </div>
-        <Showcase beforeLabel={t("showcase.before")} />
+        <Showcase beforeLabel={t("showcase.before")} caption={t("showcase.caption")} />
+      </section>
+
+      {/* 何をするか。見出しは立てず、項目名と1行を3つ並べるだけ */}
+      <section className="grid gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-3">
+        {features.map((feature) => (
+          <div className="flex flex-col gap-2 bg-card p-6" key={feature.title}>
+            <h2 className="font-medium text-[17px]">{feature.title}</h2>
+            <p className="text-muted text-sm leading-relaxed">{feature.body}</p>
+          </div>
+        ))}
       </section>
 
       {/* 入れ方 */}

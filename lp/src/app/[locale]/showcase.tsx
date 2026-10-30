@@ -15,7 +15,7 @@ const LABELS: Record<(typeof SHOTS)[number], string> = {
   amazon: "Amazon",
 };
 
-export function Showcase({ beforeLabel }: { beforeLabel: string }) {
+export function Showcase({ beforeLabel, caption }: { beforeLabel: string; caption: string }) {
   const [shot, setShot] = useState<(typeof SHOTS)[number]>("before");
 
   return (
@@ -57,6 +57,7 @@ export function Showcase({ beforeLabel }: { beforeLabel: string }) {
           width={1280}
         />
       </div>
+      <figcaption className="text-muted text-sm">{caption}</figcaption>
     </figure>
   );
 }
