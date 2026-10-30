@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "title": "Poi — make your app look like a product people know",
+    "description": "A skill for Claude Code. Say \"make it Google-ish\" and Poi rewrites the screens of your repository in that product's style: color, spacing and wording."
+  },
+  "hero": {
+    "tagline": ["Say", "\"make it Google-ish.\""],
+    "lead": [
+      "Poi rewrites the screens of your repository,",
+      "down to the wording on buttons and errors."
+    ],
+    "points": ["Color, spacing and wording", "Behavior stays as is", "A skill for Claude Code"],
+    "start": "Get started",
+    "name": "The name comes from the Japanese \"っぽい\" (-ppoi), meaning \"-ish\"."
+  },
+  "showcase": {
+    "before": "Before",
+    "caption": "The same sample admin app, rewritten by Poi with each company's rules."
+  },
+  "product": {
+    "title": "More than a white background and a blue button.",
+    "statement": "The rules are taken from the real screens: color, spacing, and how the company writes.",
+    "statementMuted": "Poi picks a product for each screen: a list like Gmail, a search box like Google Search.",
+    "label": "What Poi does",
+    "items": [
+      {
+        "title": "Color and spacing",
+        "body": "Colors, sizes and corner radii measured from each product's own pages."
+      },
+      {
+        "title": "Wording and tone",
+        "body": "Button labels, errors, empty states and confirmations, rewritten the way that company writes them."
+      },
+      {
+        "title": "Behavior stays",
+        "body": "Data fetching, saving and navigation are left as they are. Logos and company names are never copied."
+      },
+      {
+        "title": "Every width, both modes",
+        "body": "The layouts your app already has at 1280, 768 and 375px are kept. If your app has a dark mode, it is kept and matched to the product's dark theme."
+      },
+      {
+        "title": "Any stack",
+        "body": "The rules are values and example copy, so they fit React or Vue, Tailwind or plain CSS."
+      }
+    ],
+    "companiesLabel": "Products so far",
+    "companies": "Gmail, Google Search, Google Cloud console, Slack, GitHub, Amazon and X."
+  },
+  "install": {
+    "title": "Get started in three steps.",
+    "steps": [
+      {
+        "title": "Add the marketplace",
+        "body": "Run the first command below in your terminal."
+      },
+      {
+        "title": "Install Poi",
+        "body": "Run the second command."
+      },
+      {
+        "title": "Ask",
+        "body": "In Claude Code, open your repository and say \"Make it Google-ish.\" Name a screen to change only that one."
+      }
+    ],
+    "note": "Poi rewrites your code directly. Commit first, so you can compare the result and undo it.",
+    "cta": "View on GitHub"
+  },
+  "footer": {
+    "source": "Source code"
+  },
+  "language": {
+    "ja": "日本語",
+    "en": "English"
+  }
+}

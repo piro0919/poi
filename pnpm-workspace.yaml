@@ -1,0 +1,8 @@
+packages:
+  - lp
+
+# ビルド処理を走らせない依存。どれも LP の組み立てには要らない
+allowBuilds:
+  '@parcel/watcher': false
+  '@swc/core': false
+  sharp: false

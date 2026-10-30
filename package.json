@@ -1,0 +1,8 @@
+{
+  "name": "poi",
+  "private": true,
+  "scripts": {
+    "lp:dev": "pnpm --filter poi-lp dev",
+    "lp:build": "pnpm --filter poi-lp build"
+  }
+}

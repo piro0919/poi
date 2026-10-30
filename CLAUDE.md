@@ -5,7 +5,7 @@ You say "make it Google-ish" or "make it Slack-ish", and Poi rewrites the screen
 
 The name comes from the Japanese "っぽい" (-ppoi), meaning "-ish" or "looks like", as in "Google-ppoi".
 
-This file records what was agreed in a brainstorming session on 2026-10-30. The skill lives in `skills/poi`, and the sample admin app used for trials in `examples/sample-admin`.
+This file records what was agreed in a brainstorming session on 2026-10-30. The skill lives in `skills/poi`, and the sample admin app used for trials in `examples/sample-admin`. The landing page is in `lp/` (Next.js + next-intl, English and Japanese, copied from Owler's LP). Its hero switches between shots of the sample app before and after a trial for each company, in `lp/public/shots/`; retake them after a style document changes noticeably.
 
 ## Why
 
