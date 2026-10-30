@@ -7,7 +7,7 @@ Use for the app shell, record lists, filter bars and settings pages.
 - **Global header**: 64px, black `#000000` (signed-out) or `#f6f8fa` with a bottom border (signed-in style; prefer this for an app). Left: logo slot (use the app's own mark), then nav. Right: a search button styled as an input — 32–36px, 6px radius, 1px border, "Search or jump to…" with a "/" key hint at the right — then icon buttons and the avatar.
 - **Context header**: a breadcrumb in 14px — owner in regular, current item in weight 600 (`vercel / next.js`) — on the `#f6f8fa` strip.
 - **Underline tabs** under it: 14px, icon + label + counter pill, 32px items with 8px padding and 6px radius on hover. The active tab is weight 600 with a 2px coral `#fd8c73` underline sitting on the strip's bottom border.
-- **Left sidebar** (~240px) inside the page: 32px items, 14px, 16px icon + label, 6px radius. The selected item has a gray fill and a 4px blue bar on its left edge. Groups are separated by a 1px divider. Utility items ("Feedback", "Collapse sidebar") sit at the bottom.
+- **Left sidebar** (256px, measured on the issues page at 1280px on 2026-10-31) inside the page: items start 16px from the window's edge and are 223px wide, 32px tall with 6px 8px padding, 14px, 16px icon + label, 6px radius. The main column's content starts 24px after the sidebar (x 280). The selected item has a gray fill and a 4px blue bar on its left edge. Groups are separated by a 1px divider. Utility items ("Feedback", "Collapse sidebar") sit at the bottom.
 - **Main column**: 24px padding. Title row: 20px weight 600 title on the left, green primary button ("New issue") on the right.
 
 ## Record list (issues / pull requests pattern)
