@@ -33,11 +33,15 @@ Dense, precise and engineered. Small type (lots of 12px metadata), thin gray bor
 | Links | `#0969da` |
 | Borders | `#d1d9e0` 1px |
 | Hover / selected fill | `rgba(129,139,152,.15)` |
-| Primary ("create") button | `#1f883d` background, white text, border `rgba(31,35,40,.15)` |
-| Default button | `#f6f8fa` background, `#25292e` text, `#d1d9e0` border |
+| Primary ("create") button | `#1f883d` background, white text, border `rgba(31,35,40,.15)`. Hover `#1c8139`, pressed `#197935` |
+| Default button | `#f6f8fa` background, `#25292e` text, `#d1d9e0` border. Hover `#eff2f5`, pressed `#e6eaef` |
+| Danger button (destructive confirm) | Default button with `#d1242f` text; on hover it fills `#cf222e` with white text |
 | Success / open state | `#1a7f37` |
+| Attention (pending, warning) | `#9a6700` |
 | Danger | `#d1242f`, light fill `#ffebe9` |
 | Accent fill (info, focus) | `#ddf4ff` |
+| State labels | Outlined, no fill: text and 1px border in the state's color. Success `#1a7f37`, accent `#0969da`, attention `#9a6700`, danger `#d1242f` text with `#cf222e` border, done `#8250df`; neutral is `#59636e` text with a `#d1d9e0` border |
+| Banners (flash) | 1px border, 6px radius, padding 20px 16px, primary text. Info: `#ddf4ff` fill, `rgba(84,174,255,.4)` border. Success: `#dafbe1`, `rgba(74,194,107,.4)`. Warning: `#fff8c5`, `rgba(212,167,44,.4)`. Error: `#ffebe9`, `rgba(255,129,130,.4)` |
 | Active tab underline | `#fd8c73` (coral) |
 | Counter pill | `rgba(129,139,152,.12)` fill, primary text |
 
@@ -55,11 +59,15 @@ Use only when the app already has a dark mode. GitHub's default dark theme ("Dar
 | Links and accent text | `#4493f8` |
 | Borders | `#3d444d` 1px (`rgba(61,68,77,.7)` between rows) |
 | Hover / selected fill, counter pill | `rgba(101,108,118,.2)` |
-| Primary ("create") button | `#238636` background, white text, border `rgba(255,255,255,.15)` |
-| Default button | `#212830` background, `#f0f6fc` text, `#3d444d` border |
+| Primary ("create") button | `#238636` background, white text, border `rgba(255,255,255,.15)`. Hover `#29903b`, pressed `#2e9a40` |
+| Default button | `#212830` background, `#f0f6fc` text, `#3d444d` border. Hover `#262c36`, pressed `#2a313c` |
+| Danger button (destructive confirm) | Default button with `#fa5e55` text; on hover it fills `#b62324` with white text |
 | Success / open state | `#3fb950` |
+| Attention (pending, warning) | `#d29922` |
 | Danger | `#f85149` text; filled danger `#da3633`; light fill `rgba(248,81,73,.1)` with a `rgba(248,81,73,.4)` border on labels |
 | Accent fill (info) | `rgba(56,139,253,.1)` |
+| State labels | Outlined, no fill. Text / border: success `#3fb950` / `#238636`, accent `#4493f8` / `#1f6feb`, attention `#d29922` / `#9e6a03`, danger `#f85149` / `#da3633`, done `#ab7df8` / `#8957e5`, neutral `#9198a1` / `#3d444d` |
+| Banners (flash) | Same shape as light, primary text. Info: `rgba(56,139,253,.1)` fill, `rgba(56,139,253,.4)` border. Success: `rgba(46,160,67,.15)`, `rgba(46,160,67,.4)`. Warning: `rgba(187,128,9,.15)`, `rgba(187,128,9,.4)`. Error: `rgba(248,81,73,.1)`, `rgba(248,81,73,.4)` |
 | Focus ring | `#1f6feb` |
 | Active tab underline | `#f78166` |
 
@@ -147,15 +155,11 @@ Measured from issue and pull request lists.
 
 No reference screen showed these, so there are no measured values. Keep them in the same quiet system; do not invent loud styles:
 
-- Errors that belong to the whole form rather than one field
-- The banner shown after saving settings
-- Hover and pressed fills of buttons
-- The dialog backdrop
+- Which banner GitHub shows after saving settings, and its wording. The banner styles themselves are in the color tables
+- The wording of errors that belong to the whole form rather than one field. Show them in the error banner
 - How older dates are written next to relative times
-- Label fills and borders for success, attention and accent; only the danger label was measured
-- Dialogs in the dark theme
 - Summary number tiles (GitHub has no screen with them)
 
 ## Sources
 
-Captured 2026-10-30 in a 1280×900 window, light theme (narrow layouts at 768×1024 and 375×812 the same day: the Issues list, repository settings and the New issue form): vercel/next.js Issues and Pull requests lists, and signed in, a repository's Issues (empty), New issue form, General settings with its Danger Zone and delete dialog, Branches settings, profile settings, and the New repository form with a name error. The signed-in account is set to the dark theme, so the light values were taken by loading GitHub's own light theme stylesheet in that tab; the account setting was not changed. Screenshots of this look slightly desaturated; the hex values above are computed styles, not pixel reads. The dark values were measured the same day from the Issues list and General settings in the account's own dark theme, as computed styles. Octicon names, sizes and colors were read the same day from the icons' class names and computed styles, in the account's dark theme: the Issues and Pull requests lists, a repository's home, the New issue form and repository settings.
+Captured 2026-10-30 in a 1280×900 window, light theme (narrow layouts at 768×1024 and 375×812 the same day: the Issues list, repository settings and the New issue form): vercel/next.js Issues and Pull requests lists, and signed in, a repository's Issues (empty), New issue form, General settings with its Danger Zone and delete dialog, Branches settings, profile settings, and the New repository form with a name error. The signed-in account is set to the dark theme, so the light values were taken by loading GitHub's own light theme stylesheet in that tab; the account setting was not changed. Screenshots of this look slightly desaturated; the hex values above are computed styles, not pixel reads. The dark values were measured the same day from the Issues list and General settings in the account's own dark theme, as computed styles. On 2026-10-31, button hover and pressed fills, state labels, banners, and the dialog's backdrop, padding and dark surface were read from GitHub's own stylesheet, signed out, on the vercel/next.js Releases and Issues pages: the design tokens on the page, and the computed styles of GitHub's `Label`, `flash`, `Overlay` and `btn` classes placed in the page, with the page switched between its light and dark themes. The attention label was also checked on a real "Pre-release" label on the Releases page. These are the values GitHub's stylesheet assigns; a live dialog or banner was not opened, because the browser's GitHub session had signed out. Octicon names, sizes and colors were read the same day from the icons' class names and computed styles, in the account's dark theme: the Issues and Pull requests lists, a repository's home, the New issue form and repository settings.

@@ -44,7 +44,10 @@ Inside the list Box, centered, about 150px tall: a 24px muted line icon (a magni
 ## Dialogs
 
 - White, 480px wide, radius 12px, shadow `0 0 0 1px rgba(209,217,224,.25), 0 6px 12px -3px rgba(37,41,46,.04), 0 6px 18px 0 rgba(37,41,46,.12)`.
-- Header: title 14px weight 600 naming the target ("Delete piro0919/poi"), a 32px close (×) icon button on the right.
+- Header: title 14px weight 600 naming the target ("Delete piro0919/poi"), a 32px close (×) icon button on the right. An optional 12px muted description under the title. A 1px `#d1d9e0` line under the header.
+- Body padding 16px, 14px text. Footer padding 16px with a 1px line above it; buttons right-aligned, 8px apart, Cancel first.
+- Backdrop: `rgba(200,209,218,.4)` light, `rgba(33,40,48,.4)` dark.
+- Dark theme: surface `#010409`, shadow `0 0 0 1px #3d444d, 0 6px 12px -3px rgba(1,4,9,.4)`, header and footer lines `#3d444d`.
 - The first step of a destructive confirmation is one full-width default button stating intent ("I want to delete this repository"). Only that first step was captured.
 
 ## Narrow widths
