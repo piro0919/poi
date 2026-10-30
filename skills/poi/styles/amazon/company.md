@@ -36,9 +36,10 @@ Dense, practical and plain. A near-black top bar with a second dark strip under 
 | Links | `#2162a1`, used freely for item titles, counts and secondary actions |
 | Current page in a breadcrumb | `#c45500` text |
 | Tabs | inactive tabs are `#2162a1` links; the active tab is bold `#0f1111` with a 2px orange underline (about `#d67f32`, read from a screenshot) over a 1px `#dddddd` line |
-| Main button | `#ffd814` fill and border, `#0f1111` text |
+| Main button | `#ffd814` fill and border, `#0f1111` text. Hover `#ffce12` |
 | Urgent button (buy now) | `#ffa41c` fill and border, `#0f1111` text |
-| Default button | white, 1px `#888c8c` border, `#0f1111` text |
+| Default button | white, 1px `#888c8c` border, `#0f1111` text. Hover: `#edf8ff` fill and a `#0a7cd1` border |
+| Link hover | Item titles and blue links both turn `#0c3353`, with no underline |
 | Box border | 1px `#d5d9d9` |
 | Box header strip | `#f0f2f2` |
 | Input border | 1px `#888c8c` |
@@ -60,6 +61,7 @@ The shopping site has no dark theme in the browser, on desktop or phone: it stay
 - Home-page style cards: white, radius 8px–12px, shadow `0 2px 5px rgba(15,17,17,.15)`.
 - Checkboxes are the plain 13px browser checkbox.
 - Inline errors sit under the field: a red circled `!` icon and one 12px / 15px red sentence.
+- Modal dialogs: centered over the page darkened to about 47% black (read from a screenshot: white became `#878787`). The box is 375px wide for a short task, radius 8px. Header strip `#f0f2f2`, 57px tall, padding 0 24px, a 1px `#d5d9d9` line under it, the title 16px weight 700 on the left and a 44px × close button on the right. White body, padding 16px 24px. Measured on the 「場所を選択」 dialog.
 
 ## Icons
 
@@ -86,14 +88,13 @@ Measured from the Japanese site. The English site was not captured.
 ## Not captured yet
 
 - The English site wording and its Latin font
-- Hover colors for buttons and links
-- Modal dialogs
+- Hover on the urgent button
 - Summary number tiles
-- Destructive confirmations (delete an address)
+- Destructive confirmations (delete an address). The address page now asks for the password again and was not opened
 - Success messages after saving
 - Data tables (the shopping site has none)
 
 ## Sources
 
-Captured 2026-10-30 in a 1280×900 window, signed in, on amazon.co.jp with a Japanese UI: home, search results, no results, an item detail page, the account hub, order history, addresses, the add-address form empty and after submitting it empty, and an empty cart. The login-and-security page asked for the password again and was not opened. Narrow layouts were captured the same day at 768×1024 in a desktop browser and at 375×812 with an iPhone user agent: search results, an item page, the account hub, order history, the add-address form and the cart. Nothing was bought, saved or deleted. Only interface labels were copied; no names, addresses, order numbers or item titles from the account. Search results and the account hub were also opened the same day with the browser set to dark, at 1280px and at 375px with an iPhone user agent; all stayed light.
+Captured 2026-10-30 in a 1280×900 window, signed in, on amazon.co.jp with a Japanese UI: home, search results, no results, an item detail page, the account hub, order history, addresses, the add-address form empty and after submitting it empty, and an empty cart. The login-and-security page asked for the password again and was not opened. Narrow layouts were captured the same day at 768×1024 in a desktop browser and at 375×812 with an iPhone user agent: search results, an item page, the account hub, order history, the add-address form and the cart. Nothing was bought, saved or deleted. Only interface labels were copied; no names, addresses, order numbers or item titles from the account. Search results and the account hub were also opened the same day with the browser set to dark, at 1280px and at 375px with an iPhone user agent; all stayed light. On 2026-10-31, hover colors were read as computed styles on a search results page while hovering a 「カートに入れる」 button, a 「単品」 option button, an item title and a blue link, and the 「場所を選択」 dialog was opened from the delivery line and closed with Escape without choosing anything.
 Icons were read the same day at 1280×900 on the header and order history: sizes and colors as computed styles, shapes from a screenshot.
