@@ -53,4 +53,4 @@ Icon-only controls always have a tooltip naming the action ("Refresh", "More ema
 Measured at 768px in a desktop browser.
 
 - **Tablet (768px)**: the desktop layout as is. The left nav stays at 256px, the list fills the rest, and each row wraps to two lines: the sender and time on top, then the subject and snippet. Settings tabs wrap onto several rows, and the setting labels in the left column wrap inside about 80px.
-- **Phone**: not captured. Gmail sends phone browsers to its app, and the browser version behind 「I am not interested」 is an old basic interface that does not represent Gmail today.
+- **Phone**: no Gmail layout to follow. Gmail sends phone browsers to its app, and the browser version behind 「I am not interested」 is an old basic interface that does not represent Gmail today. At this width keep the app's own narrow layout and apply only the colors, type and wording above; make sure nothing breaks.

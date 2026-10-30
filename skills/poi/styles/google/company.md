@@ -87,7 +87,6 @@ No reference screen showed these, so there are no measured values. Keep them qui
 - Hover and pressed fills
 - Dialogs (radius, width, button order)
 - Record detail pages (label and value lists)
-- Gmail at phone width (phones are sent to the app)
 
 ## Sources
 

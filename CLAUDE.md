@@ -51,6 +51,7 @@ Poi exists to close that gap.
   - The sample admin app is made responsive first, so a trial can tell whether Poi kept or broke it
   - SKILL.md tells Poi not to break the widths the app already supports, and to check the result at all three widths
   - Every product's reference screens are captured at 768px and 375px too, and the narrow layouts go into its rule document (e.g. X's icon-only navigation and bottom tab bar). This covers all products, Google Cloud console and github.com included, since they are the first picks for admin screens. The cost is about three times the capture work per product
+  - Exception: Gmail and Slack at 375px. Their browser versions send phones to the app (Gmail falls back to an old basic interface, Slack shows only an app page), so there is no phone layout to capture. Their app screens are not captured either. At that width Poi only guarantees nothing breaks: the app keeps its own narrow layout, with the company's colors, type and wording (decided 2026-10-30)
 - After rewriting, Poi does not report which product it used for each screen or component. The result is visible by opening the screens, and a long explanation tends to go unread. For now; may be revisited
 
 ## Postponed

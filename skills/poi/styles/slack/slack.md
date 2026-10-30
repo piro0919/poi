@@ -58,4 +58,4 @@ The sidebar and window background change with the user's theme, so any clear the
 Measured at 768px in a desktop browser.
 
 - **Tablet (768px)**: the desktop layout, narrowed. The rail stays at 70px and the sidebar shrinks to 180px, truncating names with an ellipsis. The main pane takes the rest. The top bar keeps its back/forward icons and a shorter search field.
-- **Phone**: not captured. Slack has no phone layout in the browser; it sends phones to a page that offers the app.
+- **Phone**: no Slack layout to follow. Slack has no phone layout in the browser; it sends phones to a page that offers the app. At this width keep the app's own narrow layout and apply only the colors, type and wording above; make sure nothing breaks.

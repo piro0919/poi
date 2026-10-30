@@ -77,7 +77,6 @@ Measured from a Japanese UI. The English UI was not captured.
 - Hover colors for buttons, rows and sidebar items
 - Colored status labels (Slack's own screens seen here have none)
 - Data tables and summary number tiles (Slack's own screens seen here have none)
-- Phone width (the browser version sends phones to the app)
 
 ## Sources
 
