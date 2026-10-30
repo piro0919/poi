@@ -48,6 +48,10 @@ Dense, practical and plain. A near-black top bar with a second dark strip under 
 | Success / in stock | `#0b7b3c` |
 | Suggestion chips | `#e0f3ff` fill, `#2162a1` text, radius 20px |
 
+### Dark theme
+
+The shopping site has no dark theme in the browser, on desktop or phone: it stays white when the browser is set to dark, and its stylesheets have no dark rules. If the app already has a dark mode, keep it and derive the dark colors as SKILL.md says.
+
 ## Shape and controls
 
 - Buttons are pills: 32px tall, radius **100px**, 14px weight 400 (not bold), centered label. Width often fills the column (229px in a buy box).
@@ -82,4 +86,4 @@ Measured from the Japanese site. The English site was not captured.
 
 ## Sources
 
-Captured 2026-10-30 in a 1280×900 window, signed in, on amazon.co.jp with a Japanese UI: home, search results, no results, an item detail page, the account hub, order history, addresses, the add-address form empty and after submitting it empty, and an empty cart. The login-and-security page asked for the password again and was not opened. Narrow layouts were captured the same day at 768×1024 in a desktop browser and at 375×812 with an iPhone user agent: search results, an item page, the account hub, order history, the add-address form and the cart. Nothing was bought, saved or deleted. Only interface labels were copied; no names, addresses, order numbers or item titles from the account.
+Captured 2026-10-30 in a 1280×900 window, signed in, on amazon.co.jp with a Japanese UI: home, search results, no results, an item detail page, the account hub, order history, addresses, the add-address form empty and after submitting it empty, and an empty cart. The login-and-security page asked for the password again and was not opened. Narrow layouts were captured the same day at 768×1024 in a desktop browser and at 375×812 with an iPhone user agent: search results, an item page, the account hub, order history, the add-address form and the cart. Nothing was bought, saved or deleted. Only interface labels were copied; no names, addresses, order numbers or item titles from the account. Search results and the account hub were also opened the same day with the browser set to dark, at 1280px and at 375px with an iPhone user agent; all stayed light.
