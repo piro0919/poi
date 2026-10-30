@@ -15,7 +15,7 @@ export function SettingsForm() {
     <div className="max-w-2xl space-y-6">
       <div>
         <h1 className="text-2xl font-bold">Settings</h1>
-        <p className="text-sm text-gray-500">Manage your workspace settings.</p>
+        <p className="text-sm text-gray-500 dark:text-gray-400">Manage your workspace settings.</p>
       </div>
 
       <form
@@ -35,31 +35,31 @@ export function SettingsForm() {
           setSaving(false);
           setMessage({ type: "success", text: "Settings saved successfully!" });
         }}
-        className="space-y-5 rounded-xl border border-gray-200 bg-white p-6 shadow-sm"
+        className="space-y-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-6 shadow-sm"
       >
         <h2 className="text-lg font-bold">General</h2>
         <label className="block space-y-1">
-          <span className="text-sm font-medium text-gray-700">Workspace Name</span>
+          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Workspace Name</span>
           <input
             value={workspace}
             onChange={(event) => setWorkspace(event.target.value)}
-            className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+            className="w-full rounded-lg border border-gray-300 dark:border-gray-700 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-200 dark:focus:ring-indigo-900"
           />
         </label>
         <label className="block space-y-1">
-          <span className="text-sm font-medium text-gray-700">Billing Email</span>
+          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Billing Email</span>
           <input
             value={email}
             onChange={(event) => setEmail(event.target.value)}
-            className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+            className="w-full rounded-lg border border-gray-300 dark:border-gray-700 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-200 dark:focus:ring-indigo-900"
           />
         </label>
         <label className="block space-y-1">
-          <span className="text-sm font-medium text-gray-700">Timezone</span>
+          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Timezone</span>
           <select
             value={timezone}
             onChange={(event) => setTimezone(event.target.value)}
-            className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm"
+            className="w-full rounded-lg border border-gray-300 dark:border-gray-700 px-3 py-2 text-sm"
           >
             <option>Asia/Tokyo</option>
             <option>America/New_York</option>
@@ -73,10 +73,10 @@ export function SettingsForm() {
             onChange={(event) => setNotifications(event.target.checked)}
             className="size-4 accent-indigo-600"
           />
-          <span className="text-sm text-gray-700">Enable email notifications</span>
+          <span className="text-sm text-gray-700 dark:text-gray-300">Enable email notifications</span>
         </label>
         {message && (
-          <p className={`text-sm ${message.type === "success" ? "text-green-600" : "text-red-600"}`}>{message.text}</p>
+          <p className={`text-sm ${message.type === "success" ? "text-green-600 dark:text-green-400" : "text-red-600 dark:text-red-400"}`}>{message.text}</p>
         )}
         <button
           type="submit"
@@ -87,9 +87,9 @@ export function SettingsForm() {
         </button>
       </form>
 
-      <div className="space-y-3 rounded-xl border border-red-200 bg-white p-6 shadow-sm">
-        <h2 className="text-lg font-bold text-red-600">Danger Zone</h2>
-        <p className="text-sm text-gray-600">Once you delete a workspace, there is no going back. Please be certain.</p>
+      <div className="space-y-3 rounded-xl border border-red-200 dark:border-red-900 bg-white dark:bg-gray-900 p-6 shadow-sm">
+        <h2 className="text-lg font-bold text-red-600 dark:text-red-400">Danger Zone</h2>
+        <p className="text-sm text-gray-600 dark:text-gray-400">Once you delete a workspace, there is no going back. Please be certain.</p>
         <button
           type="button"
           onClick={() => setConfirmDelete(true)}
@@ -101,14 +101,14 @@ export function SettingsForm() {
 
       {confirmDelete && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/50 p-4">
-          <div className="w-full max-w-sm space-y-4 rounded-xl bg-white p-6 shadow-xl">
+          <div className="w-full max-w-sm space-y-4 rounded-xl bg-white dark:bg-gray-900 p-6 shadow-xl">
             <h2 className="text-lg font-bold">Are you sure?</h2>
-            <p className="text-sm text-gray-600">This action cannot be undone.</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400">This action cannot be undone.</p>
             <div className="flex justify-end gap-2">
               <button
                 type="button"
                 onClick={() => setConfirmDelete(false)}
-                className="rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium hover:bg-gray-50"
+                className="rounded-lg border border-gray-300 dark:border-gray-700 px-4 py-2 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800"
               >
                 Cancel
               </button>

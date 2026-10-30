@@ -18,7 +18,7 @@ export function InvoiceTable() {
     <div className="space-y-6">
       <div>
         <h1 className="text-2xl font-bold">Invoices</h1>
-        <p className="text-sm text-gray-500">View and manage all invoices.</p>
+        <p className="text-sm text-gray-500 dark:text-gray-400">View and manage all invoices.</p>
       </div>
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
@@ -28,14 +28,14 @@ export function InvoiceTable() {
       </div>
 
       <div className="flex items-center gap-2">
-        <label htmlFor="status" className="text-sm font-medium text-gray-700">
+        <label htmlFor="status" className="text-sm font-medium text-gray-700 dark:text-gray-300">
           Status:
         </label>
         <select
           id="status"
           value={status}
           onChange={(event) => setStatus(event.target.value as (typeof statuses)[number])}
-          className="rounded-lg border border-gray-300 px-3 py-2 text-sm"
+          className="rounded-lg border border-gray-300 dark:border-gray-700 px-3 py-2 text-sm"
         >
           {statuses.map((option) => (
             <option key={option}>{option}</option>
@@ -43,9 +43,9 @@ export function InvoiceTable() {
         </select>
       </div>
 
-      <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white shadow-sm">
+      <div className="overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-sm">
         <table className="w-full whitespace-nowrap text-left text-sm">
-          <thead className="bg-gray-50 text-xs uppercase text-gray-500">
+          <thead className="bg-gray-50 dark:bg-gray-800 text-xs uppercase text-gray-500 dark:text-gray-400">
             <tr>
               <th className="px-6 py-3">Invoice</th>
               <th className="px-6 py-3">Customer</th>
@@ -55,17 +55,17 @@ export function InvoiceTable() {
               <th className="px-6 py-3">Due</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-200">
+          <tbody className="divide-y divide-gray-200 dark:divide-gray-800">
             {filtered.map((invoice) => (
-              <tr key={invoice.id} className="hover:bg-gray-50">
+              <tr key={invoice.id} className="hover:bg-gray-50 dark:hover:bg-gray-800">
                 <td className="px-6 py-4 font-medium">{invoice.id}</td>
                 <td className="px-6 py-4">{findCustomer(invoice.customerId)?.company}</td>
                 <td className="px-6 py-4">{formatAmount(invoice.amount)}</td>
                 <td className="px-6 py-4">
                   <StatusBadge status={invoice.status} />
                 </td>
-                <td className="px-6 py-4 text-gray-500">{invoice.issuedAt}</td>
-                <td className="px-6 py-4 text-gray-500">{invoice.dueAt}</td>
+                <td className="px-6 py-4 text-gray-500 dark:text-gray-400">{invoice.issuedAt}</td>
+                <td className="px-6 py-4 text-gray-500 dark:text-gray-400">{invoice.dueAt}</td>
               </tr>
             ))}
           </tbody>
@@ -77,8 +77,8 @@ export function InvoiceTable() {
 
 function Stat({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
-      <div className="text-sm text-gray-500">{label}</div>
+    <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-5 shadow-sm">
+      <div className="text-sm text-gray-500 dark:text-gray-400">{label}</div>
       <div className="mt-1 text-2xl font-bold">{value}</div>
     </div>
   );

@@ -52,6 +52,10 @@ Poi exists to close that gap.
   - SKILL.md tells Poi not to break the widths the app already supports, and to check the result at all three widths
   - Every product's reference screens are captured at 768px and 375px too, and the narrow layouts go into its rule document (e.g. X's icon-only navigation and bottom tab bar). This covers all products, Google Cloud console and github.com included, since they are the first picks for admin screens. The cost is about three times the capture work per product
   - Exception: Gmail and Slack at 375px. Their browser versions send phones to the app (Gmail falls back to an old basic interface, Slack shows only an app page), so there is no phone layout to capture. Their app screens are not captured either. At that width Poi only guarantees nothing breaks: the app keeps its own narrow layout, with the company's colors, type and wording (decided 2026-10-30)
+- Dark mode: when the app already has a dark mode, Poi keeps it and makes it look like the company's dark theme. It does not add a dark mode to an app that has none (decided 2026-10-30). This takes three things, as with the widths:
+  - The sample admin app gets a dark mode that follows the OS setting, so a trial can tell whether Poi kept or broke it
+  - SKILL.md tells Poi not to drop the app's dark mode, to use the product's dark values where its document has them, and to check the result in both modes
+  - Every product's reference screens are captured in its dark theme too, and the dark values go into its rule document. A product with no dark theme in the browser is written down as such
 - After rewriting, Poi does not report which product it used for each screen or component. The result is visible by opening the screens, and a long explanation tends to go unread. For now; may be revisited
 
 ## Postponed

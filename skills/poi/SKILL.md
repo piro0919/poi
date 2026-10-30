@@ -41,9 +41,10 @@ Rewrite the copy too: button labels, headings, empty states, errors, confirmatio
 - Swapping a control for another one that holds the same state and options is allowed (a status `<select>` becoming filter chips). Do not change input types or validation attributes: `type="text"` to `type="email"` adds the browser's own validation and changes behavior.
 - Keep the meaning of every piece of copy. Change how it is said, not what it says.
 - **Do not break the widths the app supports.** If a screen works at tablet (768px) or mobile (375px) width before the rewrite, it must still work there afterwards: no horizontal page scroll, no clipped or overlapping controls, every action still reachable. Where a product document describes its narrow layouts, use them at those widths. Where it has none for a width, keep the app's own layout there and apply only the company's colors, type and wording.
+- **Keep the app's dark mode, and do not add one.** If the app switches to dark colors (a `prefers-color-scheme` query, a `dark` class, a theme toggle), every rewritten screen must still switch, in the same way and on the same trigger. Use the product's dark values where its document has them; where it has none, derive dark colors that keep the same contrast and accent. If the app has no dark mode, do not add one.
 - Keep the app's own language. Example copy in a rule document written in another language shows the tone; carry the tone over instead of switching languages.
 - Keep the user's own product name and domain terms.
 
 ## 5. Finish
 
-Check that the project still type-checks and builds if it has those commands. Then check every rewritten screen at 1280px, 768px and 375px wide, if you have a way to view them. Reply with one or two sentences saying it is done. Do not list which product was used for each screen.
+Check that the project still type-checks and builds if it has those commands. Then check every rewritten screen at 1280px, 768px and 375px wide, if you have a way to view them, and in dark mode as well if the app has one. Reply with one or two sentences saying it is done. Do not list which product was used for each screen.
