@@ -26,6 +26,8 @@ Everything is tinted navy-blue. Avoid pure black text and neutral grays.
 
 ## Layout
 
+The project pill, breadcrumb, "Learn" button and table checkbox column below appear only when the app has something behind them: workspaces to switch, nested pages, help to link to, bulk actions.
+
 - **Header**: 56–64px tall on the app background. Left: menu icon button, product name, a pill showing the current project/workspace (outlined, fully rounded). Center: a wide rounded search field (`#dde3ea`, 9999px radius, placeholder with shortcut). Right: 40px circular icon buttons and the avatar.
 - **Breadcrumb** under the header in 14px secondary text: "IAM & Admin / IAM".
 - **Left nav** (~256px) on the app background: section name with an icon at the top (22px, regular), then collapsible groups. Group headers are 14px weight 500 with a chevron on the right. Items are 36px tall, 14px weight 500, `#475569`, 12px radius; the selected item gets the `#dbedfc` fill and a 3–4px `#545f72` bar at the left edge of the nav. Each item may show a "more" (⋮) icon on the right.
