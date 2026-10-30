@@ -22,8 +22,8 @@ Poi exists to close that gap.
 - What success looks like:
   - People who use it are surprised that it really does feel like Google
   - The number of supported companies keeps growing
-- First version: company names only. Start with Google, Slack and GitHub; in general, large tech companies
-- Target users: teams building B2B SaaS, especially those without (or with few) designers
+- First version: company names only. Start with Google, Slack and GitHub, then keep adding large tech companies, consumer services included. Amazon, X and Instagram were named as next candidates (2026-10-30)
+- Target users: not limited to admin screens or B2B SaaS. Any team that wants its screens to feel like a well-known product, especially one without (or with few) designers
 - Which product to imitate is decided by the AI from what the service in the repository does. It may differ per screen or per component, e.g. a list that looks like Gmail and a search box that looks like Google Search
 - The goal is to resemble the company, not to become it
 - Distributed as a skill for Claude Code / Cursor
@@ -34,7 +34,7 @@ Poi exists to close that gap.
   - Company-wide rules: tone, how buttons are worded, how errors are written; things that hold across all of that company's products. Always read
   - Per-product rules: the shapes of screens and components, e.g. the Gmail list, the Search box, tables in the Google Cloud console. Read only for the products the AI matches to the screen at hand
   - The cost is that adding a company means extracting one document per product, not just one per company
-- Products covered first, chosen for the lists, search, tables and settings screens that B2B SaaS admin UIs are made of:
+- Products covered first. These three companies were chosen for the lists, search, tables and settings screens of admin UIs; companies added later need not be:
   - Google: Gmail, Google Search, Google Cloud console. Editing tools such as Docs and Sheets are left out because their shape is far from a SaaS screen. Google Workspace admin console is a candidate to swap in for the Cloud console
   - Slack: the Slack app only. It is close to a single product, so its product rules overlap heavily with the company-wide ones
   - GitHub: github.com only. Issue and pull request lists and repository settings serve as admin-screen references
