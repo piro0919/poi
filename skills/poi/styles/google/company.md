@@ -12,7 +12,7 @@ Read this first for any Google-ish request. These rules hold across Google's pro
 
 When in doubt for a B2B admin app, the app shell (header, left nav, page panel) follows `cloud-console.md`, and individual lists or search boxes borrow from Gmail or Search.
 
-When products are mixed, **the shell product's palette wins everywhere**. The other products lend shapes, layout and copy only. A Gmail-style list inside a Cloud console shell uses Cloud console colors (navy text, `#b7c3e0` dividers), not Gmail's neutral grays. The header search field likewise follows the shell product, not `search.md`.
+When products are mixed, **the shell product's palette wins everywhere**. The other products lend shapes, layout and copy only. A Gmail-style list inside a Cloud console shell uses Cloud console colors (navy text, `#b7c3e0` dividers), not Gmail's neutral grays. The header search field likewise follows the shell product, not `search.md`. Behavior that is part of a shape goes with the shape: a Gmail-style list inside a Cloud console shell keeps Gmail's row hover (the row lifts with Gmail's shadow, with the shell's divider color for the 1px side lines), even though the console's own tables use a flat fill.
 
 ## Feel in one paragraph
 
@@ -79,7 +79,7 @@ Measured from Cloud console, Search and Gmail screens.
 | Saving... | Saving… |
 | Settings saved successfully! | Settings saved |
 | Error: Invalid email. | Enter a valid email address |
-| Error: All fields are required. | (mark each empty field) Enter a name |
+| Error: All fields are required. | Fill in all required fields (still one message; give each empty field the error border) |
 | No data found. | No customers match your search |
 | Are you sure? / This action cannot be undone. | Delete workspace? / This permanently deletes the workspace and all of its data. You can't undo this. |
 | Yes, Delete | Delete |

@@ -5,10 +5,10 @@ Use for the app shell, feeds, lists of people or records, search results, settin
 ## App shell
 
 - Three columns centered in the window, all white, split by 1px `#eff3f4` vertical hairlines: left navigation (283px at a 1280px window, its items starting 16px from the left edge), main column (600px), right column (350px plus gutters).
-- **Left navigation**: a small icon mark at the top only if the app has its own, then items 58px tall (50px when the window is 800px tall; measured at 900px and 800px): a line icon and a 20px label, the current page bold with a filled icon. Under the items, the full-width black 「ポストする」 style pill for the app's single main action, if there is one. The signed-in account sits at the bottom: avatar, name in bold, handle in secondary text, and a 「…」 icon.
+- **Left navigation**: a small icon mark at the top only if the app has its own. When the app has only a text name, show the name as text where the navigation shows labels, and the name's first letter in a circle the size of a navigation icon where it shows icons only, so the app stays named at every width; use the same circle as the mark in the phone top bar. Then items 58px tall (50px when the window is 800px tall; measured at 900px and 800px): a line icon and a 20px label, the current page bold with a filled icon. Under the items, the full-width black 「ポストする」 style pill for the app's single main action, if there is one. The signed-in account sits at the bottom: avatar, name in bold, handle in secondary text, and a 「…」 icon.
 - **Main column header**: sticky, white at 85% opacity. Either tabs only (home), or a back arrow icon button with the title (20px weight 700) and a 13px count under it (「4,381 件のポスト」), or a search pill with a 「…」 icon on the right.
-- **Right column**: a search pill at the top, then side cards (white, 1px `#eff3f4` border, radius 16px, padding 16px 20px) titled in 20px weight 800, with 「さらに表示」 links in `#1d9bf0` at the bottom.
-- Use the right column only for real secondary content such as filters; leave it out rather than fill it with promotions.
+- **Right column**: on the real site, a search pill at the top, then side cards (white, 1px `#eff3f4` border, radius 16px, padding 16px 20px) titled in 20px weight 800, with 「さらに表示」 links in `#1d9bf0` at the bottom.
+- Search and filters that belong to a page go at the top of the main column, in the band under the page title, at every width, so they do not move when the right column disappears. Show the right column only on pages that have other secondary content for it; leave it out rather than show it empty or fill it with promotions.
 
 ## Feeds and lists
 

@@ -31,6 +31,19 @@ Poi exists to close that gap.
 - Typefaces follow the same line as icons (decided 2026-10-31): Poi loads the company's own typeface only when the company distributes it for free (Google Sans / Google Sans Flex, Mona Sans and Lato are on Google Fonts, checked the same day). Typefaces that are not distributed (X's Chirp, Amazon Ember) are never copied; their documents give a system stack instead. The cost is that X and Amazon resemble the original less than the others, since the typeface carries much of the feel
   - A Japanese web font in a stack (Slack's Noto Sans JP) is loaded only when the app shows Japanese text. When a stack names no Japanese font, Japanese falls back to the OS's sans-serif, as Gmail and the Cloud console do (measured the same day)
 - Never change existing behavior: data fetching, saving and navigation stay as they are. Adding UI-only state that lives entirely inside a screen (open/closed, selected row, hover actions) is allowed, because without it a list cannot really feel like Gmail. This is a first attempt and may be tightened after trying it
+- Where the trials left the rules unclear, the owner decided on 2026-10-31:
+  - A description under a heading is dropped when the company's document says to, or the product's heading has no room for it. Notes with real information stay
+  - A screen's own create button goes at the right of its heading row. The big button in a product's left navigation is only for an action the whole app has
+  - A shape brings its behavior: a Gmail-style list in a Cloud console shell keeps Gmail's row hover
+  - Warning and failure states the app colored keep the company's error color, even where the document shows states without color
+  - An app with only a text name shows its first letter in a circle where X shows a mark
+  - A "/" key that only focuses the search field may be added with the hint
+  - Required fields may get the company's required mark, on fields the app already requires
+  - "Never change behavior" wins over a document's disabled-until-valid button
+  - A form-wide error stays one message, restyled and reworded
+  - In X's shape, page search and filters sit at the top of the main column at every width; the right column appears only with content
+  - Icons go in as SVG components when the package ships them, unless the app already uses an icon font
+  - The English UI of Amazon and X is to be measured rather than guessed
 - Poi may add the company's own icon package to the user's repository, so icons match the real product down to stroke and corners (decided 2026-10-30). Icons that are logos or product marks are never used (in Octicons: `mark-github`, `logo-github`, `logo-gist`, `copilot*`). Packages checked the same day:
   - Google: Material Symbols, Apache-2.0 (`material-symbols` / `@material-symbols/svg-400` on npm, or the Google Fonts icon font)
   - GitHub: Octicons, MIT (`@primer/octicons-react`, `@primer/octicons`)
