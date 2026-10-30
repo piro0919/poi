@@ -58,7 +58,9 @@ Main pane values were measured in the light theme. The sidebar is themed per use
 Measured from a Japanese UI. The English UI was not captured.
 
 - Warm and conversational, with full sentences and a period. Errors explain the cause in a whole sentence: 「その名前は（ワークスペース名）のチャンネル、ユーザー名、またはユーザーグループにすでに使用されています。」
-- Empty states: a bold short heading, then a question inviting feedback and a concrete suggestion: 「何も見つかりませんでした」「キーワードの変更、入力ミスのチェック、またはフィルターの調整を試してみることをおすすめします。」
+- Empty states: a bold short heading, then a question inviting feedback with a link, then a concrete suggestion: 「何も見つかりませんでした」「期待していた結果と違っていますか？ フィードバックを送る.」「キーワードの変更、入力ミスのチェック、またはフィルターの調整を試してみることをおすすめします。」 Leave out the feedback question when the app has nowhere to send feedback.
+- The create button on a list page is a white default button (「チャンネルを作成する」); green is kept for the button that moves the dialog forward, such as 「次へ」.
+- Field labels in create dialogs have no colon (「名前」); the colon is for setting labels in preferences.
 - Actions are verb phrases ending in する: 「チャンネルを作成する」「メンバーを招待する」「通知を有効にする」「もっと表示する」.
 - Multi-step dialogs show progress in the footer, 「ステップ 1 / 2」, and the button says 「次へ」.
 - Placeholders give an example: 「例 : 計画-予算」; search fields say what they search: 「チャンネルを検索する」「ユーザーを検索する」「会話を見つける…」.
@@ -72,6 +74,9 @@ Measured from a Japanese UI. The English UI was not captured.
 - The default sidebar theme (only one custom theme was seen)
 - Destructive confirmations
 - Toasts after saving
+- Hover colors for buttons, rows and sidebar items
+- Colored status labels (Slack's own screens seen here have none)
+- Data tables and summary number tiles (Slack's own screens seen here have none)
 
 ## Sources
 
