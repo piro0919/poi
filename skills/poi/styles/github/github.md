@@ -16,7 +16,7 @@ Use for the app shell, record lists, filter bars and settings pages.
 - The list is one Box (white, 1px border, 6px radius).
 - **Box header** (`#f6f8fa`, 48px): left — state toggles "**Open** 1,119" and "Closed 24,551" (selected one bold, each with a counter pill); right — filter menu buttons without borders: "Author ▾", "Labels ▾", "Projects ▾", … and a view toggle.
 - **Rows**: white, separated by 1px borders, padding 8–12px 16px.
-  - Left: a 16px state icon (green circle for open).
+  - Left: a 16px state icon (green circle for open). When the record has a state (active, trial, churned), the icon shows it in that state's color, as the issue icons do; a neutral gray icon for the record type (a person for every customer) is used only when the record has no state.
   - Title line: 16px weight 500 primary text, followed inline by small labels.
   - Meta line: 12px muted — "`#100938` · author opened 5h ago".
   - Right side: small icon + count for linked items or comments, muted.
@@ -35,6 +35,7 @@ Inside the list Box, centered, about 150px tall: a 24px muted line icon (a magni
 
 - Left sidebar of setting sections (~270px). Group headings are 12px weight 600 muted ("Access", "Code, planning, and automation"), with a 1px divider between groups. The selected item has a light gray fill (`rgba(129,139,152,.15)`) and a 4px blue bar on its left edge.
 - Main column fills the rest (about 920px at 1280px wide).
+- The first section's heading is the page heading ("General"); there is no separate "Settings" title above it. Compared side by side with a trial (2026-10-31), a 20px "Settings" title stacked over a 24px "General" read as a different product.
 - Sections start with a **24px weight 400** heading and a 1px `#d1d9e0` bottom border, then fields: label 14px weight 600 above, input below, 12px muted note under it.
 - A single field is saved with a default button right next to it ("Rename" beside the name input). Otherwise one "Save changes"/"Update" default (gray) button under each form section; the green button is only for creating things.
 - On/off options are checkboxes with a 14px weight 600 label and a 12px muted explanation below; related options are grouped in a bordered Box.

@@ -11,7 +11,7 @@ Use for the app shell, search results and item grids, item detail pages, account
 
 ## Search results and item grids
 
-- A thin bar under the shell: 「検索結果 50,000 以上 のうち 1-48件 "query"」 in 14px, with the query in bold orange-brown (value not measured); a small 「並べ替え：おすすめ」 dropdown at the right (white, radius 8px).
+- A thin bar under the shell: 「検索結果 50,000 以上 のうち 1-48件 "query"」 in 14px, with the query in bold `#c45500` (measured 2026-10-31); a small 「並べ替え：おすすめ」 dropdown at the right (white, radius 8px).
 - **Filter column** (about 240px) on the left: group headings 14px weight 700 (「配送」「価格」「ブランド名」), then checkbox rows or plain 14px links, one per line. Price ranges are links such as 「2,400～3,300￥」.
 - A row of rounded suggestion chips (44px tall, `#f0f2f2`-ish fill, a small image and a label) under 「検索を絞り込む」.
 - **Result grid** under a 20px weight 700 heading 「結果」: four columns of tiles. Each tile: the image on a very light grey `#f7f7f7` panel, then a 16px regular title clamped to a few lines, a star rating with a count link (12px), the price large (about 21px) with a small 「￥」, and a delivery line in 14px.

@@ -48,10 +48,21 @@ Use only when the app already has a dark mode. The dark theme this account uses:
 - **Toolbar** above the rows, 48px: a select-all checkbox with a small dropdown arrow, refresh icon, more (⋮) icon. On the right: "1–50 of 1,240" in 12px secondary text and previous/next chevron icon buttons. When rows are selected, the toolbar swaps to bulk actions as icon buttons.
 - **Rows** are single lines, 40px at default density (28px compact):
   1. checkbox, 2. star icon, 3. the primary name (~200px column, truncated), 4. title and a snippet on one line — `Title - snippet text…` with the snippet in secondary color, 5. date or time right-aligned (`16:59` for today, `Oct 29` for older).
+- Show the date only when the record already has one. Never hard-code today's date or the current year to decide between `16:59`, `Oct 29` and `10/29/25`; compute it at run time, or, when the app cannot (a statically rendered page), show every date in the older format.
 - **Unread / needs attention** rows: name, title and date in weight 700; everything else 400. This is the only place bold is used.
 - **Hover**: the row lifts with a faint shadow and the date is replaced by icon buttons (archive, delete, mark as read, snooze). These are UI-only and can be added without changing behavior; wire them only to actions the app already has.
 - **Selected** rows get a light blue fill.
 - No status pills. Category or status goes in a small label chip before the title, or as an icon.
+
+### What makes it read as Gmail at a glance
+
+Compared side by side with a trial (2026-10-30), these were what the trial lacked and the real list had. Keep them even when the list sits inside another product's shell.
+
+- **A checkbox at the start of every row**, before the name. Selecting rows is UI-only state, so add it even when the app has no bulk actions; the toolbar's select-all checkbox selects them all.
+- **The toolbar strip above the rows**, not a page-level filter bar: select-all checkbox with `arrow_drop_down` (a small All / None menu) on the left, and `more_vert` only when there are list actions to put in it; the range ("1–8 of 8") and previous/next chevrons on the right. Leave the chevrons disabled when everything fits on one page. Add `refresh` only when the app already has a way to reload the list. A filter field, if the app has one, goes in the header search or in the toolbar between the icons and the range.
+- **The star**, only when the app already has a field it can stand for (favorite, pinned, flagged). Without one, leave the star column out rather than show a star that does nothing.
+- **Near-invisible row dividers.** The real divider is the inset shadow above at 12% opacity. Even when the shell's palette wins, keep the divider at that strength (e.g. the shell's border color at about 40% opacity), not a full-strength 1px line.
+- **No heading or primary button between the toolbar and the rows.** Gmail's main action lives in the left nav. When the shell keeps a page heading and its button, they sit above the list surface, and the toolbar is the first thing inside it.
 
 ## Icons
 

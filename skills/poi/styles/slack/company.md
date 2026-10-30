@@ -100,6 +100,7 @@ Measured from a Japanese UI. The English UI was not captured.
 - Counts are written in words with the unit: 「13 名のメンバー」「252 件の結果」「1 件の返信」.
 - Labels for a group of settings end with a colon: 「通知を許可 :」「ステータスを設定 :」.
 - Notices say what to do and give a link: 「通知を受け取りたい場合には、Slack に許可を与えてください。通知を有効にする」.
+- No description line under a page title. The directory goes straight from 「ディレクトリ」 to its tabs and search field; drop sentences such as "Find and manage your customers here." (compared side by side with a trial, 2026-10-31).
 
 ## Not captured yet
 

@@ -16,6 +16,15 @@ Use for the app shell, feeds, directories, search results, create dialogs and pr
 
 The sidebar and window background change with the user's theme, so any clear theme works. Values measured in one custom light theme: sidebar text `rgba(3,54,64,.8)`, workspace name `#033640`, selected item `#611f69` fill with `#f9edff` text. When the app has no theme of its own, use these with a plain light sidebar.
 
+The window frame behind the top bar, the rail and the panel is a soft gradient, not a flat color. In the same theme, read from screenshots on 2026-10-31:
+
+| | Light | Dark |
+| --- | --- | --- |
+| Frame, top left | `#c1ecf0` (pale cyan) | `#173341` |
+| Frame, left and right edges at mid height | `#d6ecf5`, `#d1e7f1` | `#151e33`, `#151f33` |
+| Frame, top right and bottom left | `#eeedfc` (pale lavender) | `#1a0c26` |
+| Search field in the top bar | about `#85afb3` to `#9ab0b9`, a translucent darker tint over the gradient | about `#557179` to `#565e6d` |
+
 ## Directory and lists
 
 - Page title 18px weight 900 at the top left of the pane (「ディレクトリ」), tabs below it.
@@ -43,7 +52,7 @@ The sidebar and window background change with the user's theme, so any clear the
 - 520px wide. Title 22px weight 900 at the top left, close button at the top right.
 - Field label 15px weight 700 above a 44px input with 12px radius; a prefix (`#`) inside on the left and a remaining-character count on the right.
 - Errors appear under the field: a warning icon and one sentence in red; the field gets the red ring.
-- Footer: 「ステップ 1 / 2」 in 15px muted text on the left, the green 「次へ」 on the right (grey until the input is valid).
+- Footer: 「ステップ 1 / 2」 in 15px muted text on the left, the green 「次へ」 on the right. Slack greys it until the input is valid; keep it enabled when the app only validates on submit, or its errors would never show.
 
 ## Preferences
 

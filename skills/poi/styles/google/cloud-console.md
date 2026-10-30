@@ -61,8 +61,9 @@ The project pill, breadcrumb, "Learn" button and table checkbox column below app
 
 - Toolbar above the table: text buttons with a leading icon ("Grant access", "Remove access"), 28px tall, 14px weight 500, `#314f9b`. Disabled ones stay in place, greyed.
 - Filter row: a filter icon + "Filter" label followed by an inline input "Enter property name or value". Help (?) and column-display icon buttons on the far right.
-- Header row: `#e9eef6` fill, 14px weight 500 primary text, sort arrow next to the sorted column. Checkbox column first.
-- Body rows: 36–40px, 14px regular, white, 1px divider between rows. No zebra striping, no hover shadows. Edit is a pencil icon at the end of the row.
+- Any filter the app already has (a status select, a search box) moves into this filter row. Do not turn it into a row of filter chips above the table: the console's tables do not use chips, and a trial that did (2026-10-30) looked like Material, not like the console.
+- Header row: 29px tall (measured on IAM, 2026-10-30), `#e9eef6` fill, 14px weight 500 primary text, sort arrow next to the sorted column. Checkbox column first.
+- Body rows: 29px tall (measured on IAM, 2026-10-30), 14px regular, white, 1px divider between rows. The table is dense; a 40px row already reads as a different product. No zebra striping, no hover shadows. Edit is a pencil icon at the end of the row.
 - Names that open a detail page are links (`#3d60b8`).
 
 ## Forms
@@ -72,7 +73,10 @@ The project pill, breadcrumb, "Learn" button and table checkbox column below app
 - Field width ~480px, not full width.
 - Multi-step creation is a vertical stepper: numbered circles (filled navy for the current step, gray for later), step titles 22px regular with "(optional)" in secondary color.
 - Actions at the bottom left: primary filled ("Create and close") then outlined ("Cancel"), 32px tall, radius 12px, 14px weight 500, padding 0 12px, 8px gap.
-- Settings pages: sections with a 22px regular heading, a one-sentence description, and outlined buttons for each action ("Migrate", "Shut down"). Destructive actions are ordinary outlined buttons with a clear verb, not red blocks.
+- Settings pages (measured on IAM & Admin > Settings, 2026-10-30):
+  - The first group of fields sits right under the page title, with no heading of its own.
+  - Actions on the whole object ("Migrate", "Shut down"; in an app, deleting the workspace) are outlined buttons with a leading icon in the panel header, right after the title: 32px tall, radius 12px, 14px weight 500. They are not a separate "danger" section at the bottom of the page. Destructive actions are ordinary outlined buttons with a clear verb, not red blocks; the confirmation dialog carries the warning.
+  - Later sections have a 22px regular heading, a one-sentence description, and outlined buttons for their own actions. Sections are separated by space only, with no divider lines.
 
 ## Dashboards
 

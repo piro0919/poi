@@ -7,7 +7,7 @@ Read this first for any Google-ish request. These rules hold across Google's pro
 | Product | File | Use for |
 | --- | --- | --- |
 | Gmail | `gmail.md` | Lists of records people triage one by one: inboxes, tickets, leads, customers, notifications. Dense rows, bulk-select toolbar |
-| Google Search | `search.md` | Search boxes, search results pages, global search in a header, filter chips |
+| Google Search | `search.md` | Search boxes, search results pages, global search in a header, filter chips on a results page (not above a table; see `cloud-console.md`) |
 | Google Cloud console | `cloud-console.md` | Admin screens: data tables, settings pages, create/edit forms, left navigation with sections, dashboards |
 
 When in doubt for a B2B admin app, the app shell (header, left nav, page panel) follows `cloud-console.md`, and individual lists or search boxes borrow from Gmail or Search.
@@ -83,7 +83,7 @@ Measured from Cloud console, Search and Gmail screens.
 | No data found. | No customers match your search |
 | Are you sure? / This action cannot be undone. | Delete workspace? / This permanently deletes the workspace and all of its data. You can't undo this. |
 | Yes, Delete | Delete |
-| Danger Zone | (no scary heading; a plain section title such as "Delete workspace") |
+| Danger Zone | (no scary heading. In a Cloud console shell, a "Delete workspace" button in the panel header; see `cloud-console.md`. Elsewhere, a plain section title such as "Delete workspace") |
 | Manage your customers here. | (drop it, or one useful sentence with "Learn more") |
 | ← Back | (an arrow icon button left of the page title) |
 

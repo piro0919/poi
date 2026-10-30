@@ -5,7 +5,7 @@ Use for the app shell, feeds, lists of people or records, search results, settin
 ## App shell
 
 - Three columns centered in the window, all white, split by 1px `#eff3f4` vertical hairlines: left navigation (about 275px), main column (600px), right column (350px plus gutters).
-- **Left navigation**: a small icon mark at the top only if the app has its own, then items 58px tall: a line icon and a 20px label, the current page bold with a filled icon. Under the items, the full-width black 「ポストする」 style pill for the app's single main action, if there is one. The signed-in account sits at the bottom: avatar, name in bold, handle in secondary text, and a 「…」 icon.
+- **Left navigation**: a small icon mark at the top only if the app has its own, then items 58px tall (50px when the window is 800px tall; measured at 900px and 800px): a line icon and a 20px label, the current page bold with a filled icon. Under the items, the full-width black 「ポストする」 style pill for the app's single main action, if there is one. The signed-in account sits at the bottom: avatar, name in bold, handle in secondary text, and a 「…」 icon.
 - **Main column header**: sticky, white at 85% opacity. Either tabs only (home), or a back arrow icon button with the title (20px weight 700) and a 13px count under it (「4,381 件のポスト」), or a search pill with a 「…」 icon on the right.
 - **Right column**: a search pill at the top, then side cards (white, 1px `#eff3f4` border, radius 16px, padding 16px 20px) titled in 20px weight 800, with 「さらに表示」 links in `#1d9bf0` at the bottom.
 - Use the right column only for real secondary content such as filters; leave it out rather than fill it with promotions.
