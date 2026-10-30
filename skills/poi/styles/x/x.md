@@ -46,7 +46,7 @@ Measured at 768px in a desktop browser and at 375px in an iPhone browser.
   - Top bar at the top level: a 50px row with the avatar on the left, the app's own mark in the middle (never X's) and a secondary pill on the right, then a 50px tab row, white at 85% opacity, 101px in all.
   - Top bar on deeper pages: one 50px row with a back arrow, the title in bold and a 13px secondary line under it (「4,381 件のポスト」「@handle」).
   - Bottom tab bar: 50px tall, white, a 1px `#eff3f4` line on top, icon-only items of equal width (75px each for five), the current one filled. Put each top-level page of the app in it, up to five.
-  - The main action floats as a 53px `#1d9bf0` circle with a white icon (color read from a screenshot), about 19px from the right edge and 19px above the tab bar.
+  - The main action floats as a 53px blue circle with a white icon (read from a screenshot as about `#4a99e9`, lighter than the accent), about 19px from the right edge and 19px above the tab bar.
   - Lists, search results and settings run edge to edge with the same 16px row padding as on desktop. Settings shows the menu with its search pill as one page and each detail as another, with a back arrow.
 
 ## Empty states
