@@ -5,7 +5,7 @@ You say "make it Google-ish" or "make it Slack-ish", and Poi rewrites the screen
 
 The name comes from the Japanese "っぽい" (-ppoi), meaning "-ish" or "looks like", as in "Google-ppoi".
 
-Nothing is built yet. This file records what was agreed in a brainstorming session on 2026-10-30.
+This file records what was agreed in a brainstorming session on 2026-10-30. The skill lives in `skills/poi`, and the sample admin app used for trials in `examples/sample-admin`.
 
 ## Why
 

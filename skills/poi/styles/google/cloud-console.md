@@ -10,7 +10,7 @@ Use for the app shell of an admin product and for its tables, forms and settings
 | Page panel | `#ffffff` |
 | Table header row, subtle fills | `#e9eef6` |
 | Search field in header | `#dde3ea` |
-| Selected nav item | `#dbedfc` fill |
+| Selected nav item | `#dbedfc` fill and a 3–4px `#545f72` bar at the left edge |
 | Primary text | `#1b2e5d` (deep navy, not black) |
 | Secondary text, nav labels, icons-with-text | `#475569` |
 | Icon buttons | `#545f72` |
