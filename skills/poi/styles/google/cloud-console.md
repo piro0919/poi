@@ -9,18 +9,19 @@ Use for the app shell of an admin product and for its tables, forms and settings
 | App background (behind the panel, header, left nav) | `#f1f5fd` — a very light blue; nav and header sit directly on it |
 | Page panel | `#ffffff` |
 | Table header row, subtle fills | `#e9eef6` |
-| Search field in header | `#dde3ea` |
+| Search field in header | `#dde3ea`, 1px `#b7c3e0` border |
 | Selected nav item | `#dbedfc` fill and a 3–4px `#545f72` bar at the left edge |
 | Primary text | `#1b2e5d` (deep navy, not black) |
 | Secondary text, nav labels, icons-with-text | `#475569` |
 | Icon buttons | `#545f72` |
 | Links | `#3d60b8` |
 | Text and outlined buttons | `#314f9b` text |
-| Primary filled button | `#496cc3` background, `#ffffff` text |
+| Primary filled button | `#496cc3` background, `#ffffff` text. Hover lays white at 8% over the fill (measured on "Create and close") |
 | Outline border (buttons) | `#b7c3e0` |
-| Input border | `#8496c1`; focused 2px `#496cc3` |
+| Input border | `#8496c1`; focused 2px `#496cc3`, and the floating label turns `#314f9b` |
 | Dividers | `#b7c3e0` at 1px, or the panel edge |
-| Disabled | `#1b2e5d` at 38% |
+| Disabled | `#1b2e5d` at 38%. Disabled filled buttons (design tokens): fill `rgba(60,64,67,.12)`, label `rgba(60,64,67,.38)` |
+| Focus outline | `#4058b5` (design token) |
 | Hover / pressed fill | Neutral surfaces `rgba(60,64,67,.04)` / `rgba(60,64,67,.1)`; blue (link-colored) controls `rgba(12,103,223,.04)` / `rgba(12,103,223,.1)` |
 | Status: success | `#108463` text and icon; light fill `#e5f7f6` |
 | Status: warning | `#c64415`; light fill `#fff6d6` |
@@ -51,7 +52,8 @@ Use only when the app already has a dark mode. The console's dark theme, which f
 | Outline border (buttons) | `#50638b` |
 | Input border | `#b7c2e8`; focused 2px `#839cff`, and the floating label turns `#a8baff` |
 | Dividers | `#50638b` at 1px |
-| Disabled | `#f1f4f9` at 38% |
+| Disabled | `#f1f4f9` at 38%. Disabled filled buttons (design tokens): fill `rgba(232,234,237,.12)`, label `rgba(232,234,237,.38)` |
+| Focus outline | `#a9b8ff` (design token) |
 | Hover / pressed fill | Neutral `rgba(232,234,237,.04)` / `rgba(232,234,237,.1)`; blue controls `rgba(138,180,248,.04)` / `rgba(138,180,248,.1)` |
 | Status: success | `#6eebbf`; fill `#275f5c` |
 | Status: warning | `#ffdf82`; fill `#736b3f` |
@@ -65,7 +67,7 @@ Use only when the app already has a dark mode. The console's dark theme, which f
 
 The project pill, breadcrumb, "Learn" button and table checkbox column below appear only when the app has something behind them: workspaces to switch, nested pages, help to link to, bulk actions.
 
-- **Header**: 56–64px tall on the app background. Left: menu icon button, product name, a pill showing the current project/workspace (outlined, fully rounded). Center: a wide search field (`#dde3ea`, placeholder with shortcut, a magnifier and a 「検索」 label inside at the right). At 1280px it is about 704px wide (x 340–1044), 36px tall, with about 8px corners: a rounded rectangle, not a pill (read from a screenshot in the dark theme, 2026-10-31). Right: 40px circular icon buttons and the avatar.
+- **Header**: 56–64px tall on the app background. Left: menu icon button, product name, a pill showing the current project/workspace (outlined, fully rounded). Center: a wide search field (`#dde3ea`, placeholder with shortcut, a magnifier and a "Search" label inside at the right, 「検索」 in the Japanese UI). The placeholder in English: "Search (/) for resources, docs, products, and more". At 1280px it is about 704px wide (x 340–1044), 36px tall, with 12px corners: a rounded rectangle, not a pill (computed style, light, 2026-10-31). Focused, it keeps its fill and gets no ring; the console widens it into a panel of suggestions with its bottom corners squared. An app without suggestions leaves the field as it is on focus. Right: 40px circular icon buttons and the avatar.
 - **Breadcrumb** under the header in 14px secondary text: "IAM & Admin / IAM".
 - **Left nav** (~256px) on the app background: section name with an icon at the top (22px, regular), then collapsible groups. Group headers are 14px weight 500 with a chevron on the right. Items are 36px tall, 14px weight 500, `#475569`, 12px radius; the selected item gets the `#dbedfc` fill and a 3–4px `#545f72` bar at the left edge of the nav. Each item may show a "more" (⋮) icon on the right.
 - **Page panel**: white, top corners radius 20px, starts right of the nav with 16px gap and stops 16px short of the window's right edge (measured at 1280px wide: x 272–1264, top 81). It runs to the bottom of the window with no bottom margin. Content padding 24px.

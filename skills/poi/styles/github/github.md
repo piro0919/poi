@@ -15,6 +15,7 @@ Use for the app shell, record lists, filter bars and settings pages.
 - A full-width search input above the list showing the active query as text.
 - The list is one Box (white, 1px border, 6px radius).
 - **Box header** (`#f6f8fa`, 48px): left — state toggles "**Open** 1,119" and "Closed 24,551" (selected one bold, each with a counter pill); right — filter menu buttons without borders: "Author ▾", "Labels ▾", "Projects ▾", … and a view toggle.
+- **Filter menu** (what "Labels ▾" opens, measured signed out on primer/octicons Issues, 2026-10-31): a white panel 320px wide, radius 12px, the same shadow as dialogs, anchored under the button. Top: a 14px weight 600 title "Filter by label", then a full-width filter input ("Filter labels"). Below a 1px line, 32px rows: a checkbox, the option, and for labels a color dot. The hovered or keyboard-current row has the gray fill and the 4px blue bar on its left edge, as in the sidebar.
 - **Rows**: white, separated by 1px borders, padding 8–12px 16px.
   - Left: a 16px state icon (green circle for open). When the record has a state (active, trial, churned), the icon shows it in that state's color, as the issue icons do; a neutral gray icon for the record type (a person for every customer) is used only when the record has no state.
   - Title line: 16px weight 500 primary text, followed inline by small labels.

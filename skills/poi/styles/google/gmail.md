@@ -56,7 +56,7 @@ Error colors are declared as design tokens in the stylesheet but no error was se
 - **Toolbar** above the rows, 48px: a select-all checkbox with a small dropdown arrow, refresh icon, more (⋮) icon. On the right: "1–50 of 1,240" in 12px secondary text and previous/next chevron icon buttons. When rows are selected, the toolbar swaps to bulk actions as icon buttons.
 - **Rows** are single lines, 40px at default density (28px compact):
   1. checkbox, 2. star icon, 3. the primary name (~200px column, truncated), 4. title and a snippet on one line — `Title - snippet text…` with the snippet in secondary color, 5. date or time right-aligned (`16:59` for today, `Oct 29` for older).
-- Show the date only when the record already has one. Never hard-code today's date or the current year to decide between `16:59`, `Oct 29` and `10/29/25`; compute it at run time, or, when the app cannot (a statically rendered page), show every date in the older format.
+- Show the date only when the record already has one. Never hard-code today's date or the current year to decide between `16:59`, `Oct 29` and `10/29/25`; compute it at run time, or, when the app cannot (a statically rendered page), show every date in the form with the year, `10/29/25`, since `Oct 29` would claim the current year.
 - **Unread / needs attention** rows: name, title and date in weight 700; everything else 400. This is the only place bold is used.
 - **Hover**: the row lifts with a faint shadow and the date is replaced by icon buttons (archive, delete, mark as read, snooze). These are UI-only and can be added without changing behavior; wire them only to actions the app already has.
 - **Selected** rows get a light blue fill.
