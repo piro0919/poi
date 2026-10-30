@@ -99,7 +99,7 @@ X has no public icon set. Its icons are its own SVGs on a 24×24 grid, drawn as 
 
 ## Wording and tone
 
-Measured from the Japanese UI. The English UI was not captured.
+Measured from the Japanese UI, and from the English UI (below).
 
 - Short, plain and direct. Row titles are nouns or verb phrases: 「アカウント情報」「パスワードを変更する」「データのアーカイブをダウンロード」「アカウント削除」.
 - Every settings row has a one-sentence description ending in a period: 「パスワードはいつでも変更できます。」「電話番号やメールアドレスなどのアカウント情報を確認できます。」
@@ -110,9 +110,22 @@ Measured from the Japanese UI. The English UI was not captured.
 - Counts are numbers with 件: 「4,381 件のポスト」「171件のポスト」; follower counts put the number in bold before the word: 「**770** フォロー中」.
 - Placeholders are a question or a single word: 「いまどうしてる？」「検索」「検索設定」.
 
+### English
+
+Seen on 2026-10-31 with the account's display language switched to English for the visit and back to Japanese afterwards.
+
+- Sentence case everywhere, including settings rows: "Account information", "Change your password", "Download an archive of your data", "Deactivate your account", "Security and account access", "Privacy and safety". Section titles of a pane are title case: "Your Account".
+- Settings rows speak to the user as "your", and each description is one sentence ending in a period: "Change your password at any time.", "See your account information like your phone number and email address.", "Manage what information you allow other people on X to see." Some descriptions on the same page have no period ("Manage who can see your Spaces listening activity"); end with a period when the app's own text has none.
+- Section leads say what the page is for: "Manage what information you see and share on X." Put the app's own name in place of X.
+- Buttons are one word where possible: "Post", "Follow", "Save", "Discard", "Delete", "Cancel", "Show more".
+- Confirmations ask a short question, then explain the consequence in one sentence, then the action and Cancel: "Delete post?" / "This can’t be undone and it will be removed from your profile, the timeline of any accounts that follow you, and from search results." / "Delete" / "Cancel". Leaving the composer: "Save post?" / "You can save this to send later from your drafts." / "Save" / "Discard".
+- Toast: "Copied to clipboard", no period.
+- Empty search: "No results for "query"", then "Try searching for something else, or check your Search settings to see if they’re protecting you from potentially sensitive content." with "Search settings" as the link.
+- Counts: abbreviated with K ("N.NK posts") and a lowercase noun; profile counts put the number in bold before a capitalized word: "**N** Following", "**N** Followers".
+- Placeholders: "What’s happening?", "Search Settings". Curly apostrophes throughout (’).
+
 ## Not captured yet
 
-- The English UI wording
 - The toast after saving settings. Only the one after copying a link was seen
 - Colored status labels (X has none)
 - Data tables and summary number tiles (X has none)
@@ -120,5 +133,5 @@ Measured from the Japanese UI. The English UI was not captured.
 
 ## Sources
 
-Captured 2026-10-30 in a 1280×900 window, signed in, in the light theme with a Japanese UI: home, explore, people search, an empty search, a public profile, notifications, settings (account, privacy and safety), and the create-list dialog with the name field focused and filled to its limit. The dialog was closed without saving; nothing was posted or followed. Hover colors and the dialog backdrop were read as computed styles later the same day, with the page forced to the light color scheme in that tab only. Narrow layouts were captured the same day at 768×1024 in a desktop browser and at 375×812 with an iPhone user agent: home, people search, a public profile, settings and account settings. Only interface labels were copied; no post text, names or handles. The dark values were measured the same day as computed styles, with the page forced to the dark color scheme in that tab: home and account settings. On 2026-10-31, in both color schemes, as computed styles: the post composer was opened, 「poi」 typed and the dialog closed, and the draft discarded at the 「ポストを保存しますか？」 prompt; the delete confirmation of one of the account's own posts was opened and closed with 「キャンセル」 (the post was not deleted); a two-letter name was typed into the username settings to show its error, and the page was left without saving; a post's link was copied to show the toast. The same day, hover colors in dark were read on home by hovering a navigation item, a post and the post button.
+Captured 2026-10-30 in a 1280×900 window, signed in, in the light theme with a Japanese UI: home, explore, people search, an empty search, a public profile, notifications, settings (account, privacy and safety), and the create-list dialog with the name field focused and filled to its limit. The dialog was closed without saving; nothing was posted or followed. Hover colors and the dialog backdrop were read as computed styles later the same day, with the page forced to the light color scheme in that tab only. Narrow layouts were captured the same day at 768×1024 in a desktop browser and at 375×812 with an iPhone user agent: home, people search, a public profile, settings and account settings. Only interface labels were copied; no post text, names or handles. The dark values were measured the same day as computed styles, with the page forced to the dark color scheme in that tab: home and account settings. On 2026-10-31, in both color schemes, as computed styles: the post composer was opened, 「poi」 typed and the dialog closed, and the draft discarded at the 「ポストを保存しますか？」 prompt; the delete confirmation of one of the account's own posts was opened and closed with 「キャンセル」 (the post was not deleted); a two-letter name was typed into the username settings to show its error, and the page was left without saving; a post's link was copied to show the toast. The same day, hover colors in dark were read on home by hovering a navigation item, a post and the post button. Later that day, with the owner's permission, the display language was switched to English, the same composer, delete confirmation and copy-link steps were repeated (nothing was posted or deleted), settings, an empty search and the profile were read, and the language was switched back to Japanese.
 Icons were read the same day at 1280×900 on home navigation and account settings: SVG sizes, viewBox and colors as computed styles, shapes from a screenshot.
