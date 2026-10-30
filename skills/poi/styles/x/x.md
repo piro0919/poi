@@ -16,6 +16,8 @@ Use for the app shell, feeds, lists of people or records, search results, settin
 - A record row: 40px round avatar on the left; to its right the name (15px weight 700) and handle or meta (15px `#536471`) on one line joined with 「·」 (「@handle · 5時間」), then the body in 15px / 20px. A 「…」 icon button at the top right.
 - A person row adds a black 「フォロー」 pill (32px) at the right of the name line, and a short bio under it.
 - Action counters under a post are icon + number in 13px `#536471`, spread across the row.
+- X has no data tables or number tiles. Turn a table into record rows: the key field in bold, the rest joined with 「·」 in secondary text, and an amount or other key number in bold at the right of the first line. Turn summary tiles into one line of counts written like follower counts, the number in bold before its label (「**7** total · **$10,580** outstanding」).
+- X has no colored status labels. Put a status as plain secondary text in the row's meta line; only an error state such as overdue may use the red `#f4212e`.
 
 ## Tabs and search results
 
@@ -40,13 +42,14 @@ Use for the app shell, feeds, lists of people or records, search results, settin
 
 Measured at 768px in a desktop browser and at 375px in an iPhone browser.
 
+- **Between 1024px and 1279px** (measured 2026-10-31 on people search): the left navigation is already icons only, a column about 96–99px wide, while the main column stays 600px. The right column is still there: 350px at 1100px, narrowed to 290px at 1024px.
 - **Tablet (768px)**: the right column is gone. The left navigation collapses to icons only: a column about 115px wide, items 72×58px with a 26px icon centered and no label, the current page's icon filled. The main action becomes a 52px black circle with an icon instead of the wide pill, and the account shows as the avatar alone at the bottom. The main column keeps its 600px width and sits right after the navigation.
 - **Tablet settings**: only the menu pane shows, in the main column. Picking a row opens the detail as its own page with a back arrow.
 - **Phone (375px)**: there is no left navigation.
   - Top bar at the top level: a 50px row with the avatar on the left, the app's own mark in the middle (never X's) and a secondary pill on the right, then a 50px tab row, white at 85% opacity, 101px in all.
   - Top bar on deeper pages: one 50px row with a back arrow, the title in bold and a 13px secondary line under it (「4,381 件のポスト」「@handle」).
   - Bottom tab bar: 50px tall, white, a 1px `#eff3f4` line on top, icon-only items of equal width (75px each for five), the current one filled. Put each top-level page of the app in it, up to five.
-  - The main action floats as a 53px blue circle with a white icon (read from a screenshot as about `#4a99e9`, lighter than the accent), about 19px from the right edge and 19px above the tab bar.
+  - The main action floats as a 53px `#1d9bf0` circle (the accent; measured as a computed style on 2026-10-31) with a white icon and a soft shadow, `rgba(101,119,134,.2) 0 0 8px` plus `rgba(101,119,134,.25) 0 1px 3px`, about 19px from the right edge and 19px above the tab bar.
   - Lists, search results and settings run edge to edge with the same 16px row padding as on desktop. Settings shows the menu with its search pill as one page and each detail as another, with a back arrow.
 
 ## Empty states

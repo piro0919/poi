@@ -44,6 +44,7 @@ Flat, monochrome and airy. Everything is white with near-black text and one blue
 | Hover on left navigation items | `rgba(15, 20, 25, 0.1)` behind the icon and label, as a pill |
 | Hover on the black main button | `#272c30` |
 | Dialog backdrop | `rgba(180, 180, 182, 0.5)`, a neutral grey with no blue in it |
+| Destructive red | `#f4212e`, as text on the account deletion link (measured 2026-10-31, light theme). Its use as an error color in forms was not seen |
 
 ### Dark theme
 
@@ -99,7 +100,7 @@ Measured from the Japanese UI. The English UI was not captured.
 - Form error messages (the name field stops at its maximum length instead of showing an error)
 - Destructive confirmations
 - Toasts after saving
-- The error and destructive red
+- The red as an error color in forms, and the red in dark
 - Colored status labels (X has none)
 - Data tables and summary number tiles (X has none)
 - Placeholder avatars for records without a photo
