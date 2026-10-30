@@ -6,6 +6,11 @@ Use for the app shell, search results and item grids, item detail pages, account
 
 - **Top bar** (60px, `#131921`): on the left the app's own name, then a delivery-place style line (two lines, 12px light grey over 14px bold white) only if the app has such a setting. In the middle a wide search group 40px tall with 8px outer corners: a grey category dropdown on the left (`#e6e6e6`, 12px, caret), the white field, and a square `#febd69` button with a magnifier on the right. Inside the group only the outer corners are rounded. On the right, two-line links: a 12px greeting over a 14px bold label with a small caret (「アカウント＆リスト」), and 「返品もこちら / 注文履歴」.
 - **Second strip** (39px, `#232f3e`): a 「≡ すべて」 menu button in bold, then the app's main sections as white 14px links with padding 8px 5px. Use it for the app's top-level navigation instead of a sidebar. Amazon marks no current item in this strip; none was seen in any capture.
+- **The 「≡ すべて」 menu** (opened from the button and closed with its ✕ on 2026-10-31, at 1280px): a white panel 365px wide sliding over the page from the left, full height, shadow `4px 0 10px rgba(0,0,0,.4)`, over a `rgba(0,0,0,.8)` scrim. A 20px ✕ in the scrim just right of the panel closes it.
+  - On top, a 50px `#232f3e` row with a person icon and a bold white greeting. Show it only when the app has a signed-in user; never copy the account's name into the code.
+  - Groups under 18px / 24px weight 700 headings (「人気・新着の商品」「デジタルコンテンツ＆デバイス」「カテゴリー」), padding 13px 20px 7px 36px. A 1px `#d5dbdb` line with 5px margins separates groups.
+  - Rows are 14px regular `#111111`, 42px tall, padding 13px 20px 13px 36px, full panel width. A row that opens a sub-menu has a 10×14px chevron at its right edge. Hover fills the row `#eaeded`.
+  - Long groups end with a 「すべてを表示」 row with a down chevron.
 - There is no left sidebar on most pages. Content sits in a centered column (1000px for account pages: x 140–1140 at a 1280px window, title starting 14px under the second strip; measured 2026-10-31) or, for search results, full width with a filter column on the left.
 - Breadcrumbs above the title: 14px `#565959` links separated by 「›」, the current page in `#c45500`.
 
