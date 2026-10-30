@@ -77,7 +77,8 @@ Measured from a Japanese UI. The English UI was not captured.
 - Hover colors for buttons, rows and sidebar items
 - Colored status labels (Slack's own screens seen here have none)
 - Data tables and summary number tiles (Slack's own screens seen here have none)
+- Phone width (the browser version sends phones to the app)
 
 ## Sources
 
-Captured 2026-10-30 in a 1280×900 window, signed in to a work workspace with a Japanese UI: a channel, the directory (members and channels tabs), the create-channel dialog with a valid name and with a name error, preferences, and search with results and with no results. The account's preference is the dark theme; the light theme was shown by removing the dark theme class from the page in that tab only. The account setting was not changed, and nothing was created or sent. Only interface labels were copied; no message text, names or channel names.
+Captured 2026-10-30 in a 1280×900 window, signed in to a work workspace with a Japanese UI: a channel, the directory (members and channels tabs), the create-channel dialog with a valid name and with a name error, preferences, and search with results and with no results. The account's preference is the dark theme; the light theme was shown by removing the dark theme class from the page in that tab only. The account setting was not changed, and nothing was created or sent. Only interface labels were copied; no message text, names or channel names. A channel and the files page were also captured at 768×1024 the same day; at 375×812 with an iPhone user agent Slack only offered its app.

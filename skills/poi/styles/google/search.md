@@ -36,3 +36,15 @@ Use for search boxes (global search in a header, a search page), results lists, 
 ## Copy seen here
 
 "Search", "Search by voice", "Search by image", "I'm Feeling Lucky", "AI Mode", "All", "Images", "Videos", "News", "More", "Tools", "Show more", "Read more", "About this result", "Translate this page", "People also ask", "Sign in". Tooltips name the action plainly.
+
+## Narrow widths
+
+Measured at 768px in a desktop browser and at 375px in an iPhone browser. The signed-in account uses the dark theme, so only shape and size were taken from these captures, not color.
+
+- **Tablet (768px)**: the same results page, narrowed. The search box keeps its height and spans the width except for the icons on the right. Tabs stay in one row; results keep their desktop type.
+- **Phone (375px)**:
+  - Header: the app's own mark centered on the top row, with the account avatar and an icon button at the right.
+  - The search box on its own row, full width with 16px side margins, 44px tall, radius 25px.
+  - The tab row under it scrolls sideways, 48px tall, 13px labels.
+  - Results run full width with 16px margins. Titles are 22px. Related links become full-width rows 58px tall, 20px text, with a chevron at the right and a divider between rows, instead of chips.
+  - 「People also ask」 rows keep their desktop shape.

@@ -47,3 +47,10 @@ Values marked * were measured on Gmail's light surfaces (settings page); the res
 
 Japanese UI (measured): 「作成」「受信トレイ」「送信済み」「下書き」「もっと見る」「ラベル」「新しいラベルを作成」「メールを検索」「詳細検索オプション」「詳細を表示」「1–100 / 40,305 行」、settings such as 「表示件数:」「カーソルでの操作を有効にする」「返信時のデフォルトの動作:」.
 Icon-only controls always have a tooltip naming the action ("Refresh", "More email options", "Show search options").
+
+## Narrow widths
+
+Measured at 768px in a desktop browser.
+
+- **Tablet (768px)**: the desktop layout as is. The left nav stays at 256px, the list fills the rest, and each row wraps to two lines: the sender and time on top, then the subject and snippet. Settings tabs wrap onto several rows, and the setting labels in the left column wrap inside about 80px.
+- **Phone**: not captured. Gmail sends phone browsers to its app, and the browser version behind 「I am not interested」 is an old basic interface that does not represent Gmail today.

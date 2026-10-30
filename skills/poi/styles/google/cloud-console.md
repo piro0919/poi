@@ -62,3 +62,19 @@ The project pill, breadcrumb, "Learn" button and table checkbox column below app
 ## Copy seen here
 
 "Grant access", "Remove access", "View by principals", "View by roles", "Include Google-provided role grants", "Create and continue", "Create and close", "Cancel", "Enable APIs and services", "Learn", "Learn more", "Filter", "Enter property name or value", "Display name for this service account", "These permissions affect this project and all of its resources."
+
+## Narrow widths
+
+Measured at 768px in a desktop browser and at 375px in an iPhone browser.
+
+- **Tablet (768px)**:
+  - The left nav is gone; the menu icon in the header opens it. The page panel spans the width with the same 16px side gaps.
+  - The header keeps the product name and the project pill, and turns the search field into a search icon button.
+  - The breadcrumb, panel header and tabs keep their desktop shape.
+  - A table wider than the panel scrolls sideways inside the panel with its own scrollbar. The page itself does not scroll sideways.
+- **Phone (375px)**:
+  - Header 49px: the menu icon, the product name, then search, notification and ⋮ icon buttons. The project pill moves into the breadcrumb row as an icon with a caret.
+  - The panel keeps its rounded top corners, with 16px side gaps and content inset to about 40px from the window edge.
+  - Tabs that do not fit scroll sideways between ‹ and › arrow buttons.
+  - Checkboxes and helper actions stack under the title, each on its own line.
+  - Create forms keep the numbered steps down the left. Fields fill the panel width.

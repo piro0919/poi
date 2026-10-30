@@ -52,3 +52,10 @@ The sidebar and window background change with the user's theme, so any clear the
 - Right column: section title 18px weight 700, then groups separated by 1px `#dddddd` lines. Each group: a 15px weight 700 heading, one or two sentences of 15px `#454447` explanation, a 15px weight 700 label ending in a colon, then controls.
 - Selects are 36px white boxes with a 1px `#7c7a7f` border, radius 8px and a caret; time ranges read 「（開始） から （終了）」.
 - Checkbox rows: the checkbox and a 15px sentence, with key words in bold.
+
+## Narrow widths
+
+Measured at 768px in a desktop browser.
+
+- **Tablet (768px)**: the desktop layout, narrowed. The rail stays at 70px and the sidebar shrinks to 180px, truncating names with an ellipsis. The main pane takes the rest. The top bar keeps its back/forward icons and a shorter search field.
+- **Phone**: not captured. Slack has no phone layout in the browser; it sends phones to a page that offers the app.

@@ -87,7 +87,8 @@ No reference screen showed these, so there are no measured values. Keep them qui
 - Hover and pressed fills
 - Dialogs (radius, width, button order)
 - Record detail pages (label and value lists)
+- Gmail at phone width (phones are sent to the app)
 
 ## Sources
 
-Captured 2026-10-30 in a 1280×900 window: Google Search home (light, signed out), Google Search results (dark theme, signed in; layout and copy only), Gmail inbox and settings (dark theme, Japanese UI; layout and copy only), Google Cloud console IAM, APIs & Services, Create service account and IAM settings (light). Error message styling was not captured.
+Captured 2026-10-30 in a 1280×900 window: Google Search home (light, signed out), Google Search results (dark theme, signed in; layout and copy only), Gmail inbox and settings (dark theme, Japanese UI; layout and copy only), Google Cloud console IAM, APIs & Services, Create service account and IAM settings (light). Error message styling was not captured. Narrow layouts were captured the same day at 768×1024 in a desktop browser and at 375×812 with an iPhone user agent: Search results, Gmail inbox and settings, and the Cloud console IAM page and Create service account form.
