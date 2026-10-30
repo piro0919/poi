@@ -69,7 +69,13 @@ Use only when the app already has a dark mode. X's darkest background, "Lights o
 | Secondary (outlined) pill | transparent, 1px `#536471` border, primary text |
 | Destructive red and form errors | `#f4212e`, unchanged |
 
-Hover fills were not measured in dark.
+Hover in dark (measured on home, 2026-10-31):
+
+| Role | Value |
+| --- | --- |
+| Hover on rows (posts) | `rgba(255, 255, 255, 0.03)` |
+| Hover on left navigation items | `rgba(231, 233, 234, 0.1)` behind the icon and label, as a pill |
+| Hover on the near-white main button | `#d7dbdc` |
 
 ## Shape and controls
 
@@ -108,12 +114,11 @@ Measured from the Japanese UI. The English UI was not captured.
 
 - The English UI wording
 - The toast after saving settings. Only the one after copying a link was seen
-- Hover fills in dark
 - Colored status labels (X has none)
 - Data tables and summary number tiles (X has none)
 - Placeholder avatars for records without a photo
 
 ## Sources
 
-Captured 2026-10-30 in a 1280×900 window, signed in, in the light theme with a Japanese UI: home, explore, people search, an empty search, a public profile, notifications, settings (account, privacy and safety), and the create-list dialog with the name field focused and filled to its limit. The dialog was closed without saving; nothing was posted or followed. Hover colors and the dialog backdrop were read as computed styles later the same day, with the page forced to the light color scheme in that tab only. Narrow layouts were captured the same day at 768×1024 in a desktop browser and at 375×812 with an iPhone user agent: home, people search, a public profile, settings and account settings. Only interface labels were copied; no post text, names or handles. The dark values were measured the same day as computed styles, with the page forced to the dark color scheme in that tab: home and account settings. On 2026-10-31, in both color schemes, as computed styles: the post composer was opened, 「poi」 typed and the dialog closed, and the draft discarded at the 「ポストを保存しますか？」 prompt; the delete confirmation of one of the account's own posts was opened and closed with 「キャンセル」 (the post was not deleted); a two-letter name was typed into the username settings to show its error, and the page was left without saving; a post's link was copied to show the toast.
+Captured 2026-10-30 in a 1280×900 window, signed in, in the light theme with a Japanese UI: home, explore, people search, an empty search, a public profile, notifications, settings (account, privacy and safety), and the create-list dialog with the name field focused and filled to its limit. The dialog was closed without saving; nothing was posted or followed. Hover colors and the dialog backdrop were read as computed styles later the same day, with the page forced to the light color scheme in that tab only. Narrow layouts were captured the same day at 768×1024 in a desktop browser and at 375×812 with an iPhone user agent: home, people search, a public profile, settings and account settings. Only interface labels were copied; no post text, names or handles. The dark values were measured the same day as computed styles, with the page forced to the dark color scheme in that tab: home and account settings. On 2026-10-31, in both color schemes, as computed styles: the post composer was opened, 「poi」 typed and the dialog closed, and the draft discarded at the 「ポストを保存しますか？」 prompt; the delete confirmation of one of the account's own posts was opened and closed with 「キャンセル」 (the post was not deleted); a two-letter name was typed into the username settings to show its error, and the page was left without saving; a post's link was copied to show the toast. The same day, hover colors in dark were read on home by hovering a navigation item, a post and the post button.
 Icons were read the same day at 1280×900 on home navigation and account settings: SVG sizes, viewBox and colors as computed styles, shapes from a screenshot.
