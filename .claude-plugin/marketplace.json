@@ -1,0 +1,11 @@
+{
+  "name": "poi",
+  "owner": { "name": "piro0919" },
+  "plugins": [
+    {
+      "name": "poi",
+      "source": "./",
+      "description": "Restyle your app's UI to feel like a well-known product: color, spacing and wording."
+    }
+  ]
+}
