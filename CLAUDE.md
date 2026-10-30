@@ -47,6 +47,10 @@ Poi exists to close that gap.
   - Screenshots: for the overall impression, layout and density
   - Page contents: the actual color values, spacing and font sizes in use, and the visible copy verbatim. Screenshots alone would leave these values as guesses
   - The cost is more material to sift through when choosing which values actually define the company's feel
+- Responsive support: the result must hold at desktop (1280px), tablet (768px) and mobile (375px), and look like the company at each width, not just stay unbroken (decided 2026-10-30). This takes three things:
+  - The sample admin app is made responsive first, so a trial can tell whether Poi kept or broke it
+  - SKILL.md tells Poi not to break the widths the app already supports, and to check the result at all three widths
+  - Every product's reference screens are captured at 768px and 375px too, and the narrow layouts go into its rule document (e.g. X's icon-only navigation and bottom tab bar). This covers all products, Google Cloud console and github.com included, since they are the first picks for admin screens. The cost is about three times the capture work per product
 - After rewriting, Poi does not report which product it used for each screen or component. The result is visible by opening the screens, and a long explanation tends to go unread. For now; may be revisited
 
 ## Postponed
