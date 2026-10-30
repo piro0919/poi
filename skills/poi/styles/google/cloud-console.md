@@ -49,10 +49,11 @@ Use only when the app already has a dark mode. The console's dark theme, which f
 
 The project pill, breadcrumb, "Learn" button and table checkbox column below appear only when the app has something behind them: workspaces to switch, nested pages, help to link to, bulk actions.
 
-- **Header**: 56–64px tall on the app background. Left: menu icon button, product name, a pill showing the current project/workspace (outlined, fully rounded). Center: a wide rounded search field (`#dde3ea`, 9999px radius, placeholder with shortcut). Right: 40px circular icon buttons and the avatar.
+- **Header**: 56–64px tall on the app background. Left: menu icon button, product name, a pill showing the current project/workspace (outlined, fully rounded). Center: a wide search field (`#dde3ea`, placeholder with shortcut, a magnifier and a 「検索」 label inside at the right). At 1280px it is about 704px wide (x 340–1044), 36px tall, with about 8px corners: a rounded rectangle, not a pill (read from a screenshot in the dark theme, 2026-10-31). Right: 40px circular icon buttons and the avatar.
 - **Breadcrumb** under the header in 14px secondary text: "IAM & Admin / IAM".
 - **Left nav** (~256px) on the app background: section name with an icon at the top (22px, regular), then collapsible groups. Group headers are 14px weight 500 with a chevron on the right. Items are 36px tall, 14px weight 500, `#475569`, 12px radius; the selected item gets the `#dbedfc` fill and a 3–4px `#545f72` bar at the left edge of the nav. Each item may show a "more" (⋮) icon on the right.
 - **Page panel**: white, top corners radius 20px, starts right of the nav with 16px gap and stops 16px short of the window's right edge (measured at 1280px wide: x 272–1264, top 81). It runs to the bottom of the window with no bottom margin. Content padding 24px.
+  - Keep the 16px strip of app background between the nav and the panel even when the app has no breadcrumb and the panel moves up under the header. The light blue showing on both sides is what makes the panel read as a raised sheet; a trial that put the panel flush against the nav (x 256) lost it (2026-10-31).
 - Selected nav items keep weight 500 like the rest; only the fill and the left bar change.
 - **Panel header**: page title 18px weight 500, optional back arrow icon button on its left, one outlined helper button ("Learn") on the right.
 - **Tabs** below the title: 14px weight 500, link blue text, the active tab has a 2–3px underline in the same blue; a 1px divider runs under the tab row.
