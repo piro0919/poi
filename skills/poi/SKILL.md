@@ -40,6 +40,7 @@ Rewrite the copy too: button labels, headings, empty states, errors, confirmatio
 - **Do not add controls that promise features the app lacks.** Skip parts of a product's layout that have no backing data or action in this app: a workspace switcher, breadcrumbs, a "Learn" button, stars, hover actions, bulk-select checkboxes with no bulk actions. An inert control looks broken.
 - Swapping a control for another one that holds the same state and options is allowed (a status `<select>` becoming filter chips). Do not change input types or validation attributes: `type="text"` to `type="email"` adds the browser's own validation and changes behavior.
 - Keep the meaning of every piece of copy. Change how it is said, not what it says.
+- Keep the app's own language. Example copy in a rule document written in another language shows the tone; carry the tone over instead of switching languages.
 - Keep the user's own product name and domain terms.
 
 ## 5. Finish
