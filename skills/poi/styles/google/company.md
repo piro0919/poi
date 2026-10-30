@@ -37,7 +37,7 @@ Quiet, roomy and flat. White or very light tinted surfaces, almost no shadows, s
 
 ## Color roles
 
-Product files give exact palettes. Shared roles:
+Product files give exact palettes, light and dark. Shared roles:
 
 - Primary action: filled blue button, white text. One per view.
 - Secondary actions: outlined (1px light border) or text-only buttons in the same blue.
@@ -90,4 +90,4 @@ No reference screen showed these, so there are no measured values. Keep them qui
 
 ## Sources
 
-Captured 2026-10-30 in a 1280×900 window: Google Search home (light, signed out), Google Search results (dark theme, signed in; layout and copy only), Gmail inbox and settings (dark theme, Japanese UI; layout and copy only), Google Cloud console IAM, APIs & Services, Create service account and IAM settings (light). Error message styling was not captured. Narrow layouts were captured the same day at 768×1024 in a desktop browser and at 375×812 with an iPhone user agent: Search results, Gmail inbox and settings, and the Cloud console IAM page and Create service account form.
+Captured 2026-10-30 in a 1280×900 window: Google Search home (light, signed out), Google Search results (dark theme, signed in; layout and copy only), Gmail inbox and settings (dark theme, Japanese UI; layout and copy only), Google Cloud console IAM, APIs & Services, Create service account and IAM settings (light). Error message styling was not captured. Narrow layouts were captured the same day at 768×1024 in a desktop browser and at 375×812 with an iPhone user agent: Search results, Gmail inbox and settings, and the Cloud console IAM page and Create service account form. Dark palettes were measured the same day at 1280×900: Search home and results and the Cloud console IAM page and Create service account form with the browser set to dark, and the Gmail inbox in the account's own dark theme. Nothing was created.

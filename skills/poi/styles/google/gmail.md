@@ -19,6 +19,23 @@ Values marked * were measured on Gmail's light surfaces (settings page); the res
 | Selected nav item | `#d3e3fd` fill |
 | Compose / main action button | `#c2e7ff` fill, `#001d35` text |
 
+## Palette (dark)
+
+Use only when the app already has a dark mode. The dark theme this account uses: neutral greys with no blue tint, and white text at reduced opacity instead of grey colors. Values marked † were read from a screenshot; the rest are computed styles.
+
+| Role | Value |
+| --- | --- |
+| App background (header, left nav) | `#111111` |
+| List surface | `#161616`† (rows are `rgba(0,0,0,.5)` laid over a lighter panel) |
+| List toolbar strip | `#2c2c2c`† |
+| Search field | `#474747`†, fully rounded |
+| Primary text | `rgba(255,255,255,.87)`; nav labels and headings white |
+| Secondary text (senders and subjects on read rows, counts) | `rgba(255,255,255,.7)` |
+| Muted text (dates) | `rgba(255,255,255,.5)` |
+| Row divider | inset shadow `0 -1px 0 0 rgba(255,255,255,.12)` |
+| Selected nav item | `rgba(255,255,255,.3)` fill, radius 0 12px 12px 0 |
+| Compose / main action button | white fill, `#5f6368` text, shadow `0 1px 2px rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15)`, radius 16px |
+
 ## Layout
 
 - **Header** 64px: menu icon, product name, then a large search field (fully rounded, ~720px wide, 48px tall, filled background, search icon on the left, a filter/options icon on the right). Help, settings and app icons on the right, 40px circles.

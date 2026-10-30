@@ -24,6 +24,27 @@ Use for the app shell of an admin product and for its tables, forms and settings
 
 Everything is tinted navy-blue. Avoid pure black text and neutral grays.
 
+## Palette (dark)
+
+Use only when the app already has a dark mode. The console's dark theme, which follows the browser's dark setting. Slate greys with a blue tint, never black; the panel is lighter than the app background around it.
+
+| Role | Value |
+| --- | --- |
+| App background (behind the panel, header, left nav) | `#282c32` |
+| Page panel | `#353b43` |
+| Table header row | `#414d5e`, with a 1px `#50638b` line under it |
+| Search field in header | `#4c4f5c`, 1px `#50638b` border |
+| Selected nav item | `#2a3f5e` fill and a 4px `#9ca6b2` bar at the left edge |
+| Primary text | `#f1f4f9` |
+| Secondary text, nav labels, icons | `#b9c0cc` |
+| Links | `#e5ebff`, underlined inside sentences |
+| Text and outlined buttons | `#a8baff` text |
+| Primary filled button | `#839cff` background, `#1b2e5d` text |
+| Outline border (buttons) | `#50638b` |
+| Input border | `#b7c2e8`; focused 2px `#839cff`, and the floating label turns `#a8baff` |
+| Dividers | `#50638b` at 1px |
+| Disabled | `#f1f4f9` at 38% |
+
 ## Layout
 
 The project pill, breadcrumb, "Learn" button and table checkbox column below appear only when the app has something behind them: workspaces to switch, nested pages, help to link to, bulk actions.

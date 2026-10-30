@@ -14,6 +14,22 @@ Use for search boxes (global search in a header, a search page), results lists, 
 | Search box border | `#dadce0` 1px |
 | Divider | `#dadce0` |
 
+## Palette (dark)
+
+Use only when the app already has a dark mode. A dark blue-grey, not black.
+
+| Role | Value |
+| --- | --- |
+| Background | `#22242a` |
+| Primary text | `#e8eaf2` |
+| Secondary text (snippets) | `#9e9e9e`; site URLs `#bdc1c6` |
+| Result titles and links | `#99c3ff` |
+| Search box | `#363840` fill, no border, no shadow, radius 26px |
+| Divider (under the tab row, between related links) | `#444746` 1px |
+| Active tab | `#e8eaf2` label with a 3px `#e8eaf2` underline |
+
+Chips and the primary filled button were not seen in dark.
+
 ## Search box
 
 - Fully rounded (radius 24–26px), 48–50px tall, white, 1px `#dadce0` border, and a soft shadow `0 3px 10px rgba(31,31,31,.08)` that grows slightly on hover and focus.
