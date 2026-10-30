@@ -35,6 +35,10 @@ Use only when the app already has a dark mode. The dark theme this account uses:
 | Row divider | inset shadow `0 -1px 0 0 rgba(255,255,255,.12)` |
 | Selected nav item | `rgba(255,255,255,.3)` fill, radius 0 12px 12px 0 |
 | Compose / main action button | white fill, `#5f6368` text, shadow `0 1px 2px rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15)`, radius 16px |
+| Row hover | shadow `inset 1px 0 0 rgba(255,255,255,.2), inset -1px 0 0 rgba(255,255,255,.2), 0 0 4px 0 rgba(95,99,104,.6), 0 0 6px 2px rgba(95,99,104,.6)`, no fill change |
+| Selected row | `#174ea6` fill, white text, dates `rgba(255,255,255,.5)` |
+
+Error colors are declared as design tokens in the stylesheet but no error was seen on screen: `#b3261e` with a `#f9dedc` container in light, `#f2b8b5` with a `#8c1d18` container in dark.
 
 ## Layout
 
@@ -81,9 +85,28 @@ Material Symbols, **outlined** everywhere, with thin strokes. The header icons a
 - Options are radio buttons with a bold label and a plain explanation after a dash: "**Enable hover actions** - Quickly gain access to archive, delete, mark as read, and snooze controls on hover."
 - Save and Cancel buttons sit at the bottom of the page.
 
+## Dialogs
+
+Measured on 「新しいラベル」 (create label), opened and cancelled on 2026-10-31. The dialog stayed light while the account's dark theme was on.
+
+- White surface, radius 28px, no shadow, about 500px wide, centered over a `rgba(0,0,0,.32)` scrim.
+- Title 24px / 32px weight 400, `#1f1f1f`. Field labels above the fields, 14px / 20px, `#444746`, ending in a colon.
+- Outlined text field 56px tall, radius 4px, 1px `#747775` outline, 16px text; focused, the outline turns `#0b57d0` at 3px.
+- Actions at the bottom right, both 40px tall, radius 20px, 14px weight 500: a text button 「キャンセル」 in `#0b57d0` (padding 0 12px), then the filled confirming button 「作成」 (`#0b57d0`, white text, padding 0 24px).
+- The confirming button stays disabled until the required field has text: `#f1f3f4` fill, text `rgba(31,31,31,.38)`.
+
+## Toast
+
+Read from Gmail's stylesheet, not seen on screen; no dark variant of the rule was found while the dark theme was on.
+
+- Bottom left, 24px from the window edges, max 640px wide, min 52px tall, padding 8px 52px 8px 24px.
+- White, radius 4px, shadow `0 1px 3px 0 rgba(60,64,67,.3), 0 4px 8px 3px rgba(60,64,67,.15)`. Message 14px, `#5f6368`.
+- An action as a text button: `#1a73e8`, 14px weight 500, 36px tall, padding 0 8px, radius 4px; hover fill `rgba(66,133,244,.04)`, pressed `rgba(66,133,244,.15)`.
+- A 20px close icon 16px from the right edge.
+
 ## Copy seen here
 
-Japanese UI (measured): 「作成」「受信トレイ」「送信済み」「下書き」「もっと見る」「ラベル」「新しいラベルを作成」「メールを検索」「詳細検索オプション」「詳細を表示」「1–100 / 40,305 行」、settings such as 「表示件数:」「カーソルでの操作を有効にする」「返信時のデフォルトの動作:」.
+Japanese UI (measured): 「作成」「受信トレイ」「送信済み」「下書き」「もっと見る」「ラベル」「新しいラベルを作成」「メールを検索」「詳細検索オプション」「詳細を表示」「1–100 / 40,305 行」、settings such as 「表示件数:」「カーソルでの操作を有効にする」「返信時のデフォルトの動作:」, and in the create label dialog 「新しいラベル」「新しいラベル名を入力してください:」「次のラベルの下位にネスト:」「親を選択してください...」「キャンセル」「作成」.
 Icon-only controls always have a tooltip naming the action ("Refresh", "More email options", "Show search options").
 
 ## Narrow widths
