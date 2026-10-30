@@ -27,6 +27,25 @@ Poi exists to close that gap.
 - Which product to imitate is decided by the AI from what the service in the repository does. It may differ per screen or per component, e.g. a list that looks like Gmail and a search box that looks like Google Search
 - The goal is to resemble the company, not to become it
 - Distributed as a skill for Claude Code / Cursor
+- Do not copy logos or company names; transfer only color, spacing and wording. This keeps the tool from being used to build phishing look-alikes, and fits the goal of resembling the company rather than becoming it
+- Never change existing behavior: data fetching, saving and navigation stay as they are. Adding UI-only state that lives entirely inside a screen (open/closed, selected row, hover actions) is allowed, because without it a list cannot really feel like Gmail. This is a first attempt and may be tightened after trying it
+- Styles are extracted ahead of time by the maintainer and shipped inside the skill as one set of rule documents per company. They are not extracted on the user's machine at run time: many reference screens (Gmail, Google Cloud console) require a login, and run-time extraction would make the result vary from run to run. The cost is that a document has to be re-extracted when the company redesigns its screens
+- Each company's rules come in two layers:
+  - Company-wide rules: tone, how buttons are worded, how errors are written; things that hold across all of that company's products. Always read
+  - Per-product rules: the shapes of screens and components, e.g. the Gmail list, the Search box, tables in the Google Cloud console. Read only for the products the AI matches to the screen at hand
+  - The cost is that adding a company means extracting one document per product, not just one per company
+- Products covered first, chosen for the lists, search, tables and settings screens that B2B SaaS admin UIs are made of:
+  - Google: Gmail, Google Search, Google Cloud console. Editing tools such as Docs and Sheets are left out because their shape is far from a SaaS screen. Google Workspace admin console is a candidate to swap in for the Cloud console
+  - Slack: the Slack app only. It is close to a single product, so its product rules overlap heavily with the company-wide ones
+  - GitHub: github.com only. Issue and pull request lists and repository settings serve as admin-screen references
+- Scope of one run: with no scope given, Poi rewrites every screen in the repository, so it can look across all of them when assigning products (the list to Gmail, the search box to Search). When the user names a scope, such as "make only the settings screen Slack-ish", it rewrites only that
+- Any stack is supported. Rule documents are written independently of tools: color values, spacing sizes, corner radii, example copy. Fitting them to the repository's own stack (React or Vue, Tailwind or plain CSS) is left to Claude Code / Cursor, so adding a company or product does not mean writing one document per stack. The cost is that how closely the result resembles the original may vary by stack
+- Quality is checked against a small sample B2B SaaS admin app kept in this repository, with list, search, table and settings screens. Poi is run on it per company, and the result is compared side by side with the reference product's screens. After a rule document changes, it is run again on the same sample to see whether it improved. The side-by-side images can also go in the README. Start with one sample; the risk is overfitting to it, which can later be addressed with samples on other stacks or real open-source admin apps
+- How the maintainer extracts a style: capture the real screens in two forms, have Claude write the rules from them, then review and fix them by hand. Screens that need a login are opened in a logged-in browser
+  - Screenshots: for the overall impression, layout and density
+  - Page contents: the actual color values, spacing and font sizes in use, and the visible copy verbatim. Screenshots alone would leave these values as guesses
+  - The cost is more material to sift through when choosing which values actually define the company's feel
+- After rewriting, Poi does not report which product it used for each screen or component. The result is visible by opening the screens, and a long explanation tends to go unread. For now; may be revisited
 
 ## Postponed
 
@@ -34,6 +53,4 @@ Poi exists to close that gap.
 
 ## Not decided
 
-- Do not copy logos or company names; transfer only color, spacing and wording. Proposed so the tool cannot be used to build phishing look-alikes
-- Touch only appearance and copy; never change behavior or logic. Proposed so users can let it rewrite code with confidence
 - Package name on npm: `poi` is taken by an unrelated bundler (last updated 2022-06). Not needed as long as Poi ships only as a skill
