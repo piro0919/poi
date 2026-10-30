@@ -41,6 +41,28 @@ Dense, precise and engineered. Small type (lots of 12px metadata), thin gray bor
 | Active tab underline | `#fd8c73` (coral) |
 | Counter pill | `rgba(129,139,152,.12)` fill, primary text |
 
+### Dark theme
+
+Use only when the app already has a dark mode. GitHub's default dark theme ("Dark"). The structure stays the same; the header strip turns darker than the page instead of lighter.
+
+| Role | Value |
+| --- | --- |
+| Page background | `#0d1117` |
+| Header strip (global header plus tabs) | `#010409`, the darkest surface, with a 1px `#3d444d` bottom border |
+| Box headers, settings boxes, inputs on settings forms | `#151b23`. Rows inside a list box stay on the page background |
+| Primary text | `#f0f6fc` |
+| Muted text | `#9198a1` |
+| Links and accent text | `#4493f8` |
+| Borders | `#3d444d` 1px (`rgba(61,68,77,.7)` between rows) |
+| Hover / selected fill, counter pill | `rgba(101,108,118,.2)` |
+| Primary ("create") button | `#238636` background, white text, border `rgba(255,255,255,.15)` |
+| Default button | `#212830` background, `#f0f6fc` text, `#3d444d` border |
+| Success / open state | `#3fb950` |
+| Danger | `#f85149` text; filled danger `#da3633`; light fill `rgba(248,81,73,.1)` with a `rgba(248,81,73,.4)` border on labels |
+| Accent fill (info) | `rgba(56,139,253,.1)` |
+| Focus ring | `#1f6feb` |
+| Active tab underline | `#f78166` |
+
 ## Shape and controls
 
 - Radius **6px** on buttons, inputs, boxes and menus. Pills (counters, labels) are fully rounded.
@@ -95,4 +117,4 @@ No reference screen showed these, so there are no measured values. Keep them in 
 
 ## Sources
 
-Captured 2026-10-30 in a 1280×900 window, light theme (narrow layouts at 768×1024 and 375×812 the same day: the Issues list, repository settings and the New issue form): vercel/next.js Issues and Pull requests lists, and signed in, a repository's Issues (empty), New issue form, General settings with its Danger Zone and delete dialog, Branches settings, profile settings, and the New repository form with a name error. The signed-in account is set to the dark theme, so the light values were taken by loading GitHub's own light theme stylesheet in that tab; the account setting was not changed. Screenshots of this look slightly desaturated; the hex values above are computed styles, not pixel reads.
+Captured 2026-10-30 in a 1280×900 window, light theme (narrow layouts at 768×1024 and 375×812 the same day: the Issues list, repository settings and the New issue form): vercel/next.js Issues and Pull requests lists, and signed in, a repository's Issues (empty), New issue form, General settings with its Danger Zone and delete dialog, Branches settings, profile settings, and the New repository form with a name error. The signed-in account is set to the dark theme, so the light values were taken by loading GitHub's own light theme stylesheet in that tab; the account setting was not changed. Screenshots of this look slightly desaturated; the hex values above are computed styles, not pixel reads. The dark values were measured the same day from the Issues list and General settings in the account's own dark theme, as computed styles.
