@@ -1,12 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
-import { useState } from "react";
-import { type Customer, customers as seed } from "@/lib/data";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
+import { type Customer, findCustomer, customers as seed } from "@/lib/data";
 import { StatusBadge } from "./status-badge";
 
 export function CustomerList() {
+  const router = useRouter();
   const searchParams = useSearchParams();
   const [customers, setCustomers] = useState(seed);
   const urlQuery = searchParams.get("q") ?? "";
@@ -43,7 +44,13 @@ export function CustomerList() {
       <input
         type="text"
         value={query}
-        onChange={(event) => setQuery(event.target.value)}
+        onChange={(event) => {
+          // Keep the URL in step, so searching the same words from the header again still applies.
+          const value = event.target.value;
+          setQuery(value);
+          setLastUrlQuery(value);
+          router.replace(value ? `/customers?q=${encodeURIComponent(value)}` : "/customers", { scroll: false });
+        }}
         placeholder="Filter customers..."
         className="w-full rounded-lg sm:w-72 border border-gray-300 dark:border-gray-700 px-4 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-200 dark:focus:ring-indigo-900"
       />
@@ -53,12 +60,9 @@ export function CustomerList() {
           <div className="p-12 text-center text-sm text-gray-500 dark:text-gray-400">No data found.</div>
         ) : (
           <ul className="divide-y divide-gray-200 dark:divide-gray-800">
-            {filtered.map((customer) => (
-              <li key={customer.id}>
-                <Link
-                  href={`/customers/${customer.id}`}
-                  className="flex items-center justify-between gap-4 px-4 py-4 hover:bg-gray-50 dark:hover:bg-gray-800 sm:px-6"
-                >
+            {filtered.map((customer) => {
+              const content = (
+                <>
                   <div className="min-w-0">
                     <div className="truncate font-semibold">{customer.name}</div>
                     <div className="truncate text-sm text-gray-500 dark:text-gray-400">
@@ -69,9 +73,26 @@ export function CustomerList() {
                     <span className="hidden text-sm text-gray-500 dark:text-gray-400 sm:inline">{customer.plan}</span>
                     <StatusBadge status={customer.status} />
                   </div>
-                </Link>
-              </li>
-            ))}
+                </>
+              );
+              const rowClassName = "flex items-center justify-between gap-4 px-4 py-4 sm:px-6";
+
+              return (
+                <li key={customer.id}>
+                  {/* Customers added here live only in this page's state, so they have no detail page. */}
+                  {findCustomer(customer.id) ? (
+                    <Link
+                      href={`/customers/${customer.id}`}
+                      className={`${rowClassName} hover:bg-gray-50 dark:hover:bg-gray-800`}
+                    >
+                      {content}
+                    </Link>
+                  ) : (
+                    <div className={rowClassName}>{content}</div>
+                  )}
+                </li>
+              );
+            })}
           </ul>
         )}
       </div>
@@ -100,6 +121,14 @@ function AddCustomerDialog({
   const [company, setCompany] = useState("");
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
+
+  useEffect(() => {
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") onCancel();
+    };
+    document.addEventListener("keydown", closeOnEscape);
+    return () => document.removeEventListener("keydown", closeOnEscape);
+  }, [onCancel]);
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black/50 p-4">

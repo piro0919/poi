@@ -22,6 +22,8 @@ export function TopBar({ menuOpen, onMenuClick }: { menuOpen: boolean; onMenuCli
         onSubmit={(event) => {
           event.preventDefault();
           router.push(`/customers?q=${encodeURIComponent(query)}`);
+          // The customer list's filter takes over the words from here.
+          setQuery("");
         }}
         className="w-full max-w-md min-w-0 flex-1"
       >
