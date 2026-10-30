@@ -100,7 +100,7 @@ export function SettingsForm() {
       </div>
 
       {confirmDelete && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black/50">
+        <div className="fixed inset-0 flex items-center justify-center bg-black/50 p-4">
           <div className="w-full max-w-sm space-y-4 rounded-xl bg-white p-6 shadow-xl">
             <h2 className="text-lg font-bold">Are you sure?</h2>
             <p className="text-sm text-gray-600">This action cannot be undone.</p>

@@ -18,15 +18,15 @@ export function CustomerList() {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <div>
+      <div className="flex items-center justify-between gap-4">
+        <div className="min-w-0">
           <h1 className="text-2xl font-bold">Customers</h1>
           <p className="text-sm text-gray-500">Manage your customers here.</p>
         </div>
         <button
           type="button"
           onClick={() => setShowForm(true)}
-          className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-indigo-700"
+          className="shrink-0 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-indigo-700"
         >
           + Add Customer
         </button>
@@ -37,7 +37,7 @@ export function CustomerList() {
         value={query}
         onChange={(event) => setQuery(event.target.value)}
         placeholder="Filter customers..."
-        className="w-72 rounded-lg border border-gray-300 px-4 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+        className="w-full rounded-lg sm:w-72 border border-gray-300 px-4 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-200"
       />
 
       <div className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
@@ -49,16 +49,16 @@ export function CustomerList() {
               <li key={customer.id}>
                 <Link
                   href={`/customers/${customer.id}`}
-                  className="flex items-center justify-between px-6 py-4 hover:bg-gray-50"
+                  className="flex items-center justify-between gap-4 px-4 py-4 hover:bg-gray-50 sm:px-6"
                 >
-                  <div>
-                    <div className="font-semibold">{customer.name}</div>
-                    <div className="text-sm text-gray-500">
+                  <div className="min-w-0">
+                    <div className="truncate font-semibold">{customer.name}</div>
+                    <div className="truncate text-sm text-gray-500">
                       {customer.company} · {customer.email}
                     </div>
                   </div>
-                  <div className="flex items-center gap-4">
-                    <span className="text-sm text-gray-500">{customer.plan}</span>
+                  <div className="flex shrink-0 items-center gap-4">
+                    <span className="hidden text-sm text-gray-500 sm:inline">{customer.plan}</span>
                     <StatusBadge status={customer.status} />
                   </div>
                 </Link>
@@ -94,7 +94,7 @@ function AddCustomerDialog({
   const [error, setError] = useState("");
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black/50">
+    <div className="fixed inset-0 flex items-center justify-center bg-black/50 p-4">
       <form
         onSubmit={(event) => {
           event.preventDefault();

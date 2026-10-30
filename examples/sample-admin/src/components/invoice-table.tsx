@@ -21,7 +21,7 @@ export function InvoiceTable() {
         <p className="text-sm text-gray-500">View and manage all invoices.</p>
       </div>
 
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         <Stat label="Total Invoices" value={String(invoices.length)} />
         <Stat label="Outstanding" value={formatAmount(outstanding)} />
         <Stat label="Overdue" value={String(invoices.filter((invoice) => invoice.status === "Overdue").length)} />
@@ -43,8 +43,8 @@ export function InvoiceTable() {
         </select>
       </div>
 
-      <div className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
-        <table className="w-full text-left text-sm">
+      <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white shadow-sm">
+        <table className="w-full whitespace-nowrap text-left text-sm">
           <thead className="bg-gray-50 text-xs uppercase text-gray-500">
             <tr>
               <th className="px-6 py-3">Invoice</th>

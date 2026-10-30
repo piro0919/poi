@@ -21,17 +21,17 @@ export default async function CustomerPage({ params }: PageProps<"/customers/[id
       </Link>
 
       <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
-        <div className="flex items-start justify-between">
-          <div>
+        <div className="flex items-start justify-between gap-4">
+          <div className="min-w-0">
             <h1 className="text-2xl font-bold">{customer.name}</h1>
             <p className="text-gray-500">{customer.company}</p>
           </div>
           <StatusBadge status={customer.status} />
         </div>
-        <dl className="mt-6 grid grid-cols-3 gap-6 text-sm">
-          <div>
+        <dl className="mt-6 grid grid-cols-1 gap-4 text-sm sm:grid-cols-3 sm:gap-6">
+          <div className="min-w-0">
             <dt className="text-gray-500">Email</dt>
-            <dd className="font-medium">{customer.email}</dd>
+            <dd className="break-words font-medium">{customer.email}</dd>
           </div>
           <div>
             <dt className="text-gray-500">Plan</dt>
