@@ -45,6 +45,23 @@ Flat, monochrome and airy. Everything is white with near-black text and one blue
 | Hover on the black main button | `#272c30` |
 | Dialog backdrop | `rgba(180, 180, 182, 0.5)`, a neutral grey with no blue in it |
 
+### Dark theme
+
+Use only when the app already has a dark mode. X's darkest background, "Lights out", as this account showed it with the browser set to dark. X also has a dark blue-grey "Dim" background, which was not captured. Pure black, with the main button inverted to near white.
+
+| Role | Value |
+| --- | --- |
+| Page, columns and side cards | `#000000` |
+| Primary text | `#e7e9ea` |
+| Secondary text | `#71767b` |
+| Accent (links, tab indicator, selected marks, blue buttons) | `#1d9bf0`, unchanged; white text on blue buttons |
+| Main button | `#eff3f4` fill, `#0f1419` bold text. Disabled, the same button faded (read from a screenshot) |
+| Hairlines between rows and columns, side card borders | 1px `#2f3336` |
+| Input border | 1px `#333639` |
+| Selected row in a settings menu | `#16181c` fill and a 2px `#1d9bf0` bar on the right edge |
+
+Hover fills, the secondary pill button and the dialog backdrop were not measured in dark.
+
 ## Shape and controls
 
 - All buttons are pills (radius 9999px). Main: 52px tall and full width in the left nav (「ポストする」, bold); in rows and dialogs 32px tall, padding 0 16px, 14px weight 700 (「フォロー」「次へ」).
@@ -81,4 +98,4 @@ Measured from the Japanese UI. The English UI was not captured.
 
 ## Sources
 
-Captured 2026-10-30 in a 1280×900 window, signed in, in the light theme with a Japanese UI: home, explore, people search, an empty search, a public profile, notifications, settings (account, privacy and safety), and the create-list dialog with the name field focused and filled to its limit. The dialog was closed without saving; nothing was posted or followed. Hover colors and the dialog backdrop were read as computed styles later the same day, with the page forced to the light color scheme in that tab only. Narrow layouts were captured the same day at 768×1024 in a desktop browser and at 375×812 with an iPhone user agent: home, people search, a public profile, settings and account settings. Only interface labels were copied; no post text, names or handles.
+Captured 2026-10-30 in a 1280×900 window, signed in, in the light theme with a Japanese UI: home, explore, people search, an empty search, a public profile, notifications, settings (account, privacy and safety), and the create-list dialog with the name field focused and filled to its limit. The dialog was closed without saving; nothing was posted or followed. Hover colors and the dialog backdrop were read as computed styles later the same day, with the page forced to the light color scheme in that tab only. Narrow layouts were captured the same day at 768×1024 in a desktop browser and at 375×812 with an iPhone user agent: home, people search, a public profile, settings and account settings. Only interface labels were copied; no post text, names or handles. The dark values were measured the same day as computed styles, with the page forced to the dark color scheme in that tab: home and account settings.
