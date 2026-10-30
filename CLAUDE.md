@@ -29,6 +29,10 @@ Poi exists to close that gap.
 - Distributed as a skill for Claude Code / Cursor
 - Do not copy logos or company names; transfer only color, spacing and wording. This keeps the tool from being used to build phishing look-alikes, and fits the goal of resembling the company rather than becoming it
 - Never change existing behavior: data fetching, saving and navigation stay as they are. Adding UI-only state that lives entirely inside a screen (open/closed, selected row, hover actions) is allowed, because without it a list cannot really feel like Gmail. This is a first attempt and may be tightened after trying it
+- Poi may add the company's own icon package to the user's repository, so icons match the real product down to stroke and corners (decided 2026-10-30). Icons that are logos or product marks are never used (in Octicons: `mark-github`, `logo-github`, `logo-gist`, `copilot*`). Packages checked the same day:
+  - Google: Material Symbols, Apache-2.0 (`material-symbols` / `@material-symbols/svg-400` on npm, or the Google Fonts icon font)
+  - GitHub: Octicons, MIT (`@primer/octicons-react`, `@primer/octicons`)
+  - Slack, X and Amazon: no published icon set is known. Their documents describe the icon style instead (stroke width, filled or outlined, size)
 - Styles are extracted ahead of time by the maintainer and shipped inside the skill as one set of rule documents per company. They are not extracted on the user's machine at run time: many reference screens (Gmail, Google Cloud console) require a login, and run-time extraction would make the result vary from run to run. The cost is that a document has to be re-extracted when the company redesigns its screens
 - Each company's rules come in two layers:
   - Company-wide rules: tone, how buttons are worded, how errors are written; things that hold across all of that company's products. Always read
