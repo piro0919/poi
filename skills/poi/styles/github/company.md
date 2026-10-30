@@ -114,6 +114,9 @@ No reference screen showed these, so there are no measured values. Keep them in 
 - Hover and pressed fills of buttons
 - The dialog backdrop
 - How older dates are written next to relative times
+- Label fills and borders for success, attention and accent; only the danger label was measured
+- Dialogs in the dark theme
+- Summary number tiles (GitHub has no screen with them)
 
 ## Sources
 
