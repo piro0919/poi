@@ -9,8 +9,16 @@ import { StatusBadge } from "./status-badge";
 export function CustomerList() {
   const searchParams = useSearchParams();
   const [customers, setCustomers] = useState(seed);
-  const [query, setQuery] = useState(searchParams.get("q") ?? "");
+  const urlQuery = searchParams.get("q") ?? "";
+  const [query, setQuery] = useState(urlQuery);
+  const [lastUrlQuery, setLastUrlQuery] = useState(urlQuery);
   const [showForm, setShowForm] = useState(false);
+
+  // A header search made while already on this page changes only the URL.
+  if (urlQuery !== lastUrlQuery) {
+    setLastUrlQuery(urlQuery);
+    setQuery(urlQuery);
+  }
 
   const filtered = customers.filter((customer) =>
     `${customer.name} ${customer.company} ${customer.email}`.toLowerCase().includes(query.toLowerCase()),
