@@ -36,6 +36,19 @@ Use for the app shell, feeds, lists of people or records, search results, settin
 - Fields are stacked floating-label boxes (58px; a multi-line one about 98px) with 16px side margins and 28px between them. A field with a maximum length shows a 「0 / 25」 counter at the top right of the box; leave the counter out when there is no maximum.
 - A setting row with a checkbox at the far right: a 15px label and a 13px explanation below.
 
+## Narrow widths
+
+Measured at 768px in a desktop browser and at 375px in an iPhone browser.
+
+- **Tablet (768px)**: the right column is gone. The left navigation collapses to icons only: a column about 115px wide, items 72×58px with a 26px icon centered and no label, the current page's icon filled. The main action becomes a 52px black circle with an icon instead of the wide pill, and the account shows as the avatar alone at the bottom. The main column keeps its 600px width and sits right after the navigation.
+- **Tablet settings**: only the menu pane shows, in the main column. Picking a row opens the detail as its own page with a back arrow.
+- **Phone (375px)**: there is no left navigation.
+  - Top bar at the top level: a 50px row with the avatar on the left, the app's own mark in the middle (never X's) and a secondary pill on the right, then a 50px tab row, white at 85% opacity, 101px in all.
+  - Top bar on deeper pages: one 50px row with a back arrow, the title in bold and a 13px secondary line under it (「4,381 件のポスト」「@handle」).
+  - Bottom tab bar: 50px tall, white, a 1px `#eff3f4` line on top, icon-only items of equal width (75px each for five), the current one filled. Put each top-level page of the app in it, up to five.
+  - The main action floats as a 53px `#1d9bf0` circle with a white icon (color read from a screenshot), about 19px from the right edge and 19px above the tab bar.
+  - Lists, search results and settings run edge to edge with the same 16px row padding as on desktop. Settings shows the menu with its search pill as one page and each detail as another, with a back arrow.
+
 ## Empty states
 
 - Inside the main column, about 400px wide and centered with generous top space: a 31px weight 800 headline, then one 15px `#536471` sentence with an inline `#1d9bf0` link.
