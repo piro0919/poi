@@ -34,7 +34,7 @@ Rewrite the copy too: button labels, headings, empty states, errors, confirmatio
 
 ### Hard rules
 
-- **No logos, no company or product names.** Do not add the company's logo, wordmark, product names, icons that identify the brand, or trademarks. Transfer only color, spacing, shape and wording. The result must never pass as the real product.
+- **No logos, no company or product names.** Do not add the company's logo, wordmark, product names, mascots, or trademarks. Transfer only color, spacing, shape and wording. Generic line icons drawn in the company's style (a state circle, a magnifier, a gear) are fine. The result must never pass as the real product.
 - **Never change existing behavior.** Data fetching, saving, validation, routing and navigation stay exactly as they are. Do not remove features or fields.
 - **UI-only state is allowed.** You may add state that lives entirely inside a screen and exists only for the look — open/closed, selected row, hover actions, a focused search box.
 - **Do not add controls that promise features the app lacks.** Skip parts of a product's layout that have no backing data or action in this app: a workspace switcher, breadcrumbs, a "Learn" button, stars, hover actions, bulk-select checkboxes with no bulk actions. An inert control looks broken.

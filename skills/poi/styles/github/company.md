@@ -12,7 +12,7 @@ GitHub is close to a single product, so most rules live here and `github.md` add
 
 ## Feel in one paragraph
 
-Dense, precise and engineered. Small type (lots of 12px metadata), thin gray borders around boxes, 6px corners everywhere, a light gray page with white boxes, and one green button for "create". Information is shown as compact rows with counts, small colored labels and octicon-style line icons. It feels like a tool, not a brochure.
+Dense, precise and engineered. Small type (lots of 12px metadata), thin gray borders around boxes, 6px corners everywhere, a light gray header strip over a white page, with bordered white boxes, and one green button for "create". Information is shown as compact rows with counts, small colored labels and octicon-style line icons. It feels like a tool, not a brochure.
 
 ## Type
 
@@ -26,7 +26,7 @@ Dense, precise and engineered. Small type (lots of 12px metadata), thin gray bor
 
 | Role | Value |
 | --- | --- |
-| Page background | `#f6f8fa` (repo header strip and areas outside boxes) |
+| Page background | `#ffffff`. The header strip (global header plus tabs) is `#f6f8fa` with a 1px `#d1d9e0` bottom border; box headers are `#f6f8fa` too |
 | Box / main surface | `#ffffff` |
 | Primary text | `#1f2328` |
 | Muted text (metadata, secondary tabs) | `#59636e` |
@@ -64,14 +64,14 @@ Measured from issue and pull request lists.
 - Search placeholders describe the query language: "Search or jump to…", with a "/" key hint; list filters show the current query as text, e.g. `is:issue state:open`.
 - Plain, direct and slightly technical. No exclamation marks, no "successfully".
 - Empty states: a heading without a period, then one sentence with the next step and a "Learn more about …" link: "No results matched your search" / "Try a different search query. Learn more about searching and filtering issues and pull requests."
-- Create forms are titled "Create new …" and finish with "Create" (green) and "Cancel" (default), right-aligned, Cancel first.
+- Create forms are titled "Create new …" and finish with "Create" (green) and "Cancel" (default), right-aligned, Cancel first. When the form has no such title (a small dialog), name the object: "Create customer", as in "Create repository".
 
 ### Rewrites for common AI-default copy
 
 | Default | GitHub-ish |
 | --- | --- |
 | + Add Customer | New customer |
-| Submit | Create customer |
+| Submit | Create (under a "Create new customer" title), otherwise Create customer |
 | Save Changes | Save changes |
 | Settings saved successfully! | Settings saved. |
 | Error: Invalid email. | Email is invalid |
@@ -82,6 +82,16 @@ Measured from issue and pull request lists.
 | This action cannot be undone. | Once you delete a workspace, there is no going back. Please be certain. |
 | Are you sure? | (a dialog titled with the target, "Delete Acme Inc.", and one full-width button stating intent: "I want to delete this workspace") |
 | Status: | (a "Status" menu button with a caret) |
+
+## Not captured yet
+
+No reference screen showed these, so there are no measured values. Keep them in the same quiet system; do not invent loud styles:
+
+- Errors that belong to the whole form rather than one field
+- The banner shown after saving settings
+- Hover and pressed fills of buttons
+- The dialog backdrop
+- How older dates are written next to relative times
 
 ## Sources
 
