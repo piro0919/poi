@@ -4,7 +4,7 @@ Use for the app shell, feeds, lists of people or records, search results, settin
 
 ## App shell
 
-- Three columns centered in the window, all white, split by 1px `#eff3f4` vertical hairlines: left navigation (about 275px), main column (600px), right column (350px plus gutters).
+- Three columns centered in the window, all white, split by 1px `#eff3f4` vertical hairlines: left navigation (283px at a 1280px window, its items starting 16px from the left edge), main column (600px), right column (350px plus gutters).
 - **Left navigation**: a small icon mark at the top only if the app has its own, then items 58px tall (50px when the window is 800px tall; measured at 900px and 800px): a line icon and a 20px label, the current page bold with a filled icon. Under the items, the full-width black 「ポストする」 style pill for the app's single main action, if there is one. The signed-in account sits at the bottom: avatar, name in bold, handle in secondary text, and a 「…」 icon.
 - **Main column header**: sticky, white at 85% opacity. Either tabs only (home), or a back arrow icon button with the title (20px weight 700) and a 13px count under it (「4,381 件のポスト」), or a search pill with a 「…」 icon on the right.
 - **Right column**: a search pill at the top, then side cards (white, 1px `#eff3f4` border, radius 16px, padding 16px 20px) titled in 20px weight 800, with 「さらに表示」 links in `#1d9bf0` at the bottom.
@@ -13,7 +13,7 @@ Use for the app shell, feeds, lists of people or records, search results, settin
 ## Feeds and lists
 
 - Rows run the full width of the main column with padding 12px 16px and a 1px `#eff3f4` line between them. No cards, no zebra stripes.
-- A record row: 40px round avatar on the left; to its right the name (15px weight 700) and handle or meta (15px `#536471`) on one line joined with 「·」 (「@handle · 5時間」), then the body in 15px / 20px. A 「…」 icon button at the top right.
+- A record row: 40px round avatar on the left, then an 8px gap; to its right the name (15px weight 700) and handle or meta (15px `#536471`) on one line joined with 「·」 (「@handle · 5時間」), then the body in 15px / 20px. A 「…」 icon button at the top right.
 - A person row adds a black 「フォロー」 pill (32px) at the right of the name line, and a short bio under it.
 - Action counters under a post are icon + number in 13px `#536471`, spread across the row.
 - X has no data tables or number tiles. Turn a table into record rows: the key field in bold, the rest joined with 「·」 in secondary text, and an amount or other key number in bold at the right of the first line. Turn summary tiles into one line of counts written like follower counts, the number in bold before its label (「**7** total · **$10,580** outstanding」).
