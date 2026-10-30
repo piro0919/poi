@@ -45,3 +45,21 @@ Inside the list Box, centered, about 150px tall: a 24px muted line icon (a magni
 - White, 480px wide, radius 12px, shadow `0 0 0 1px rgba(209,217,224,.25), 0 6px 12px -3px rgba(37,41,46,.04), 0 6px 18px 0 rgba(37,41,46,.12)`.
 - Header: title 14px weight 600 naming the target ("Delete piro0919/poi"), a 32px close (×) icon button on the right.
 - The first step of a destructive confirmation is one full-width default button stating intent ("I want to delete this repository"). Only that first step was captured.
+
+## Narrow widths
+
+Measured at 768px in a desktop browser and at 375px in an iPhone browser. GitHub serves the same responsive site to both.
+
+- **Header at both widths**: 100px in all. A 52px top row: a 「≡」 menu button, the logo slot (use the app's own mark), the breadcrumb, then icon buttons and the avatar on the right. Under it a 48px row of underline tabs with 8px 16px padding. At 375px the breadcrumb shortens to 「··· / name ▾」, the right side keeps only search, a command button, the inbox and the avatar, and tabs that do not fit move into a 「More ▾」 tab at the right end.
+- **Tablet (768px)**:
+  - Lists keep the left sidebar at 256px.
+  - Settings keep the section menu at the left, about 240px, with the content starting next to it.
+  - Create forms keep the metadata column (Assignees, Labels…) at the right.
+  - Records in a list wrap their titles onto several lines rather than truncating.
+- **Phone (375px)**:
+  - The list sidebar is gone; its views live behind the 「≡」 menu.
+  - The title row keeps the title on the left and the green button on the right. The query field runs full width under it.
+  - The list Box runs full width with 16px page margins. The 「Open」「Closed」 counts and the filter menus wrap onto two lines inside the Box header.
+  - Each record shows the state icon, the title wrapped over several lines, then labels and the meta line under it.
+  - Settings: the section menu becomes the top of the page at full width, with the selected item still marked by the blue bar. The section's content follows below it.
+  - Create forms stack the metadata under the form. The 「Cancel」「Create」 buttons sit in a 48px white bar stuck to the bottom of the screen.
