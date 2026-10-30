@@ -33,7 +33,16 @@ Quiet, roomy and flat. White or very light tinted surfaces, almost no shadows, s
 - Search fields: fully rounded (9999px).
 - Icon buttons: 40×40 circles, no visible background until hover.
 - Cards and panels: large radius (16–20px) on the outer page panel, flat inside it. Prefer dividers and whitespace over boxed cards.
+- Icons: Material Symbols; see "Icons" below.
 - Shadows: avoid. The only measured shadows are a faint lift under a floating search box (`0 3px 10px rgba(31,31,31,.08)`) and 1px hairline dividers.
+
+## Icons
+
+Use Material Symbols (Apache-2.0): the `material-symbols` or `@material-symbols/svg-400` package, or the Material Symbols font from Google Fonts. Add one if the app has none. Google Search draws its icons from Material Symbols (`viewBox="0 -960 960 960"`); the Cloud console loads Google's own symbol font and Gmail older 24px icons, but both look like Material Symbols at the sizes below. Never draw the multicolor product logos (the Gmail "M", the Cloud hexagon).
+
+Whether icons are filled or outlined, and their size, depends on the product; each product file says which. Icons take the color of the text next to them: secondary text color in navigation and lists, button blue inside text buttons, 38% when disabled.
+
+Icon names below were identified by eye from screenshots, not read from the page.
 
 ## Color roles
 
@@ -90,4 +99,4 @@ No reference screen showed these, so there are no measured values. Keep them qui
 
 ## Sources
 
-Captured 2026-10-30 in a 1280×900 window: Google Search home (light, signed out), Google Search results (dark theme, signed in; layout and copy only), Gmail inbox and settings (dark theme, Japanese UI; layout and copy only), Google Cloud console IAM, APIs & Services, Create service account and IAM settings (light). Error message styling was not captured. Narrow layouts were captured the same day at 768×1024 in a desktop browser and at 375×812 with an iPhone user agent: Search results, Gmail inbox and settings, and the Cloud console IAM page and Create service account form. Dark palettes were measured the same day at 1280×900: Search home and results and the Cloud console IAM page and Create service account form with the browser set to dark, and the Gmail inbox in the account's own dark theme. Nothing was created.
+Icons were read the same day from the Cloud console IAM page, the Gmail inbox and a Search results page: SVG sizes, viewBox and colors as computed styles, names by eye from screenshots. Captured 2026-10-30 in a 1280×900 window: Google Search home (light, signed out), Google Search results (dark theme, signed in; layout and copy only), Gmail inbox and settings (dark theme, Japanese UI; layout and copy only), Google Cloud console IAM, APIs & Services, Create service account and IAM settings (light). Error message styling was not captured. Narrow layouts were captured the same day at 768×1024 in a desktop browser and at 375×812 with an iPhone user agent: Search results, Gmail inbox and settings, and the Cloud console IAM page and Create service account form. Dark palettes were measured the same day at 1280×900: Search home and results and the Cloud console IAM page and Create service account form with the browser set to dark, and the Gmail inbox in the account's own dark theme. Nothing was created.

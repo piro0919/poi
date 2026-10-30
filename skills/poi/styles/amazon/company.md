@@ -61,6 +61,15 @@ The shopping site has no dark theme in the browser, on desktop or phone: it stay
 - Checkboxes are the plain 13px browser checkbox.
 - Inline errors sit under the field: a red circled `!` icon and one 12px / 15px red sentence.
 
+## Icons
+
+Amazon has no public icon set and uses very few icons; its pages are text and links. Icons are images from a sprite, bold and solid, never thin line icons. Sizes and colors are computed styles; shapes were read from a screenshot.
+
+- Header: a bold magnifier in the orange search button, a 17px white ≡ before "すべて", a cart outline with the count over it.
+- Search fields on pages: an 18–20px dark magnifier inside, on the left.
+- Small solid ▾ carets after dropdown labels.
+- The second header row and the order history page show no icons before labels; do not add them there.
+
 ## Wording and tone
 
 Measured from the Japanese site. The English site was not captured.
@@ -87,3 +96,4 @@ Measured from the Japanese site. The English site was not captured.
 ## Sources
 
 Captured 2026-10-30 in a 1280×900 window, signed in, on amazon.co.jp with a Japanese UI: home, search results, no results, an item detail page, the account hub, order history, addresses, the add-address form empty and after submitting it empty, and an empty cart. The login-and-security page asked for the password again and was not opened. Narrow layouts were captured the same day at 768×1024 in a desktop browser and at 375×812 with an iPhone user agent: search results, an item page, the account hub, order history, the add-address form and the cart. Nothing was bought, saved or deleted. Only interface labels were copied; no names, addresses, order numbers or item titles from the account. Search results and the account hub were also opened the same day with the browser set to dark, at 1280px and at 375px with an iPhone user agent; all stayed light.
+Icons were read the same day at 1280×900 on the header and order history: sizes and colors as computed styles, shapes from a screenshot.

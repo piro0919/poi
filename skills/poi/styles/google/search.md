@@ -49,6 +49,14 @@ Chips and the primary filled button were not seen in dark.
 - 24–28px between results. No cards, no borders around results.
 - "People also ask" style expandable rows: 16px text, 52px tall, chevron on the right, divider between rows.
 
+## Icons
+
+Material Symbols, outlined (their `viewBox="0 -960 960 960"` is in the page). Sizes are computed styles; names were identified by eye.
+
+- In the search box: 24px `mic` and a camera icon for search by image; a 28px `close` to clear.
+- Tab row: a 16px `arrow_drop_down` after "More" and "Tools".
+- Results: an 18px `more_vert` for "About this result"; 20px `chevron_left` and `chevron_right` for paging.
+
 ## Copy seen here
 
 "Search", "Search by voice", "Search by image", "I'm Feeling Lucky", "AI Mode", "All", "Images", "Videos", "News", "More", "Tools", "Show more", "Read more", "About this result", "Translate this page", "People also ask", "Sign in". Tooltips name the action plainly.

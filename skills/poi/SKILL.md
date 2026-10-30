@@ -30,11 +30,13 @@ Then read `styles/<company>/<product>.md` for every product you picked.
 
 Apply the rules to the repository's own stack. The rule documents give values (hex colors, px sizes, radii) and example copy, not code; translate them into whatever the repository uses — Tailwind, CSS modules, plain CSS, a component library's theme, and so on. Prefer changing shared tokens and shared components over patching each screen.
 
+Use the company's own icons. When its document names an icon package, add that package if the app does not have it, and replace the app's icons with it at the sizes, fill and colors the documents give. Where the documents name icons for a role (settings, people, edit, more), use those names. When no package is named, draw or pick icons that match the style the document describes. Add icons only where the product has them, such as before nav labels and on toolbar buttons; do not decorate every label.
+
 Rewrite the copy too: button labels, headings, empty states, errors, confirmations, helper text. Wording is half of the feel.
 
 ### Hard rules
 
-- **No logos, no company or product names.** Do not add the company's logo, wordmark, product names, mascots, or trademarks. Transfer only color, spacing, shape and wording. Generic line icons drawn in the company's style (a state circle, a magnifier, a gear) are fine. The result must never pass as the real product. Example copy in the documents is quoted from the real product and sometimes contains its name (「Amazonカートは空です」); put the app's own name there or drop it.
+- **No logos, no company or product names.** Do not add the company's logo, wordmark, product names, mascots, or trademarks. Transfer only color, spacing, shape and wording. Icons for ordinary things (a state circle, a magnifier, a gear) are fine; the marks an icon set lists as excluded in the company's document are not. The result must never pass as the real product. Example copy in the documents is quoted from the real product and sometimes contains its name (「Amazonカートは空です」); put the app's own name there or drop it.
 - **Never change existing behavior.** Data fetching, saving, validation, routing and navigation stay exactly as they are. Do not remove features or fields.
 - **UI-only state is allowed.** You may add state that lives entirely inside a screen and exists only for the look — open/closed, selected row, hover actions, a focused search box.
 - **Do not add controls that promise features the app lacks.** Skip parts of a product's layout that have no backing data or action in this app: a workspace switcher, breadcrumbs, a "Learn" button, stars, hover actions, bulk-select checkboxes with no bulk actions. An inert control looks broken.

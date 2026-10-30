@@ -53,6 +53,16 @@ Use only when the app already has a dark mode. The dark theme this account uses:
 - **Selected** rows get a light blue fill.
 - No status pills. Category or status goes in a small label chip before the title, or as an icon.
 
+## Icons
+
+Material Symbols, **outlined** everywhere, with thin strokes. The header icons are 24px SVGs (computed); the nav, toolbar and row icons look about 20px in a screenshot. Names were identified by eye.
+
+- Header: `menu`, `search`, `help`, `settings`, `apps`.
+- Main action button: `edit` (a pencil) before "Compose".
+- Left nav: `inbox`, `send`, `draft`, `report`, `expand_more` for "More"; `label` before each label, `add` next to the "Labels" heading.
+- List toolbar: a checkbox with `arrow_drop_down`, `refresh`, `more_vert`.
+- Each row: an outlined checkbox, `star` (outlined until starred), `label_important` (outlined).
+
 ## Settings page
 
 - Tabs across the top (14px weight 500, gray; active tab in accent with a 2px underline).

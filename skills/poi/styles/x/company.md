@@ -72,6 +72,14 @@ Hover fills, the secondary pill button and the dialog backdrop were not measured
 - Tabs fill the column width equally; the active one has a 4px `#1d9bf0` indicator, rounded, only as wide as its label.
 - Dialogs: white, radius 16px, 600px wide, no visible border. Header row about 53px: a close (×) icon button on the left, the title 20px weight 700 next to it, and the main pill on the right.
 
+## Icons
+
+X has no public icon set. Its icons are its own SVGs on a 24×24 grid, drawn as filled shapes that read as outlines: rounded, even, medium-weight lines. Pick an outlined set with rounded strokes of the same weight, or draw icons that match. Sizes and colors are computed styles; shapes were read from a screenshot. Never draw the X mark or Grok's mark.
+
+- Left navigation: 26px, primary text color, before 20px labels: home, magnifier, bell, person with +, speech bubble, phone. The current page's icon is filled.
+- Settings rows: a 19px icon in secondary text color at the left of each row (person, key, download arrow, broken heart); a chevron `>` at the right end of menu rows.
+- Search fields: a 16px magnifier inside, on the left.
+
 ## Wording and tone
 
 Measured from the Japanese UI. The English UI was not captured.
@@ -99,3 +107,4 @@ Measured from the Japanese UI. The English UI was not captured.
 ## Sources
 
 Captured 2026-10-30 in a 1280×900 window, signed in, in the light theme with a Japanese UI: home, explore, people search, an empty search, a public profile, notifications, settings (account, privacy and safety), and the create-list dialog with the name field focused and filled to its limit. The dialog was closed without saving; nothing was posted or followed. Hover colors and the dialog backdrop were read as computed styles later the same day, with the page forced to the light color scheme in that tab only. Narrow layouts were captured the same day at 768×1024 in a desktop browser and at 375×812 with an iPhone user agent: home, people search, a public profile, settings and account settings. Only interface labels were copied; no post text, names or handles. The dark values were measured the same day as computed styles, with the page forced to the dark color scheme in that tab: home and account settings.
+Icons were read the same day at 1280×900 on home navigation and account settings: SVG sizes, viewBox and colors as computed styles, shapes from a screenshot.

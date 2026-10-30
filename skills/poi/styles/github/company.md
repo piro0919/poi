@@ -72,7 +72,45 @@ Use only when the app already has a dark mode. GitHub's default dark theme ("Dar
 - Required fields: a red asterisk after the label, and one sentence at the top of the form: "Required fields are marked with an asterisk (*)."
 - Boxes ("Box" pattern): white, 1px border, 6px radius, a header row in `#f6f8fa`, rows separated by 1px borders.
 - Shadows are almost absent: at most `0 1px 0 rgba(31,35,40,.04)` under buttons.
-- Icons: thin 16px line icons in muted color next to labels.
+- Icons: Octicons; see "Icons" below.
+
+## Icons
+
+Use Octicons, GitHub's own icon set (MIT): `@primer/octicons-react` for React, `@primer/octicons` for anything else. Add the package if the app has none. Never use the marks in it: `mark-github`, `logo-github`, `logo-gist`, `copilot`, `copilot-error`, `copilot-warning`.
+
+- Size: 16px everywhere in the UI: header, tabs, sidebar, buttons, rows, toolbars. 24px only for the icon above an empty-state heading.
+- Color: the muted text color (`#59636e` light, `#9198a1` dark). Inside a filled button the icon takes the button's text color.
+- Only state icons are colored: open `issue-opened` and `git-pull-request` in success green, `check` in green and `x` in danger red for passing and failing checks, drafts in muted.
+- Icons sit before the label. Dropdown carets are `triangle-down` after the label.
+
+Names seen on the Issues and Pull requests lists, a repository's home, the New issue form and repository settings, with the role they play:
+
+| Role in an app | Octicon |
+| --- | --- |
+| Menu, list density | `three-bars`, `rows` |
+| Search, clear a field | `search`, `x-circle-fill` |
+| New / create | `plus` |
+| More actions | `kebab-horizontal` |
+| Sort | `sort-desc` |
+| Edit | `pencil` |
+| Settings, general | `gear` |
+| People, one person | `people`, `person` |
+| Labels, tags | `tag` |
+| Milestones, goals | `milestone` |
+| Recent, history | `clock`, `history` |
+| Inbox, notifications | `inbox` |
+| Open record, linked record | `issue-opened` |
+| Comments | `comment`, `comment-discussion` |
+| Views, groups | `stack` |
+| Tables, projects | `table` |
+| Documents, wiki | `book`, `file`, `file-directory-fill` |
+| Charts, insights, activity | `graph`, `pulse` |
+| Security, keys | `shield`, `key`, `key-asterisk` |
+| Webhooks, servers, apps | `webhook`, `server`, `apps` |
+| Run, actions | `play` |
+| Attach | `paperclip` |
+| Collapse a sidebar | `sidebar-expand` |
+| Watch, star, pin | `eye`, `star`, `pin` |
 
 ## Wording and tone
 
@@ -120,4 +158,4 @@ No reference screen showed these, so there are no measured values. Keep them in 
 
 ## Sources
 
-Captured 2026-10-30 in a 1280×900 window, light theme (narrow layouts at 768×1024 and 375×812 the same day: the Issues list, repository settings and the New issue form): vercel/next.js Issues and Pull requests lists, and signed in, a repository's Issues (empty), New issue form, General settings with its Danger Zone and delete dialog, Branches settings, profile settings, and the New repository form with a name error. The signed-in account is set to the dark theme, so the light values were taken by loading GitHub's own light theme stylesheet in that tab; the account setting was not changed. Screenshots of this look slightly desaturated; the hex values above are computed styles, not pixel reads. The dark values were measured the same day from the Issues list and General settings in the account's own dark theme, as computed styles.
+Captured 2026-10-30 in a 1280×900 window, light theme (narrow layouts at 768×1024 and 375×812 the same day: the Issues list, repository settings and the New issue form): vercel/next.js Issues and Pull requests lists, and signed in, a repository's Issues (empty), New issue form, General settings with its Danger Zone and delete dialog, Branches settings, profile settings, and the New repository form with a name error. The signed-in account is set to the dark theme, so the light values were taken by loading GitHub's own light theme stylesheet in that tab; the account setting was not changed. Screenshots of this look slightly desaturated; the hex values above are computed styles, not pixel reads. The dark values were measured the same day from the Issues list and General settings in the account's own dark theme, as computed styles. Octicon names, sizes and colors were read the same day from the icons' class names and computed styles, in the account's dark theme: the Issues and Pull requests lists, a repository's home, the New issue form and repository settings.

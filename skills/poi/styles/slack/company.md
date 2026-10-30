@@ -76,6 +76,16 @@ Use only when the app already has a dark mode. Slack's own dark mode, measured a
 - Dialogs: white, radius 8px, shadow `0 0 0 1px rgba(29,28,29,.13), 0 18px 48px rgba(0,0,0,.35)`, close (×) icon button 36px at the top right.
 - Tabs: 13px weight 700, the active one with a 2px underline in the theme's accent color.
 
+## Icons
+
+Slack has no public icon set. Its icons are its own SVGs on a 20×20 grid (`viewBox="0 0 20 20"`), drawn as filled shapes that read as outlines: medium-weight lines with rounded ends and corners, no fills inside. Pick an outlined set with rounded strokes, or draw icons that match; avoid sharp, thin or two-tone icons. Sizes and colors are computed styles; shapes were read from a screenshot.
+
+- Top bar: 20px, back and forward arrows, a history clock; a 15px magnifier inside the search field.
+- Sidebar items: 15–16px, the sidebar text color, one icon before each label (unread, threads, drafts and sent, bookmarks, directory, star). A channel shows `#` instead of an icon.
+- Workspace header: 18–20px icon buttons for settings (a gear) and compose (a pencil in a square).
+- Channel header: a 20px star before the name; tabs carry 18px icons; a + to add a tab.
+- The app's leftmost rail: 20px icons with a label under each; the current one sits in a rounded square fill.
+
 ## Wording and tone
 
 Measured from a Japanese UI. The English UI was not captured.
@@ -104,3 +114,4 @@ Measured from a Japanese UI. The English UI was not captured.
 ## Sources
 
 Captured 2026-10-30 in a 1280×900 window, signed in to a work workspace with a Japanese UI: a channel, the directory (members and channels tabs), the create-channel dialog with a valid name and with a name error, preferences, and search with results and with no results. The account's preference is the dark theme; the light theme was shown by removing the dark theme class from the page in that tab only. The account setting was not changed, and nothing was created or sent. Only interface labels were copied; no message text, names or channel names. A channel and the files page were also captured at 768×1024 the same day; at 375×812 with an iPhone user agent Slack only offered its app. The dark values were measured the same day in the account's own dark mode: the files page, the channel directory and the create-channel dialog with a name error. The dialog was closed without creating anything.
+Icons were read the same day at 1280×900 in a channel of the workspace: SVG sizes, viewBox and colors as computed styles, shapes from a screenshot.

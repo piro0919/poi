@@ -80,6 +80,16 @@ The project pill, breadcrumb, "Learn" button and table checkbox column below app
 - Time range is a row of text options ("1 hour", "6 hours", "1 day" …) with the selected one in button blue.
 - Numbers use regular weight; do not make big bold stat cards.
 
+## Icons
+
+Material Symbols, **filled** in the navigation and on actions, outlined only for help and the header's notification bell. Sizes and colors are computed styles; names were identified by eye.
+
+- Header: 24px, `#475569` (menu) and `#545f72` (search and the icon buttons on the right): `menu`, `search`, `terminal`, `notifications` (outlined), `more_vert`.
+- Left nav: 18px, `#475569`, one icon before every item: `person_add` (IAM), `group`, `shield`, `list`. The section header has a 24px icon in primary text color and a `left_panel_close` toggle.
+- Toolbar text buttons: 18px filled icon in button blue `#314f9b` before the label: `person_add` "Grant access", `person_remove` "Remove access" (38% when disabled). "Learn" carries `school`.
+- Filter row and table: `filter_list` before "Filter"; `help` (outlined) and `view_column` on the right; `arrow_upward` next to the sorted column; `edit` at the end of a row; a 18px `person` as the type of a row.
+- Back to the parent page: a 24px `arrow_back` in button blue.
+
 ## Copy seen here
 
 "Grant access", "Remove access", "View by principals", "View by roles", "Include Google-provided role grants", "Create and continue", "Create and close", "Cancel", "Enable APIs and services", "Learn", "Learn more", "Filter", "Enter property name or value", "Display name for this service account", "These permissions affect this project and all of its resources."
