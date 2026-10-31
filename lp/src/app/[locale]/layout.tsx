@@ -1,6 +1,6 @@
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Noto_Sans_JP } from "next/font/google";
+import { Geist, Geist_Mono, Noto_Sans_JP, Righteous } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -15,6 +15,14 @@ import "./globals.css";
 const sans = Geist({ display: "swap", subsets: ["latin"], variable: "--font-geist" });
 
 const mono = Geist_Mono({ display: "swap", subsets: ["latin"], variable: "--font-geist-mono" });
+
+// ロゴの「Poi」だけに使う（本人が Google Fonts の候補から選んだ、2026-10-31）
+const logo = Righteous({
+  display: "swap",
+  subsets: ["latin"],
+  variable: "--font-righteous",
+  weight: "400",
+});
 
 const japanese = Noto_Sans_JP({
   display: "swap",
@@ -71,7 +79,10 @@ export default async function Layout({ children, params }: LayoutProps) {
   setRequestLocale(locale);
 
   return (
-    <html className={`${sans.variable} ${mono.variable} ${japanese.variable}`} lang={locale}>
+    <html
+      className={`${sans.variable} ${mono.variable} ${japanese.variable} ${logo.variable}`}
+      lang={locale}
+    >
       <body className="antialiased">
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
         <Analytics />

@@ -10,6 +10,7 @@
   --color-line: #eaeaea;
   --font-sans: var(--font-geist), var(--font-noto-jp), system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-logo: var(--font-righteous), var(--font-geist), sans-serif;
 }
 
 /* 暗い表示の設定なら黒地に。見出しの絵も暗い表示の写しに替わる */

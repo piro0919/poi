@@ -75,7 +75,7 @@ export default async function Page({ params }: PageProps) {
     <div className="mx-auto max-w-6xl px-6">
       {/* 上の帯 */}
       <header className="flex h-16 items-center justify-between">
-        <span className="font-semibold text-[17px] tracking-tight">Poi</span>
+        <span className="font-logo text-[20px]">Poi</span>
         <div className="flex items-center gap-5">
           <LanguageSwitch />
           <a className="hidden text-muted text-sm transition hover:text-ink sm:inline" href={REPO}>
@@ -141,7 +141,7 @@ export default async function Page({ params }: PageProps) {
       </section>
 
       <footer className="flex flex-col items-center justify-between gap-4 border-line border-t py-10 text-muted text-sm sm:flex-row">
-        <span>Poi</span>
+        <span className="font-logo">Poi</span>
         <div className="flex gap-6">
           <a className="transition hover:text-ink" href={REPO}>
             {t("footer.source")}

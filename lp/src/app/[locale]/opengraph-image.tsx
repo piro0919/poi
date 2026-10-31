@@ -26,9 +26,10 @@ export default async function OgImage({
   const { locale } = await params;
   const isJa = locale === "ja";
   /* 使う文字だけに絞った書体を同梱している。文言を変えたら assets/README.md の手順で作り直す */
-  const [geist, noto] = await Promise.all([
+  const [geist, noto, righteous] = await Promise.all([
     readFile(join(process.cwd(), "assets/Geist-SemiBold-subset.woff")),
     readFile(join(process.cwd(), "assets/NotoSansJP-SemiBold-subset.woff")),
+    readFile(join(process.cwd(), "assets/Righteous-subset.woff")),
   ]);
 
   return new ImageResponse(
@@ -43,7 +44,7 @@ export default async function OgImage({
         width: "100%",
       }}
     >
-      <div style={{ color: INK, fontSize: 160, letterSpacing: -7 }}>Poi</div>
+      <div style={{ color: INK, fontFamily: "Righteous", fontSize: 160 }}>Poi</div>
       <div style={{ color: MUTED, display: "flex", fontSize: 44, marginTop: 8 }}>
         {isJa ? "「Google っぽくして」と言うだけ。" : "Say “make it Google-ish.”"}
       </div>
@@ -53,6 +54,7 @@ export default async function OgImage({
       fonts: [
         { data: geist, name: "Geist", style: "normal", weight: 600 },
         { data: noto, name: "Noto Sans JP", style: "normal", weight: 600 },
+        { data: righteous, name: "Righteous", style: "normal", weight: 400 },
       ],
     },
   );
