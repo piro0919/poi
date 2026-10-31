@@ -39,6 +39,7 @@ Inside the list Box, centered, about 150px tall: a 24px muted line icon (a magni
 - The first section's heading is the page heading ("General"); there is no separate "Settings" title above it. Compared side by side with a trial (2026-10-31), a 20px "Settings" title stacked over a 24px "General" read as a different product.
 - Sections start with a **24px weight 400** heading and a 1px `#d1d9e0` bottom border, then fields: label 14px weight 600 above, input below, 12px muted note under it.
 - A single field is saved with a default button right next to it ("Rename" beside the name input). Otherwise one "Save changes"/"Update" default (gray) button under each form section; the green button is only for creating things.
+- **After saving** (measured live on profile settings, 2026-10-31): the page reloads with an **info** (blue) banner, not a success one, spanning the full width directly under the top header, above the settings layout. It is the full-width variant: no radius, no side borders, a 1px border top and bottom, padding 20px 16px, 14px primary text, no leading icon. The text is one sentence with a link: "Profile updated successfully — view your profile." A 32px × button ("Dismiss this message") sits at the right end, its icon in the link blue. It stays until dismissed or the page changes.
 - On/off options are checkboxes with a 14px weight 600 label and a 12px muted explanation below; related options are grouped in a bordered Box.
 - **Danger Zone**: a 24px weight 400 heading "Danger Zone", then a Box with a light red border `rgba(255,129,130,.4)` and 6px radius. Each row: a 14px weight 600 action name and a 14px plain explanation on the left ("Archive this repository" / "Mark this repository as archived and read-only."), and on the right a default button (`#f6f8fa` fill, gray border) with **red text** `#d1242f`, worded the same as the action ("Archive this repository"). Rows are separated by 1px borders.
 
@@ -49,7 +50,12 @@ Inside the list Box, centered, about 150px tall: a 24px muted line icon (a magni
 - Body padding 16px, 14px text. Footer padding 16px with a 1px line above it; buttons right-aligned, 8px apart, Cancel first.
 - Backdrop: `rgba(200,209,218,.4)` light, `rgba(33,40,48,.4)` dark.
 - Dark theme: surface `#010409`, shadow `0 0 0 1px #3d444d, 0 6px 12px -3px rgba(1,4,9,.4)`, header and footer lines `#3d444d`.
-- The first step of a destructive confirmation is one full-width default button stating intent ("I want to delete this repository"). Only that first step was captured.
+- The first step of a destructive confirmation is one full-width default button stating intent ("I want to delete this repository").
+- The second step stays in the same dialog, titled with the action ("Archive repository"), body only, no footer (measured live on the archive dialog, 2026-10-31):
+  - A warning banner first: a 16px `alert` icon in the attention color, a bold first line ("This repository will become read-only.") and a plain second line.
+  - Then each consequence as a row: a 16px plain-colored octicon, 16px gap, the sentence, and a bullet list under it when there are details. Rows are 16px apart.
+  - A 1px divider, then "Please type piro0919/poi to confirm." with the name in bold, a full-width 32px input, and under it a full-width 32px default button with red text that names the consequence: "I understand the consequences, archive this repository". The button stays disabled, its red text at 50%, until the name matches.
+  - The header here is 8px 8px 0 around the title, with the × at the right; the header line is the same as above.
 
 ## Narrow widths
 
