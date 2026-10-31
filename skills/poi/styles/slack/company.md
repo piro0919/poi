@@ -41,6 +41,8 @@ Main pane values were measured in the light theme. The sidebar is themed per use
 | Input focus | 1px `#1264a3` ring plus a 5px `rgba(18,100,163,.3)` halo |
 | Input error | 1px `#e01e5a` ring plus a 5px `rgba(224,30,90,.3)` halo; message in the same red |
 | Selected item in a dialog's side nav | `#1264a3` fill, white text |
+| Hover on buttons | Default and filter buttons fill `#f8f8f8`; the green primary keeps its fill. Both gain the shadow `0 1px 3px rgba(0,0,0,.098), 0 1px 2px -1px rgba(0,0,0,.098)`. Fills change over 80ms |
+| Hover on a record row (channel directory) | The fill stays white and a `0 1px 1px rgba(0,0,0,.06)` shadow appears |
 | Info banner | `#e3f8ff` fill, 8px radius |
 | Reaction or counter pill | `rgba(29,28,29,.06)` fill, or white with the card border |
 
@@ -65,7 +67,7 @@ Use only when the app already has a dark mode. Slack's own dark mode, measured a
 | Input focus | 1px ring plus a 5px halo in blue, read from a screenshot as about `#53a3ca` and `#2c4554` |
 | Input error | 1px `#e01e5a` ring plus a 5px `rgba(224,30,90,.3)` halo, as in light; the message is `#de678a` |
 | Hover fill | `rgba(248,248,248,.08)` |
-| Sidebar | the theme's dark variant. In the theme measured: a `rgba(16,18,20,.6)` layer over the theme background, text `rgba(178,227,228,.8)`, selected item `#7d3986` fill with `#efe1f5` text |
+| Sidebar | Aubergine's dark variant; see "Sidebar theme" in `slack.md` |
 
 ## Shape and controls
 
@@ -105,10 +107,9 @@ Measured from a Japanese UI. The English UI was not captured.
 ## Not captured yet
 
 - The English UI wording
-- The default sidebar theme (only one custom theme was seen)
 - Destructive confirmations
 - Toasts after saving
-- Hover colors for buttons, rows and sidebar items
+- Hover on sidebar items in the Aubergine theme, and every hover in dark
 - Colored status labels (Slack's own screens seen here have none)
 - Data tables and summary number tiles (Slack's own screens seen here have none)
 
@@ -116,3 +117,4 @@ Measured from a Japanese UI. The English UI was not captured.
 
 Captured 2026-10-30 in a 1280×900 window, signed in to a work workspace with a Japanese UI: a channel, the directory (members and channels tabs), the create-channel dialog with a valid name and with a name error, preferences, and search with results and with no results. The account's preference is the dark theme; the light theme was shown by removing the dark theme class from the page in that tab only. The account setting was not changed, and nothing was created or sent. Only interface labels were copied; no message text, names or channel names. A channel and the files page were also captured at 768×1024 the same day; at 375×812 with an iPhone user agent Slack only offered its app. The dark values were measured the same day in the account's own dark mode: the files page, the channel directory and the create-channel dialog with a name error. The dialog was closed without creating anything.
 Icons were read the same day at 1280×900 in a channel of the workspace: SVG sizes, viewBox and colors as computed styles, shapes from a screenshot.
+On 2026-10-31, with the owner's permission, the Aubergine theme was previewed in preferences (not saved; 「変更をもとに戻す」 restored the account's own theme, confirmed on screen and in the theme setting), and its frame, top bar search, sidebar and selected item were read as computed styles with the page in light and in dark. The same day, in light: the directory's 「メンバーを招待する」 and filter buttons and a row in its channels tab were hovered, and the create-channel dialog was opened, a name typed, its 「次へ」 hovered, and the dialog closed with Escape; all read as computed styles. Nothing was created.

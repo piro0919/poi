@@ -44,6 +44,7 @@ Poi exists to close that gap.
   - In X's shape, page search and filters sit at the top of the main column at every width; the right column appears only with content
   - Icons go in as SVG components when the package ships them, unless the app already uses an icon font
   - The English UI of Amazon and X is to be measured rather than guessed
+  - Slack's frame and sidebar follow its default theme, Aubergine, not the maintainer's own theme. The owner left this to Claude; the purple is what people recognize as Slack
 - Poi may add the company's own icon package to the user's repository, so icons match the real product down to stroke and corners (decided 2026-10-30). Icons that are logos or product marks are never used (in Octicons: `mark-github`, `logo-github`, `logo-gist`, `copilot*`). Packages checked the same day:
   - Google: Material Symbols, Apache-2.0 (`material-symbols` / `@material-symbols/svg-400` on npm, or the Google Fonts icon font)
   - GitHub: Octicons, MIT (`@primer/octicons-react`, `@primer/octicons`)

@@ -4,26 +4,28 @@ Use for the app shell, feeds, directories, search results, create dialogs and pr
 
 ## App shell
 
-- **Window frame**: the app sits on a themed background. A thin top bar (about 40px) holds back/forward/history icons and a wide rounded search field in the middle, filled with a darker tint of the theme.
+- **Window frame**: the app sits on a themed background. A thin top bar (about 40px) holds back/forward/history icons and a wide rounded search field in the middle, filled with a translucent tint of the theme.
 - **Rail** (70px) on the far left, on the theme background: workspace icon on top, then icon buttons with a small label under each (Home, DMs, Activity, Files …), and the avatar at the bottom. Use it only when the app has that many top-level areas.
-- **Sidebar** (about 290px): workspace name 18px weight 900 with a caret, settings and compose icon buttons on the right, then a filter field (「会話を見つける…」). Items are 28px tall, 15px regular, radius 6px, padding 0 8px, a 16px icon before the label. The selected item is a filled pill in the theme's strong color with light text. Section headers ("Channels") use the same size with a caret.
-- **Workspace panel**: the sidebar and the main pane sit together on one panel laid over the theme background, inset 40px from the top (under the top bar), 70px from the left (the rail, or a narrow strip of theme background when there is no rail) and about 4px from the right, with about 6px corners. The sidebar part is near white with a faint tint of the theme (measured `#f6fafb` to `#f8fdfd` in one light theme), and a soft 1px shade separates it from the main pane.
+- **Sidebar** (about 290px): workspace name 18px weight 900 with a caret, settings and compose icon buttons on the right, then a filter field (「会話を見つける…」). Items are 28px tall, 15px regular, radius 6px, padding 0 8px, a 16px icon before the label. The selected item is a filled pill; its colors are under "Sidebar theme". Section headers ("Channels") use the same size with a caret.
+- **Workspace panel**: the sidebar and the main pane sit together on one panel laid over the theme background, inset 40px from the top (under the top bar), 70px from the left (the rail, or a narrow strip of theme background when there is no rail) and about 4px from the right, with about 6px corners. The sidebar part shows the theme through a translucent layer (see "Sidebar theme"), and a soft 1px shade separates it from the main pane.
 - **Main pane**: white. On directory pages the pane is `#f8f8f8` and the records sit on it in a white card; on channels, search results and the empty search the pane is white. These two values were read from screenshots, not from computed styles.
 - **Pane header**: 49px, padding 0 12px 0 18px. Title 18px weight 900 (a channel shows `#` and a star icon before the name). Right side: icon buttons with counts (members, apps), 28px, radius 8px.
 - **Tabs** under the header: 13px weight 700, icon + label, 2px underline on the active tab.
 
 ### Sidebar theme
 
-The sidebar and window background change with the user's theme, so any clear theme works. Values measured in one custom light theme: sidebar text `rgba(3,54,64,.8)`, workspace name `#033640`, selected item `#611f69` fill with `#f9edff` text. When the app has no theme of its own, use these with a plain light sidebar.
-
-The window frame behind the top bar, the rail and the panel is a soft gradient, not a flat color. In the same theme, read from screenshots on 2026-10-31:
+The sidebar and window background change with the user's theme. Use Slack's default theme, Aubergine: it is the purple people recognize as Slack (owner's decision, 2026-10-31; a user's own pale theme made a trial read as a different product). Values are computed styles of Aubergine, previewed in preferences without saving:
 
 | | Light | Dark |
 | --- | --- | --- |
-| Frame, top left | `#c1ecf0` (pale cyan) | `#173341` |
-| Frame, left and right edges at mid height | `#d6ecf5`, `#d1e7f1` | `#151e33`, `#151f33` |
-| Frame, top right and bottom left | `#eeedfc` (pale lavender) | `#1a0c26` |
-| Search field in the top bar | about `#85afb3` to `#9ab0b9`, a translucent darker tint over the gradient | about `#557179` to `#565e6d` |
+| Window frame (behind the top bar, the rail and the panel) | `radial-gradient(circle, #4a154b 20%, transparent 80%), conic-gradient(from 45deg, #39063a 0%, #4a154b 25%, #39063a 50%, #4a154b 75%, #39063a 100%)` | the same with `#431349` and `#200221` |
+| Search field in the top bar | `rgba(249,237,255,.25)` with `rgba(131,56,138,.08)` laid over it, radius 4px, white text | `rgba(239,225,245,.25)` with `rgba(239,225,245,.08)` over it, `#f8f8f8` text |
+| Sidebar | a `rgba(249,237,255,.11)` layer over the frame, so it reads as a lighter purple | a `rgba(16,18,20,.6)` layer over the frame |
+| Sidebar text | `rgba(246,228,255,.9)` | `rgba(227,206,235,.8)` |
+| Workspace name | `#ffffff`, weight 900 | `#f8f8f8`, weight 900 |
+| Selected item | `#f9edff` fill, `#39063a` text, radius 6px | `#7d3986` fill, `#efe1f5` text |
+
+The main pane stays white (light) or `#1a1d21` (dark) in every theme.
 
 ## Directory and lists
 
