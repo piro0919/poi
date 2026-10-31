@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.6.2",
+    "@piro0919/biome-config": "github:piro0919/biome-config#v1.1.0",
     "@tailwindcss/postcss": "^4.3.3",
     "@types/node": "^20.19.43",
     "@types/react": "^19.3.0",

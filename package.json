@@ -1,8 +1,16 @@
 {
   "name": "poi",
   "private": true,
+  "packageManager": "pnpm@11.1.2",
   "scripts": {
     "lp:dev": "pnpm --filter poi-lp dev",
-    "lp:build": "pnpm --filter poi-lp build"
+    "lp:build": "pnpm --filter poi-lp build",
+    "lint": "pnpm --filter poi-lp lint",
+    "typecheck": "pnpm --filter poi-lp typecheck"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.4",
+    "lefthook": "^2.2.2"
   }
 }

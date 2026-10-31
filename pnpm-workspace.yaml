@@ -1,8 +1,9 @@
 packages:
   - lp
 
-# ビルド処理を走らせない依存。どれも LP の組み立てには要らない
+# ビルド処理を走らせるかどうか。lefthook は git のフックを入れるので走らせる。ほかはどれも LP の組み立てには要らない
 allowBuilds:
   '@parcel/watcher': false
   '@swc/core': false
+  lefthook: true
   sharp: false
