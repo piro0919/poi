@@ -24,6 +24,7 @@ The sidebar and window background change with the user's theme. Use Slack's defa
 | Sidebar text | `rgba(246,228,255,.9)` | `rgba(227,206,235,.8)` |
 | Workspace name | `#ffffff`, weight 900 | `#f8f8f8`, weight 900 |
 | Selected item | `#f9edff` fill, `#39063a` text, radius 6px | `#7d3986` fill, `#efe1f5` text |
+| Item hover | not captured | `rgba(239,225,245,.08)` fill; the text keeps its color |
 
 The main pane stays white (light) or `#1a1d21` (dark) in every theme.
 
@@ -33,6 +34,7 @@ The main pane stays white (light) or `#1a1d21` (dark) in every theme.
 - A large search field (about 40px, radius 8px, magnifier icon) spans the width with a default button to its right (「チャンネルを作成する」「メンバーを招待する」).
 - A row of filter buttons below it: white, 28px, 13px weight 700, radius 8px, light border, with a caret (「すべてのチャンネル」「タイトル」「場所」). A sort menu sits at the far right (「最もおすすめ」).
 - Records sit in one white card with a 12px radius. Rows are about 77px: a 15px weight 700 title (`# name`), then a 13px `#454447` meta line joining facts with 「・」 (「13 名のメンバー ・ description…」), truncated with an ellipsis. Rows are separated by 1px dividers.
+- Spacing, measured at 1280px on 2026-10-31: everything sits 16px in from both edges of the pane. The title row is 52px; the tabs row under it is 36px, with tabs padded 0 16px. In light there is no line under the tabs, only the change from the header to the gray `#f8f8f8` pane; in dark, where pane and header share one color, a line is drawn as an inset shadow `0 -1px 0 rgba(121,124,129,.3)`. Then 16px down to the search field, about 14px down to the filter row, and 8px down to the card. Rows have 16px padding on all sides. The dividers are each row's 1px top border in the card's border color, so the card border and the dividers are one line: `rgba(29,28,29,.1)` in light, `rgba(209,210,211,.1)` in dark. The first row carries the card's 12px top corners.
 - People are shown as a grid of cards (about 210px wide): a square photo filling the top, name in weight 700 with a presence dot, title in 13px secondary text below.
 
 ## Feed (messages, activity)

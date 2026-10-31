@@ -67,6 +67,7 @@ Use only when the app already has a dark mode. Slack's own dark mode, measured a
 | Input focus | 1px ring plus a 5px halo in blue, read from a screenshot as about `#53a3ca` and `#2c4554` |
 | Input error | 1px `#e01e5a` ring plus a 5px `rgba(224,30,90,.3)` halo, as in light; the message is `#de678a` |
 | Hover fill | `rgba(248,248,248,.08)` |
+| Hover on buttons and rows (measured on the directory, 2026-10-31) | Same shadows as light: buttons gain `0 1px 3px rgba(0,0,0,.098), 0 1px 2px -1px rgba(0,0,0,.098)`, record rows gain `0 1px 1px rgba(0,0,0,.06)`. Fills stay `#1a1d21` on default buttons, rows and small filter buttons; the larger filter menus (「すべてのチャンネル ▾」) fill `#212428`. Tabs do not change on hover |
 | Sidebar | Aubergine's dark variant; see "Sidebar theme" in `slack.md` |
 
 ## Shape and controls
@@ -76,6 +77,9 @@ Use only when the app already has a dark mode. Slack's own dark mode, measured a
 - Cards (search results, list containers): white, 1px light border, radius **12px**, no shadow.
 - Date dividers and similar floating labels are white pills (radius 24px) with `0 0 0 1px rgba(29,28,29,.13), 0 1px 3px rgba(0,0,0,.08)`.
 - Dialogs: white, radius 8px, shadow `0 0 0 1px rgba(29,28,29,.13), 0 18px 48px rgba(0,0,0,.35)`, close (×) icon button 36px at the top right.
+  - Measured on the create-channel dialog in dark, 2026-10-31: 520px wide. The header is 70px with padding 20px 76px 20px 28px; the × (36px, radius 8px, 20px icon, labelled 「閉じる」) sits 20px from the top and right edges. The body is padded 0 28px. The footer is padded 24px 28px with its buttons on the right. No dividers in this small dialog; only the wide preferences dialog has one under its header.
+  - The overlay behind it is `rgba(0,0,0,.6)`.
+  - Dark: surface `#1a1d21`, shadow `0 0 0 1px rgba(232,232,232,.13), 0 18px 48px rgba(0,0,0,.35)`.
 - Tabs: 13px weight 700, the active one with a 2px underline in the theme's accent color.
 
 ## Icons
@@ -109,7 +113,7 @@ Measured from a Japanese UI. The English UI was not captured.
 - The English UI wording
 - Destructive confirmations
 - Toasts after saving
-- Hover on sidebar items in the Aubergine theme, and every hover in dark
+- Hover on sidebar items in the Aubergine theme in light
 - Colored status labels (Slack's own screens seen here have none)
 - Data tables and summary number tiles (Slack's own screens seen here have none)
 
@@ -117,4 +121,5 @@ Measured from a Japanese UI. The English UI was not captured.
 
 Captured 2026-10-30 in a 1280×900 window, signed in to a work workspace with a Japanese UI: a channel, the directory (members and channels tabs), the create-channel dialog with a valid name and with a name error, preferences, and search with results and with no results. The account's preference is the dark theme; the light theme was shown by removing the dark theme class from the page in that tab only. The account setting was not changed, and nothing was created or sent. Only interface labels were copied; no message text, names or channel names. A channel and the files page were also captured at 768×1024 the same day; at 375×812 with an iPhone user agent Slack only offered its app. The dark values were measured the same day in the account's own dark mode: the files page, the channel directory and the create-channel dialog with a name error. The dialog was closed without creating anything.
 Icons were read the same day at 1280×900 in a channel of the workspace: SVG sizes, viewBox and colors as computed styles, shapes from a screenshot.
+Later on 2026-10-31, in the account's own theme: the channels directory was read for spacing and dividers, in dark and with the dark class removed for light, and the create-channel dialog was opened in dark and closed with its × without typing anything. Its rows, buttons, filter menus and tabs were hovered in dark. Aubergine was previewed once more in preferences (not saved; 「変更をもとに戻す」, then Sea Glass confirmed in the theme setting) to resolve the variable Slack's stylesheet uses for sidebar item hover; only the dark value is recorded, because removing the dark class gave sidebar text colors that disagree with the light values measured earlier.
 On 2026-10-31, with the owner's permission, the Aubergine theme was previewed in preferences (not saved; 「変更をもとに戻す」 restored the account's own theme, confirmed on screen and in the theme setting), and its frame, top bar search, sidebar and selected item were read as computed styles with the page in light and in dark. The same day, in light: the directory's 「メンバーを招待する」 and filter buttons and a row in its channels tab were hovered, and the create-channel dialog was opened, a name typed, its 「次へ」 hovered, and the dialog closed with Escape; all read as computed styles. Nothing was created.
