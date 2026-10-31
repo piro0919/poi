@@ -105,6 +105,18 @@ The project pill, breadcrumb, "Learn" button and table checkbox column below app
 - Charts sit in plain bordered cards (1px `#b7c3e0`, radius 12px) with a 16px regular title ("Traffic", "Errors", "Median latency") and icon buttons at the top right.
 - Time range is a row of text options ("1 hour", "6 hours", "1 day" …) with the selected one in button blue.
 - Numbers use regular weight; do not make big bold stat cards.
+- Charts (measured on APIs & Services: the dashboard and an API's metrics page, 2026-10-31):
+  - Lines only, about 2px, with no fill under them. Each series is one color, in this order:
+
+    | Series | Light | Dark |
+    | --- | --- | --- |
+    | 1st | `#0c67df` | `#8ab4f8` |
+    | 2nd | `#af5cf7` | `#c58af9` |
+    | 3rd | `#689f38` | `#aed581` |
+
+  - Horizontal grid lines only, 1px `#dadce0` (dark `#5f6368`). The x axis is a 1px `#80868b` line (dark `#e8eaed`). Axis labels are small text in `#475569` (dark `#b9c0cc`); the value labels sit on the right edge, the dates under the axis.
+  - The legend sits under the chart, one series per line: a short line in the series color with a marker on it (circle, then square, then diamond), then the series name and its value ("200: 0.0007/s"). The last point of each line carries the same marker.
+  - Only the first three series were seen; a fourth color was not captured.
 
 ## Icons
 
