@@ -14,7 +14,7 @@ type PageProps = {
 function PrimaryButton({ children, href }: { children: ReactNode; href: string }) {
   return (
     <a
-      className="inline-flex h-11 items-center rounded-full bg-ink px-5 font-medium text-[15px] text-bg transition hover:opacity-85"
+      className="inline-flex h-11 items-center rounded-full bg-ink px-5 font-medium text-button text-bg transition hover:opacity-85"
       href={href}
     >
       {children}
@@ -25,7 +25,7 @@ function PrimaryButton({ children, href }: { children: ReactNode; href: string }
 function SecondaryButton({ children, href }: { children: ReactNode; href: string }) {
   return (
     <a
-      className="inline-flex h-11 items-center rounded-full border border-line bg-card px-5 font-medium text-[15px] transition hover:border-muted"
+      className="inline-flex h-11 items-center rounded-full border border-line bg-card px-5 font-medium text-button transition hover:border-muted"
       href={href}
     >
       {children}
@@ -48,7 +48,7 @@ function Lines({ lines, spaced }: { lines: string[]; spaced: boolean }) {
 /// ターミナルに貼る行。横に長いので、狭い画面では中で横に流す
 function Command({ lines }: { lines: string[] }) {
   return (
-    <pre className="overflow-x-auto rounded-lg border border-line bg-card px-4 py-3 text-left font-mono text-[13px] leading-relaxed">
+    <pre className="overflow-x-auto rounded-lg border border-line bg-card px-4 py-3 text-left font-mono text-code leading-relaxed">
       <code>
         {lines.map((line) => (
           <span className="block" key={line}>
@@ -75,7 +75,7 @@ export default async function Page({ params }: PageProps) {
     <div className="mx-auto max-w-6xl px-6">
       {/* 上の帯 */}
       <header className="flex h-16 items-center justify-between">
-        <span className="font-logo text-[20px]">Poi</span>
+        <span className="font-logo text-logo">Poi</span>
         <div className="flex items-center gap-5">
           <LanguageSwitch />
           <a className="hidden text-muted text-sm transition hover:text-ink sm:inline" href={REPO}>
@@ -85,19 +85,19 @@ export default async function Page({ params }: PageProps) {
       </header>
 
       {/* 見出し。左に見出しと1行とボタン、右に書き換える前と後を切り替える絵 */}
-      <section className="grid items-center gap-12 py-16 lg:grid-cols-[1fr_1.15fr] lg:py-24">
+      <section className="grid items-center gap-12 py-16 lg:grid-cols-hero lg:py-24">
         <div className="flex flex-col gap-7">
           {/* 日本語は「」で1行が長いので一回り小さく。6xl だと「Google」のあとで割れる */}
           <h1
             className={
               locale === "ja"
-                ? "display text-4xl sm:text-5xl lg:text-[44px]"
+                ? "display text-4xl sm:text-5xl lg:text-display-ja"
                 : "display text-5xl sm:text-6xl"
             }
           >
             <Lines lines={tagline} spaced={locale !== "ja"} />
           </h1>
-          <p className="text-[19px] text-muted leading-relaxed">
+          <p className="text-lead text-muted leading-relaxed">
             <Lines lines={lead} spaced={locale !== "ja"} />
           </p>
           <div className="flex flex-wrap gap-3">
@@ -120,7 +120,7 @@ export default async function Page({ params }: PageProps) {
       <section className="grid gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-3">
         {features.map((feature) => (
           <div className="flex flex-col gap-2 bg-card p-6" key={feature.title}>
-            <h2 className="font-medium text-[17px]">{feature.title}</h2>
+            <h2 className="font-medium text-feature">{feature.title}</h2>
             <p className="text-muted text-sm leading-relaxed">{feature.body}</p>
           </div>
         ))}
@@ -134,7 +134,7 @@ export default async function Page({ params }: PageProps) {
         <h2 className="display max-w-3xl text-balance text-4xl sm:text-5xl">
           {t("install.title")}
         </h2>
-        <p className="max-w-xl text-[19px] text-muted leading-relaxed">{t("install.body")}</p>
+        <p className="max-w-xl text-lead text-muted leading-relaxed">{t("install.body")}</p>
         <div className="w-full max-w-xl">
           <Command lines={COMMANDS} />
         </div>

@@ -11,6 +11,19 @@
   --font-sans: var(--font-geist), var(--font-noto-jp), system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
   --font-logo: var(--font-righteous), var(--font-geist), sans-serif;
+  --text-code: 13px;
+  --text-button: 15px;
+  --text-feature: 17px;
+  --text-lead: 19px;
+  --text-logo: 20px;
+  /* 日本語の見出しの一番広い幅。6xl だと「Google」のあとで割れる */
+  --text-display-ja: 44px;
+  --shadow-shot: 0 30px 60px -30px rgba(0, 0, 0, 0.35);
+}
+
+/* 見出しの段。絵の側を少し広く取る */
+@utility grid-cols-hero {
+  grid-template-columns: 1fr 1.15fr;
 }
 
 /* 暗い表示の設定なら黒地に。見出しの絵も暗い表示の写しに替わる */

@@ -38,7 +38,7 @@ export function Showcase({ beforeLabel, caption }: { beforeLabel: string; captio
           </button>
         ))}
       </div>
-      <div className="overflow-hidden rounded-2xl border border-line shadow-[0_30px_60px_-30px_rgba(0,0,0,0.35)]">
+      <div className="overflow-hidden rounded-2xl border border-line shadow-shot">
         <Image
           alt=""
           className="w-full dark:hidden"
