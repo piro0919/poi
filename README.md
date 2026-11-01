@@ -48,6 +48,7 @@ follows Google Search.
 | GitHub | github.com: issue and pull request lists, repository settings |
 | X | x.com |
 | Amazon | amazon.co.jp: search results, item pages, the account hub, order history, address forms, the cart |
+| Notion | The Notion app: the sidebar shell, database tables, search, settings |
 
 ## What Poi changes, and what it leaves alone
 
