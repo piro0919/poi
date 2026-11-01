@@ -49,6 +49,8 @@ follows Google Search.
 | X | x.com |
 | Amazon | amazon.co.jp: search results, item pages, the account hub, order history, address forms, the cart |
 | Notion | The Notion app: the sidebar shell, database tables, search, settings |
+| Stripe | The Stripe Dashboard: customer and payment lists, a customer's page, the create dialog, the settings index |
+| Linear | The Linear app: the sidebar shell, grouped issue lists, an issue's page, the create dialog, the command menu, settings |
 
 ## What Poi changes, and what it leaves alone
 
@@ -70,7 +72,7 @@ follows Google Search.
   values. It does not add a dark mode to an app that has none.
 - **Icons and typefaces only when they are free to use.** Poi may add Material
   Symbols (Apache-2.0) for Google and Octicons (MIT) for GitHub. It loads
-  Google Sans Flex, Mona Sans or Lato from Google Fonts. X and Amazon do not
+  Google Sans Flex, Mona Sans, Lato or Inter from Google Fonts. X and Amazon do not
   distribute their typefaces, so for an English UI Poi loads a free look-alike
   from Google Fonts instead (Public Sans for X, Figtree for Amazon), and their
   font files are never copied.
