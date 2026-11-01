@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 /// 見本の管理画面の、書き換える前と各社の後。画像は明暗の2枚ずつで、OS の設定に合わせて出し分ける
-const SHOTS = ["before", "google", "slack", "github", "x", "amazon"] as const;
+const SHOTS = ["before", "google", "slack", "github", "x", "amazon", "notion"] as const;
 
 const LABELS: Record<(typeof SHOTS)[number], string> = {
   before: "",
@@ -13,6 +13,7 @@ const LABELS: Record<(typeof SHOTS)[number], string> = {
   github: "GitHub",
   x: "X",
   amazon: "Amazon",
+  notion: "Notion",
 };
 
 export function Showcase({ beforeLabel, caption }: { beforeLabel: string; caption: string }) {
