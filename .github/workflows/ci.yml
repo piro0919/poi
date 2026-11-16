@@ -60,6 +60,9 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
+      # PageProps と LayoutProps は Next が生成する型。生成してから型を見る
+      - run: pnpm exec next typegen
+
       - run: pnpm exec tsc --noEmit
 
       - run: pnpm build
